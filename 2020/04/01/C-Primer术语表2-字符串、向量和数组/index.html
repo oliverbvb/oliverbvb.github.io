@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>C-Primer术语表2-字符串、向量和数组 | 游戏还是生活</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文整理记录《C++ Primer》第五版书中章节后的术语表，并添加部分代码示例。 1.命名空间的using声明   术语 说明    using声明（using declaration） 令命名空间中的某个名字可被程序直接使用   123456789101112#include &lt;iostream&gt;&#x2F;&#x2F;using声明，当我们使用名字cin时，从命名空间std中获取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C-Primer术语表2-字符串、向量和数组">
+<meta property="og:url" content="https://oliverbvb.github.io/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A82-%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E5%90%91%E9%87%8F%E5%92%8C%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:site_name" content="游戏还是生活">
+<meta property="og:description" content="本文整理记录《C++ Primer》第五版书中章节后的术语表，并添加部分代码示例。 1.命名空间的using声明   术语 说明    using声明（using declaration） 令命名空间中的某个名字可被程序直接使用   123456789101112#include &lt;iostream&gt;&#x2F;&#x2F;using声明，当我们使用名字cin时，从命名空间std中获取">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-01T14:53:55.725Z">
+<meta property="article:modified_time" content="2020-04-01T14:54:40.939Z">
+<meta property="article:author" content="Oliver">
+<meta property="article:tag" content="游戏，编程，生活">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="游戏还是生活" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">游戏还是生活</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">当然是全都要</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://oliverbvb.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-C-Primer术语表2-字符串、向量和数组" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A82-%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E5%90%91%E9%87%8F%E5%92%8C%E6%95%B0%E7%BB%84/" class="article-date">
+  <time datetime="2020-04-01T14:53:55.725Z" itemprop="datePublished">2020-04-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C-Primer术语表2-字符串、向量和数组
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文整理记录《C++ Primer》第五版书中章节后的术语表，并添加部分代码示例。</p>
+<h1 id="1-命名空间的using声明"><a href="#1-命名空间的using声明" class="headerlink" title="1.命名空间的using声明"></a>1.命名空间的using声明</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>using声明（using declaration）</strong></td>
+<td>令命名空间中的某个名字可被程序直接使用</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">&#x2F;&#x2F;using声明，当我们使用名字cin时，从命名空间std中获取它</span><br><span class="line">using std::cin</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int i;</span><br><span class="line">    cin &gt;&gt; i;           &#x2F;&#x2F;正确</span><br><span class="line">    cout &lt;&lt; i;          &#x2F;&#x2F;错误：没有对应的using声明，必须使用完整的名字</span><br><span class="line">    std::cout &lt;&lt; i;     &#x2F;&#x2F;正确：显式地从std中使用cout</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-标准库类型string"><a href="#2-标准库类型string" class="headerlink" title="2.标准库类型string"></a>2.标准库类型string</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>容器（container）</strong></td>
+<td>是一种类型，其对象容纳了一组给定类型的对象。vector是一种容器类型</td>
+</tr>
+<tr>
+<td><strong>缓冲区溢出（buffer overflow）</strong></td>
+<td>一种严重的程序故障，主要的原因是视图通过一个越界的索引访问容器内容，容器类型包括string、vector和数组等</td>
+</tr>
+<tr>
+<td><strong>string</strong></td>
+<td>是一种标准库类型，表示字符的序列</td>
+</tr>
+<tr>
+<td><strong>拷贝初始化（copy initialization）</strong></td>
+<td>使用赋值号（=）的初始化形式。新创建的对象是初始值的一个副本</td>
+</tr>
+<tr>
+<td><strong>直接初始化（direct initialization）</strong></td>
+<td>不使用赋值号（=）的初始化形式</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">string s1;                          &#x2F;&#x2F;默认初始化，s1是一个空字符串</span><br><span class="line">string s2 &#x3D; s1;                     &#x2F;&#x2F;s2是s1的副本</span><br><span class="line">string s3 &#x3D; &quot;hiya&quot;;                 &#x2F;&#x2F;s3是该字符串字面值的副本</span><br><span class="line">string s4(10, &#39;c&#39;);                 &#x2F;&#x2F;s4的内容是cccccccccc</span><br><span class="line">string s5 &#x3D; &quot;hiya&quot;;                 &#x2F;&#x2F;拷贝初始化</span><br><span class="line">string s6(&quot;hiya&quot;);                  &#x2F;&#x2F;直接初始化</span><br><span class="line">string s7(10, &#39;c&#39;);                 &#x2F;&#x2F;直接初始化，s7的内容是cccccccccc</span><br><span class="line">string s8 &#x3D; string(10, &#39;c&#39;);        &#x2F;&#x2F;拷贝初始化，s8的内容是cccccccccc</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;字面值和string对象相加</span><br><span class="line">string s1 &#x3D; &quot;hello&quot;, s2 &#x3D; &quot;world&quot;;</span><br><span class="line">string s3 &#x3D; s1 + &quot;, &quot; + s2  + &#39;\n&#39;;</span><br><span class="line">string s4 &#x3D; s1 + &quot;, &quot;;              &#x2F;&#x2F;正确：把一个string对象和一个字面值相加</span><br><span class="line">string s5 &#x3D; &quot;hello&quot; + &quot;, &quot;;         &#x2F;&#x2F;错误，两个运算对象都不是string</span><br><span class="line">string s6 &#x3D; s1 + &quot;, &quot; + &quot;world&quot;;    &#x2F;&#x2F;正确</span><br><span class="line">string s7 &#x3D; &quot;hello&quot; + &quot;, &quot; + s2;    &#x2F;&#x2F;错误：不能把字面值直接相加</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>getline</strong></td>
+<td>在string头文件中定义的一个函数，以一个istream对象和一个string对象为输入参数。该函数首先读取输入流的内容直到遇到换行符停止，然后将读入的数据存入string对象，最后返回istream对象。其中换行符读入但是不保留</td>
+</tr>
+<tr>
+<td><strong>empty</strong></td>
+<td>是string和vector的成员，返回一个布尔值。当对象的大小为0时返回真，否则返回假</td>
+</tr>
+<tr>
+<td><strong>size</strong></td>
+<td>是string和vector的成员，分别返回字符的数量或元素的数量。返回值的类型是size_type</td>
+</tr>
+<tr>
+<td><strong>size_type</strong></td>
+<td>是string和vector定义的类型的名字，能存放下任意string对象或vector对象的大小。在标准库中，size_type被定义为无符号类型</td>
+</tr>
+<tr>
+<td><strong>&lt;&lt;运算符（&lt;&lt;operator）</strong></td>
+<td>标准库类型string定义的输出运算符，负责输出string对象中的字符</td>
+</tr>
+<tr>
+<td><strong>&gt;&gt;运算符（&gt;&gt;operator）</strong></td>
+<td>标准库类型string定义的输入运算符，负责读入一组字符，遇到空白停止，读入的内容赋给运算符右侧的运算对象</td>
+</tr>
+<tr>
+<td><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    string line;</span><br><span class="line">    &#x2F;&#x2F;每次读入一整行，直至到达文件末尾</span><br><span class="line">    while(getline(cin, line))</span><br><span class="line">        cout &lt;&lt; line &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></td>
+<td></td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;每次读入一整行，遇到空行直接跳过</span><br><span class="line">while(getline(cin, line))</span><br><span class="line">    if(!line.empty())</span><br><span class="line">        cout &lt;&lt; line &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">string line;</span><br><span class="line">&#x2F;&#x2F;每次读入一整行，输出其中超过80个字符的行</span><br><span class="line">while(getline(cin, line))</span><br><span class="line">    if(line.size() &gt; 80)</span><br><span class="line">        cout &lt;&lt; line &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>范围for语句（range for）</strong></td>
+<td>一种控制语句，可以在值的一个特定集合内迭代</td>
+</tr>
+<tr>
+<td><strong>索引（index）</strong></td>
+<td>是下标运算符使用的值。表示要在string对象、vector对象或者数组中访问的一个位置</td>
+</tr>
+<tr>
+<td><strong>[]运算符 （[]operator）</strong></td>
+<td>下标运算符</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;范围for语句</span><br><span class="line">string s(&quot;Hellow World!!!&quot;);</span><br><span class="line">&#x2F;&#x2F;转换成大写形式</span><br><span class="line">for(auto &amp;c : s)        &#x2F;&#x2F;对于s中的每个字符（注意：c是引用）</span><br><span class="line">    c &#x3D; toupper(c);     &#x2F;&#x2F;c是一个引用，因此赋值语句将改变s中字符的值</span><br><span class="line">cout &lt;&lt; s &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;[]运算符</span><br><span class="line">&#x2F;&#x2F;依次处理s中的字符直至我们处理完全部字符或者遇到一个空白</span><br><span class="line">for(decltype(s.size()) index &#x3D; 0; index !&#x3D; s.size() &amp;&amp; !isspace(s[index]); ++index)</span><br><span class="line">    s[index] &#x3D; toupper(s[index]);   &#x2F;&#x2F;将当前字符改成大写形式</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-标准库类型vector"><a href="#3-标准库类型vector" class="headerlink" title="3.标准库类型vector"></a>3.标准库类型vector</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>vector</strong></td>
+<td>是一种标准库类型，容纳某指定类型的一组元素</td>
+</tr>
+<tr>
+<td><strong>类模板（class template）</strong></td>
+<td>用于创建具体类类型的模板。要想使用类模板，必须提供关于类型的辅助信息</td>
+</tr>
+<tr>
+<td><strong>实例化（instantiation）</strong></td>
+<td>编译器生成一个指定的模板类或函数的过程</td>
+</tr>
+<tr>
+<td><strong>push_back</strong></td>
+<td>是vector的成员，向vector对象的末尾添加元素</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt; ivec;               &#x2F;&#x2F;ivec保存int类型的对象</span><br><span class="line">vector&lt;Sales_item&gt; Sales_vec;   &#x2F;&#x2F;保存Sales_item类型的对象</span><br><span class="line">vector&lt;vector&lt;string&gt;&gt; file;    &#x2F;&#x2F;该向量的元素是vector对象</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;初始化</span><br><span class="line">vector&lt;string&gt; v1&#123;&quot;a&quot;, &quot;an&quot;, &quot;the&quot;&#125;;    &#x2F;&#x2F;列表初始化</span><br><span class="line">vector&lt;string&gt; v2(&quot;a&quot;, &quot;an&quot;, &quot;the&quot;);    &#x2F;&#x2F;错误</span><br><span class="line"></span><br><span class="line">vector&lt;int&gt; ivec(10, -1);   &#x2F;&#x2F;10个int类型的元素，每个元素都初始化为-1</span><br><span class="line">vector&lt;string&gt; svec(10, &quot;hi!&quot;); &#x2F;&#x2F;10个string类型的元素，每个都被初始化为&quot;hi!&quot;</span><br><span class="line"></span><br><span class="line">vector&lt;int&gt; ivec(10);       &#x2F;&#x2F;10个元素，每个都初始化为0</span><br><span class="line">vector&lt;string&gt; svec(10);    &#x2F;&#x2F;10个元素，每个都是空string对象</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;从标准输入中读取单词，将其作为vector对象的元素存储</span><br><span class="line">string word;</span><br><span class="line">vector&lt;string&gt; text;        &#x2F;&#x2F;空vector对象</span><br><span class="line">while(cin &gt;&gt; word)&#123;</span><br><span class="line">    text.push_back(word);   &#x2F;&#x2F;把word添加到text后面</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;不能用下标形式添加元素</span><br><span class="line">vector&lt;int&gt; ivec;   &#x2F;&#x2F;空vector对象</span><br><span class="line">for(decltype(ivec.size()) ix &#x3D; 0; ix !&#x3D; 10; ++ix)</span><br><span class="line">    ivec[ix] &#x3D; ix;  &#x2F;&#x2F;严重错误：ivec不包含任何元素</span><br><span class="line"></span><br><span class="line">for(decltype(ivec.size()) ix &#x3D; 0; ix !&#x3D; 10; ++ix)</span><br><span class="line">    ivec.push_back(ix); &#x2F;&#x2F;正确：添加一个新元素，该元素的值是ix</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-迭代器"><a href="#4-迭代器" class="headerlink" title="4.迭代器"></a>4.迭代器</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>迭代器（iterator）</strong></td>
+<td>是一种类型，用于访问容器中的元素或者在元素之间移动</td>
+</tr>
+<tr>
+<td><strong>迭代器运算（iterator arithmetic）</strong></td>
+<td>是string或vector的迭代器的运算</td>
+</tr>
+<tr>
+<td><strong>begin</strong></td>
+<td>是string和vector的成员，返回指向第一个元素的迭代器。也是一个标准库函数，输入一个数组，返回指向该数组首元素的指针</td>
+</tr>
+<tr>
+<td><strong>end</strong></td>
+<td>是string和vector的成员，返回一个尾后迭代器。也是一个标准库函数，输入一个数组，返回指向该数组尾元素的下一位置的指针</td>
+</tr>
+<tr>
+<td><strong>尾后迭代器（off-the-end iterator）</strong></td>
+<td>end函数返回的迭代器，指向一个并不存在的元素，该元素位于容器尾元素的下一位置</td>
+</tr>
+<tr>
+<td><strong>difference_type</strong></td>
+<td>由string和vector定义的一种带符号整数类型，表示两个迭代器之间的距离</td>
+</tr>
+<tr>
+<td><strong>++运算符（++operator）</strong></td>
+<td>是迭代器和指针定义的递增运算符</td>
+</tr>
+<tr>
+<td><strong>-&gt;运算符（-&gt;operator）</strong></td>
+<td>箭头运算符</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">string s(&quot;some string&quot;);</span><br><span class="line">if(s.begin() !&#x3D; s.end())&#123;   &#x2F;&#x2F;确保s非空</span><br><span class="line">    auto it &#x3D; s.begin();    &#x2F;&#x2F;it表示s的第一个字符</span><br><span class="line">    *it &#x3D; toupper(*it);     &#x2F;&#x2F;将当前字符改成大写形式</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vector&lt;int&gt;::iterator it;       &#x2F;&#x2F;it能读写vector&lt;int&gt;的元素</span><br><span class="line">string::iterator it2;           &#x2F;&#x2F;it2能读写string对象中的字符</span><br><span class="line"></span><br><span class="line">vector&lt;int&gt;::const_iterator it3;    &#x2F;&#x2F;it3只能读元素，不能写字符</span><br><span class="line">string:const_iterator it4;          &#x2F;&#x2F;it3只能读字符，不能写字符</span><br></pre></td></tr></table></figure>
+
+<h1 id="5-数组"><a href="#5-数组" class="headerlink" title="5.数组"></a>5.数组</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>size_t</strong></td>
+<td>是cstddef头文件中定义的一种与机器实现有关的无符号整数类型，它的空间足够大，能够表示任意数组的大小</td>
+</tr>
+<tr>
+<td><strong>指针运算（pointer arithmetic）</strong></td>
+<td>是指针类型支持的算术运算中。指向数组的指针所支持的运算种类与迭代器运算一样</td>
+</tr>
+<tr>
+<td><strong>prtdiff_t</strong></td>
+<td>是cstddef头文件中定义的一种与机器实现有关的带符号整数类型，它的空间足够大，能够表示数组中任意两个指针之间的距离</td>
+</tr>
+<tr>
+<td><strong>C风格字符串（C-style string）</strong></td>
+<td>以空字符结束的字符数组。字符串字面值是C风格字符串，C风格字符串容易出错</td>
+</tr>
+<tr>
+<td><strong>以空字符结束的字符串（null-terminated string）</strong></td>
+<td>是一个字符串，它的最后一个字符后面还跟着一个空字符（’\0’）</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;指针和数组</span><br><span class="line">string nums[] &#x3D; &#123;&quot;one&quot;, &quot;two&quot;, &quot;three&quot;&#125;;    &#x2F;&#x2F;数组的元素是string对象</span><br><span class="line">string *p &#x3D; &amp;nums[0];                       &#x2F;&#x2F;p指向nums的第一个元素</span><br><span class="line">string *p2 &#x3D; nums;  &#x2F;&#x2F;等价于p2 &#x3D; &amp;nums[0]</span><br><span class="line">int ia[] &#x3D; &#123;0, 1, 2, 3, 4, 5, 6, 7, 8, 9&#125;;</span><br><span class="line">int *beg &#x3D; begin(ia);       &#x2F;&#x2F;指向ia首元素的指针</span><br><span class="line">int *last &#x3D; end(ia);        &#x2F;&#x2F;指向arr尾元素的下一位置的指针</span><br><span class="line">ptrdiff_t n &#x3D; end(ia) - begin(ia);     &#x2F;&#x2F;n的类型是ptrdiff_t，值是10，也就是ia中元素的数量</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;C风格字符串</span><br><span class="line">char ca[] &#x3D; &#123;&#39;C&#39;, &#39;+&#39;, &#39;+&#39;&#125;;        &#x2F;&#x2F;不以空字符结束</span><br><span class="line">cout &lt;&lt; strlen(ca) &lt;&lt; endl;         &#x2F;&#x2F;严重错误：ca没有以空字符结束</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;比较两个C风格字符串</span><br><span class="line">const char ca1[] &#x3D; &quot;A string example&quot;;</span><br><span class="line">const char ca2[] &#x3D; &quot;A different string&quot;;</span><br><span class="line">if(ca1 &lt; ca2)           &#x2F;&#x2F;未定义的：视图比较两个无关地址</span><br><span class="line">if(strcmp(ca1, ca2) &lt; 0)    &#x2F;&#x2F;正确</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;混用string对象和C风格字符串</span><br><span class="line">string s &#x3D; ca1;</span><br><span class="line">char *str &#x3D; s;      &#x2F;&#x2F;错误：不能用string对象初始化char*</span><br><span class="line">const char *str &#x3D; s.c_str();    &#x2F;&#x2F;正确</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://oliverbvb.github.io/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A82-%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E5%90%91%E9%87%8F%E5%92%8C%E6%95%B0%E7%BB%84/" data-id="ck8hgey1z0001zguwhau120ug" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A83-%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          C-Primer术语表3-表达式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/31/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A81-%E5%8F%98%E9%87%8F%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C-Primer术语表1-变量和基本类型</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A85-%E5%87%BD%E6%95%B0/">C-Primer术语表5-函数</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A84-%E8%AF%AD%E5%8F%A5/">C-Primer术语表4-语句</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A83-%E8%A1%A8%E8%BE%BE%E5%BC%8F/">C-Primer术语表3-表达式</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A82-%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E5%90%91%E9%87%8F%E5%92%8C%E6%95%B0%E7%BB%84/">C-Primer术语表2-字符串、向量和数组</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/31/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A81-%E5%8F%98%E9%87%8F%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/">C-Primer术语表1-变量和基本类型</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Oliver<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

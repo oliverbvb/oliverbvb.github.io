@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>C-Primer术语表3-表达式 | 游戏还是生活</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文整理记录《C++ Primer》第五版书中章节后的术语表，并添加部分代码示例。 1.基础   术语 说明    表达式（expression） C++程序中最低级别的计算。表达式将运算符作用于一个或多个运算对象，每个表达式都有对应的求值结果。表达式本身也可以作为运算对象，这时就得到了对多个运算符求值的复合表达式   运算对象（operand） 表达式在某些值上执行运算，这些值就是运算对象。一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C-Primer术语表3-表达式">
+<meta property="og:url" content="https://oliverbvb.github.io/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A83-%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:site_name" content="游戏还是生活">
+<meta property="og:description" content="本文整理记录《C++ Primer》第五版书中章节后的术语表，并添加部分代码示例。 1.基础   术语 说明    表达式（expression） C++程序中最低级别的计算。表达式将运算符作用于一个或多个运算对象，每个表达式都有对应的求值结果。表达式本身也可以作为运算对象，这时就得到了对多个运算符求值的复合表达式   运算对象（operand） 表达式在某些值上执行运算，这些值就是运算对象。一个">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-01T14:55:06.264Z">
+<meta property="article:modified_time" content="2020-04-01T14:55:36.703Z">
+<meta property="article:author" content="Oliver">
+<meta property="article:tag" content="游戏，编程，生活">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="游戏还是生活" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">游戏还是生活</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">当然是全都要</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://oliverbvb.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-C-Primer术语表3-表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A83-%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+  <time datetime="2020-04-01T14:55:06.264Z" itemprop="datePublished">2020-04-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C-Primer术语表3-表达式
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文整理记录《C++ Primer》第五版书中章节后的术语表，并添加部分代码示例。</p>
+<h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>表达式（expression）</strong></td>
+<td>C++程序中最低级别的计算。表达式将运算符作用于一个或多个运算对象，每个表达式都有对应的求值结果。表达式本身也可以作为运算对象，这时就得到了对多个运算符求值的复合表达式</td>
+</tr>
+<tr>
+<td><strong>运算对象（operand）</strong></td>
+<td>表达式在某些值上执行运算，这些值就是运算对象。一个运算符有一个或多个相关的运算对象</td>
+</tr>
+<tr>
+<td><strong>运算符（operator）</strong></td>
+<td>决定表达式所做操作的符号。C++语言定义了一套运算符并说明了这些运算符作用于内置类型时的含义</td>
+</tr>
+<tr>
+<td><strong>结果（result）</strong></td>
+<td>计算表达式得到的值或对象</td>
+</tr>
+<tr>
+<td><strong><a href="https://zh.cppreference.com/w/cpp/language/operator_precedence" target="_blank" rel="noopener">优先级（precedence）</a></strong></td>
+<td>规定了复合表达式中不同运算符的执行顺序。与低优先级的运算符相比，高优先级的运算符组合得更紧密</td>
+</tr>
+<tr>
+<td><strong>结合律（associativity）</strong></td>
+<td>规定具有相同优先级的运算符如何组合在一起。结合律分为左结合律（运算符从左向右组合）和右结合律（运算符从右向左组合）</td>
+</tr>
+<tr>
+<td><strong>求值顺序（order of evaluation）</strong></td>
+<td>是某个运算符的运算对象的求值顺序。大多数情况下，编译器可以选择运算对象求值的顺序。不过运算对象一定要在运算符之前得到求值结果</td>
+</tr>
+<tr>
+<td><strong>一元运算符（unary operators）</strong></td>
+<td>只有一个运算对象参与运算的运算符</td>
+</tr>
+<tr>
+<td><strong>二元运算符（binary operator）</strong></td>
+<td>有两个运算对象参与运算的运算符</td>
+</tr>
+<tr>
+<td><strong>重载运算符（overloaded operator）</strong></td>
+<td>针对某种运算符重新定义的适用于类类型的版本</td>
+</tr>
+<tr>
+<td><strong>左值（lvalue）</strong></td>
+<td>是指那些求值结果为对象或函数的表达式。一个表示对象的非常量左值可以作为赋值运算符的左侧运算对象</td>
+</tr>
+<tr>
+<td><strong>右值（rvalue）</strong></td>
+<td>是指一种表达式，其结果是指而非值所在的位置</td>
+</tr>
+<tr>
+<td><strong>复合表达式（compound expression）</strong></td>
+<td>含有多于一个运算符的表达式</td>
+</tr>
+</tbody></table>
+<h1 id="2-运算符"><a href="#2-运算符" class="headerlink" title="2.运算符"></a>2.运算符</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>&amp;&amp;运算符（&amp;&amp;operator）</strong></td>
+<td>逻辑与运算符，如果两个运算对象都是真，结果才为真。只有当左侧运算对象为真时才会检查右侧对象</td>
+</tr>
+<tr>
+<td><strong>&#124;&#124;运算符（&#124;&#124; operator）</strong></td>
+<td>逻辑或运算符，任何一个运算对象是真，结果就为真。只有当左侧运算对象为假时才会检查右侧运算对象</td>
+</tr>
+<tr>
+<td><strong>!运算符（!operator）</strong></td>
+<td>逻辑非运算符，将它的运算对象的布尔值取反</td>
+</tr>
+<tr>
+<td><strong>短路求值（short-circuit evaluation）</strong></td>
+<td>是一个专有名词，描述逻辑与运算符和逻辑或运算符的执行过程。如果根据运算符的第一个运算对象就能确定整个表达式的结果，求值终止，此时第二个运算对象将不会被求值</td>
+</tr>
+<tr>
+<td><strong>++运算符（++operator）</strong></td>
+<td>递增运算符。包括两种形式：前置版本和后置版本</td>
+</tr>
+<tr>
+<td><strong>–运算符（–operator）</strong></td>
+<td>递减运算符。包括两种形式：前置版本和后置版本</td>
+</tr>
+<tr>
+<td><strong>?:运算符（?:operator）</strong></td>
+<td>条件运算符</td>
+</tr>
+<tr>
+<td><strong>&lt;&lt;运算符（&lt;&lt;operator）</strong></td>
+<td>左移运算符，将左侧运算对象的值的（可能是提升后的）副本向左移位，移动的位数由右侧运算对象确定</td>
+</tr>
+<tr>
+<td><strong>&gt;&gt;运算符（&gt;&gt;operator）</strong></td>
+<td>右移运算符，除了移动方向相反，其他性质都和左移运算符类似</td>
+</tr>
+<tr>
+<td><strong>&amp;运算符（&amp;operator）</strong></td>
+<td>位与运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位都是1，所得结果中该位为1；否则所得结果中该位为0</td>
+</tr>
+<tr>
+<td><strong>&#124;运算符（&#124; operator）</strong></td>
+<td>位或运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位至少有一个是1，所得结果中该位为1；否则所得结果中该位为0</td>
+</tr>
+<tr>
+<td><strong><del>运算符（</del>operator）</strong></td>
+<td>位求反运算符，生成一个新的整数值。该值的每一位恰好与（可能是提升后的）运算对象的对应位相反</td>
+</tr>
+<tr>
+<td><strong>sizeof</strong></td>
+<td>是一个运算符，返回存储对象所需的字节数，该对象的类型可能是某个给定的类型名字，也可鞥由表达式的返回结果确定</td>
+</tr>
+<tr>
+<td><strong>,运算符（,operator）</strong></td>
+<td>逗号运算符，是一种从左向右求值的二元运算符。逗号运算符的结果是右侧运算对象的值，当且仅当右侧运算对象是左值时逗号运算符的结果是左值</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;条件运算符</span><br><span class="line">cout &lt;&lt; ((grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;);   &#x2F;&#x2F;输出pass或者fail</span><br><span class="line">cout &lt;&lt; (grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;;     &#x2F;&#x2F;输出1或者0</span><br><span class="line">cout &lt;&lt; grade &lt; 60 ? &quot;fail&quot; : &quot;pass&quot;;       &#x2F;&#x2F;错误：试图比较cout和60，因为小于运算符的优先级低于移位运算符，所以先输出了grade再进行比较</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;sizeof运算符</span><br><span class="line">Sales_data data, *p;</span><br><span class="line">sizeof(Sales_data);         &#x2F;&#x2F;存储Sales_data类型的对象所占的空间大小</span><br><span class="line">sizeof data;                &#x2F;&#x2F;data的类型的大小，即sizeof(Sales_data)</span><br><span class="line">sizeof p;                   &#x2F;&#x2F;指针所占的空间大小</span><br><span class="line">sizeof *p;                  &#x2F;&#x2F;p所指类型的空间大小，即sizeof(Sales_data)</span><br><span class="line">sizeof data.revenue;        &#x2F;&#x2F;Sales_data的revenue成员对应类型的大小</span><br><span class="line">sizeof Sales_data::revenue; &#x2F;&#x2F;另一种获取revenue大小的方式</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-类型转换"><a href="#3-类型转换" class="headerlink" title="3.类型转换"></a>3.类型转换</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>转换（conversion）</strong></td>
+<td>一种类型的值改变成另一种类型的值的过程。C++语言定义了内置类型的转换规则。类类型同样可以转换</td>
+</tr>
+<tr>
+<td><strong>隐式转换（implicit conversion）</strong></td>
+<td>由编译器自动执行的类型转换。假如表达式需要某种特定的类型而运算对象是另外一种类型，此时只要规则允许，编译器就会自动地将运算对象转换成所需的类型</td>
+</tr>
+<tr>
+<td><strong>算术转换（arithmetic conversion）</strong></td>
+<td>从一种算术类型转换成另一种算术类型。在二元运算符的上下文中，为了保留精度，算术转换通常把较小的类型转换成较大的类型</td>
+</tr>
+<tr>
+<td><strong>整型提升（integral promotion）</strong></td>
+<td>把一种较小的整数类型转换成与之最接近的较大整数类型的过程。不论是否真的需要，小整数类型（即short、char等）总是会得到提升</td>
+</tr>
+<tr>
+<td><strong>强制类型转换（cast）</strong></td>
+<td>一种显式的类型转换</td>
+</tr>
+<tr>
+<td><strong>static_cast</strong></td>
+<td>显式地执行某种定义明确的类型转换，常用于替代由编译器隐式执行的类型转换</td>
+</tr>
+<tr>
+<td><strong>const_cast</strong></td>
+<td>一种涉及const的强制类型转换。将底层const对象转换成对应的非常量类型，或者执行相反的转换</td>
+</tr>
+<tr>
+<td><strong>reinterpret_cast</strong></td>
+<td>把运算对象的内容解释成另外一种类型。这种强制类型转换本质上依赖于机器而且非常危险</td>
+</tr>
+<tr>
+<td><strong>dynamic_cast</strong></td>
+<td>和继承及运行时类型识别一起使用</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;* 隐式转换 *&#x2F;</span><br><span class="line"></span><br><span class="line">int ival &#x3D; 3.541 + 3;   &#x2F;&#x2F;结果为6，编译器可能会警告该运算损失了精度</span><br><span class="line">int ia[10];     &#x2F;&#x2F;含有10个整数的数组</span><br><span class="line">int* ip &#x3D; ia;   &#x2F;&#x2F;ia转换成指向数组首元素的指针</span><br><span class="line">&#x2F;&#x2F;转换成布尔类型</span><br><span class="line">char *cp &#x3D; get_string();</span><br><span class="line">if(cp) &#x2F;*...*&#x2F;      &#x2F;&#x2F;如果指针cp不是0，条件为真</span><br><span class="line">while(*cp) &#x2F;*...*&#x2F;  &#x2F;&#x2F;如果*cp不是空字符，条件为真</span><br><span class="line">&#x2F;&#x2F;转换成常量</span><br><span class="line">int i;</span><br><span class="line">const int &amp;j &#x3D; i;   &#x2F;&#x2F;非常量转换成const int的引用</span><br><span class="line">const int *p &#x3D; &amp;i;  &#x2F;&#x2F;非常量的地址转换成const的地址</span><br><span class="line">int &amp;r &#x3D; j, *q &#x3D; p; &#x2F;&#x2F;错误：不允许const转换成非常量</span><br><span class="line">&#x2F;&#x2F;类类型转换</span><br><span class="line">string s;</span><br><span class="line">while(cin &gt;&gt; s)     &#x2F;&#x2F;while的条件部分把cin转换成布尔值</span><br><span class="line"></span><br><span class="line">&#x2F;* 显式转换 *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;static_cast</span><br><span class="line">double slope &#x3D; static_cast&lt;double&gt;(j) &#x2F; i;  &#x2F;&#x2F;进行强制类型转换以便执行浮点数除法</span><br><span class="line">void *p &#x3D; &amp;d;                               &#x2F;&#x2F;正确：任何非常量对象的地址都能存入void*</span><br><span class="line">double *dp &#x3D; static_cast&lt;double*&gt;(p);       &#x2F;&#x2F;正确：将void*转换回初始的指针类型</span><br><span class="line">&#x2F;&#x2F;const_cast</span><br><span class="line">const char *pc;</span><br><span class="line">char *p &#x3D; const_cast&lt;char*&gt;(pc);&#x2F;&#x2F;正确：但是通过p写值是未定义的行为</span><br><span class="line">const char *cp;</span><br><span class="line">char *q &#x3D; static_cast&lt;char*&gt;(cp);       &#x2F;&#x2F;错误：static_cast不能转换掉const性质</span><br><span class="line">static_cast&lt;string&gt;(cp);                &#x2F;&#x2F;正确：字符串字面值转换成string类型</span><br><span class="line">const_cast&lt;string&gt;(cp);                 &#x2F;&#x2F;错误：const_cast只改变常量属性</span><br><span class="line">&#x2F;&#x2F;reinterpret_cast</span><br><span class="line">int *ip;</span><br><span class="line">char *pc &#x3D; reinterpret_cast&lt;char*&gt;(ip);</span><br><span class="line">string str(pc);                         &#x2F;&#x2F;错误：可能导致异常的运行时行为，必须牢记pc所指的真实对象是一个int而非字符</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://oliverbvb.github.io/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A83-%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="ck8hgey200002zguwgtf8hshs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A84-%E8%AF%AD%E5%8F%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          C-Primer术语表4-语句
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A82-%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E5%90%91%E9%87%8F%E5%92%8C%E6%95%B0%E7%BB%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C-Primer术语表2-字符串、向量和数组</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A85-%E5%87%BD%E6%95%B0/">C-Primer术语表5-函数</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A84-%E8%AF%AD%E5%8F%A5/">C-Primer术语表4-语句</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A83-%E8%A1%A8%E8%BE%BE%E5%BC%8F/">C-Primer术语表3-表达式</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/01/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A82-%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E5%90%91%E9%87%8F%E5%92%8C%E6%95%B0%E7%BB%84/">C-Primer术语表2-字符串、向量和数组</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/31/C-Primer%E6%9C%AF%E8%AF%AD%E8%A1%A81-%E5%8F%98%E9%87%8F%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/">C-Primer术语表1-变量和基本类型</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Oliver<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
