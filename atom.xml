@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>GameOrLife</title>
+  
+  <subtitle>游戏还是生活，当然是全都要</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://oliverbvb.github.io/"/>
+  <updated>2020-04-04T16:30:44.532Z</updated>
+  <id>https://oliverbvb.github.io/</id>
+  
+  <author>
+    <name>Oliver</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深切哀悼为抗击疫情牺牲的同胞</title>
+    <link href="https://oliverbvb.github.io/shen-qie-ai-dao-wei-kang-ji-yi-qing-xi-sheng-de-tong-bao/"/>
+    <id>https://oliverbvb.github.io/shen-qie-ai-dao-wei-kang-ji-yi-qing-xi-sheng-de-tong-bao/</id>
+    <published>2020-04-03T16:15:20.000Z</published>
+    <updated>2020-04-04T16:30:44.532Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我仅代表自己和我的家人深深感恩在这场抗疫中逝去的医务工作者，志愿者以及一群又一群平凡的人，在危难中挺身而出，在重压下义无反顾。我们不会忘记，他们平凡而又伟大的人生，愿逝者安息！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;maxresdefault.jpg&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="https://oliverbvb.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C++ Primer术语表5-函数</title>
+    <link href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-5-han-shu/"/>
+    <id>https://oliverbvb.github.io/c-primer-zhu-yu-biao-5-han-shu/</id>
+    <published>2020-04-03T08:25:06.000Z</published>
+    <updated>2020-04-04T16:03:07.179Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;函数是一个命名了的代码库，我们通过调用函数执行相应的代码。&lt;/p&gt;
+&lt;h1 id=&quot;1-函数基础&quot;&gt;&lt;a href=&quot;#1-函数基础&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/categories/C/"/>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/tags/C/"/>
+    
+      <category term="术语表" scheme="https://oliverbvb.github.io/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ Primer术语表4-语句</title>
+    <link href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-4-yu-ju/"/>
+    <id>https://oliverbvb.github.io/c-primer-zhu-yu-biao-4-yu-ju/</id>
+    <published>2020-04-03T08:23:37.000Z</published>
+    <updated>2020-04-04T16:03:07.177Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;C++提供了条件执行语句、重复执行相同代码的循环语句和用于中断当前控制流的跳转语句。&lt;/p&gt;
+&lt;h1 id=&quot;1-简单语句&quot;&gt;&lt;a href=&quot;#1-简单语句&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/categories/C/"/>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/tags/C/"/>
+    
+      <category term="术语表" scheme="https://oliverbvb.github.io/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ Primer术语表6-类</title>
+    <link href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-6-lei/"/>
+    <id>https://oliverbvb.github.io/c-primer-zhu-yu-biao-6-lei/</id>
+    <published>2020-04-03T08:14:54.000Z</published>
+    <updated>2020-04-04T16:03:07.181Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;类的基本思想是数据抽象和封装。&lt;/p&gt;
+&lt;h1 id=&quot;1-定义抽象数据类型&quot;&gt;&lt;a href=&quot;#1-定义抽象数据类型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/categories/C/"/>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/tags/C/"/>
+    
+      <category term="术语表" scheme="https://oliverbvb.github.io/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ Primer术语表3-表达式</title>
+    <link href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/"/>
+    <id>https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/</id>
+    <published>2020-04-03T01:27:00.000Z</published>
+    <updated>2020-04-04T16:03:07.175Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。&lt;/p&gt;
+&lt;h1 id=&quot;1-基础&quot;&gt;&lt;a href=&quot;#1-基础&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/categories/C/"/>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/tags/C/"/>
+    
+      <category term="术语表" scheme="https://oliverbvb.github.io/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ Primer术语表2-字符串、向量和数组</title>
+    <link href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-2-zi-fu-chuan-xiang-liang-he-shu-zu/"/>
+    <id>https://oliverbvb.github.io/c-primer-zhu-yu-biao-2-zi-fu-chuan-xiang-liang-he-shu-zu/</id>
+    <published>2020-04-03T01:26:00.000Z</published>
+    <updated>2020-04-04T16:03:07.172Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;C++语言定义了一个内容丰富的抽象数据类型库。其中，string和vector是两种最重要的标准库类型。内置数组是一种更基础的类型，string和vector都是对它的某种抽象。&lt;/p&gt;
+&lt;h1 id=&quot;1-命名空间的using声明&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/categories/C/"/>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/tags/C/"/>
+    
+      <category term="术语表" scheme="https://oliverbvb.github.io/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ Primer术语表 1-变量和基本类型</title>
+    <link href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-1-bian-liang-he-ji-ben-lei-xing/"/>
+    <id>https://oliverbvb.github.io/c-primer-zhu-yu-biao-1-bian-liang-he-ji-ben-lei-xing/</id>
+    <published>2020-04-03T01:25:00.000Z</published>
+    <updated>2020-04-04T16:03:07.170Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;C++语言支持广泛的数据类型。它定义了几种基本内置类型（如字符、整型、浮点数等），同时也为程序员提供了自定义数据类型的机制。基于此，C++标准库定义了一些更加复杂的数据类型，比如可变长字符串和向量等。&lt;/p&gt;
+&lt;h1 id=&quot;1-基本内置类型&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/categories/C/"/>
+    
+    
+      <category term="C++" scheme="https://oliverbvb.github.io/tags/C/"/>
+    
+      <category term="术语表" scheme="https://oliverbvb.github.io/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/"/>
+    
+  </entry>
+  
+</feed>

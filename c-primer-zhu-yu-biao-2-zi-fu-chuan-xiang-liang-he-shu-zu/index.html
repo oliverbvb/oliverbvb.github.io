@@ -1,0 +1,1316 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="C++ Primer术语表2-字符串、向量和数组, 游戏，编程，生活">
+    <meta name="description" content="C++ 字符串、向量和数组的术语表。C++语言定义了一个内容丰富的抽象数据类型库。其中，string和vector是两种最重要的标准库类型。内置数组是一种更基础的类型，string和vector都是对它的某种抽象。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>C++ Primer术语表2-字符串、向量和数组 | GameOrLife</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="GameOrLife" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">GameOrLife</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">GameOrLife</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/oliverbvb" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/oliverbvb" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">C++ Primer术语表2-字符串、向量和数组</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
+                                <span class="chip bg-color">术语表</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/C/" class="post-category">
+                                C++
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-04-03
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-04-05
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    9 分
+                </div>
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>C++语言定义了一个内容丰富的抽象数据类型库。其中，string和vector是两种最重要的标准库类型。内置数组是一种更基础的类型，string和vector都是对它的某种抽象。</p>
+<h1 id="1-命名空间的using声明"><a href="#1-命名空间的using声明" class="headerlink" title="1.命名空间的using声明"></a>1.命名空间的using声明</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>using声明（using declaration）</strong></td>
+<td>令命名空间中的某个名字可被程序直接使用</td>
+</tr>
+</tbody></table>
+<pre><code>#include &lt;iostream&gt;
+//using声明，当我们使用名字cin时，从命名空间std中获取它
+using std::cin
+
+int main()
+{
+    int i;
+    cin &gt;&gt; i;           //正确
+    cout &lt;&lt; i;          //错误：没有对应的using声明，必须使用完整的名字
+    std::cout &lt;&lt; i;     //正确：显式地从std中使用cout
+    return 0;
+}</code></pre><h1 id="2-标准库类型string"><a href="#2-标准库类型string" class="headerlink" title="2.标准库类型string"></a>2.标准库类型string</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>容器（container）</strong></td>
+<td>是一种类型，其对象容纳了一组给定类型的对象。vector是一种容器类型</td>
+</tr>
+<tr>
+<td><strong>缓冲区溢出（buffer overflow）</strong></td>
+<td>一种严重的程序故障，主要的原因是视图通过一个越界的索引访问容器内容，容器类型包括string、vector和数组等</td>
+</tr>
+<tr>
+<td><strong>string</strong></td>
+<td>是一种标准库类型，表示字符的序列</td>
+</tr>
+<tr>
+<td><strong>拷贝初始化（copy initialization）</strong></td>
+<td>使用赋值号（=）的初始化形式。新创建的对象是初始值的一个副本</td>
+</tr>
+<tr>
+<td><strong>直接初始化（direct initialization）</strong></td>
+<td>不使用赋值号（=）的初始化形式</td>
+</tr>
+</tbody></table>
+<pre><code>string s1;                          //默认初始化，s1是一个空字符串
+string s2 = s1;                     //s2是s1的副本
+string s3 = &quot;hiya&quot;;                 //s3是该字符串字面值的副本
+string s4(10, &#39;c&#39;);                 //s4的内容是cccccccccc
+string s5 = &quot;hiya&quot;;                 //拷贝初始化
+string s6(&quot;hiya&quot;);                  //直接初始化
+string s7(10, &#39;c&#39;);                 //直接初始化，s7的内容是cccccccccc
+string s8 = string(10, &#39;c&#39;);        //拷贝初始化，s8的内容是cccccccccc</code></pre><pre><code>//字面值和string对象相加
+string s1 = &quot;hello&quot;, s2 = &quot;world&quot;;
+string s3 = s1 + &quot;, &quot; + s2  + &#39;\n&#39;;
+string s4 = s1 + &quot;, &quot;;              //正确：把一个string对象和一个字面值相加
+string s5 = &quot;hello&quot; + &quot;, &quot;;         //错误，两个运算对象都不是string
+string s6 = s1 + &quot;, &quot; + &quot;world&quot;;    //正确
+string s7 = &quot;hello&quot; + &quot;, &quot; + s2;    //错误：不能把字面值直接相加</code></pre><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>getline</strong></td>
+<td>在string头文件中定义的一个函数，以一个istream对象和一个string对象为输入参数。该函数首先读取输入流的内容直到遇到换行符停止，然后将读入的数据存入string对象，最后返回istream对象。其中换行符读入但是不保留</td>
+</tr>
+<tr>
+<td><strong>empty</strong></td>
+<td>是string和vector的成员，返回一个布尔值。当对象的大小为0时返回真，否则返回假</td>
+</tr>
+<tr>
+<td><strong>size</strong></td>
+<td>是string和vector的成员，分别返回字符的数量或元素的数量。返回值的类型是size_type</td>
+</tr>
+<tr>
+<td><strong>size_type</strong></td>
+<td>是string和vector定义的类型的名字，能存放下任意string对象或vector对象的大小。在标准库中，size_type被定义为无符号类型</td>
+</tr>
+<tr>
+<td><strong>&lt;&lt;运算符（&lt;&lt;operator）</strong></td>
+<td>标准库类型string定义的输出运算符，负责输出string对象中的字符</td>
+</tr>
+<tr>
+<td><strong>&gt;&gt;运算符（&gt;&gt;operator）</strong></td>
+<td>标准库类型string定义的输入运算符，负责读入一组字符，遇到空白停止，读入的内容赋给运算符右侧的运算对象</td>
+</tr>
+</tbody></table>
+<pre><code>int main()
+{
+    string line;
+    //每次读入一整行，直至到达文件末尾
+    while(getline(cin, line))
+        cout &lt;&lt; line &lt;&lt; endl;
+    return 0;
+}</code></pre><pre><code>//每次读入一整行，遇到空行直接跳过
+while(getline(cin, line))
+    if(!line.empty())
+        cout &lt;&lt; line &lt;&lt; endl;
+
+string line;
+//每次读入一整行，输出其中超过80个字符的行
+while(getline(cin, line))
+    if(line.size() &gt; 80)
+        cout &lt;&lt; line &lt;&lt; endl;</code></pre><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>范围for语句（range for）</strong></td>
+<td>一种控制语句，可以在值的一个特定集合内迭代</td>
+</tr>
+<tr>
+<td><strong>索引（index）</strong></td>
+<td>是下标运算符使用的值。表示要在string对象、vector对象或者数组中访问的一个位置</td>
+</tr>
+<tr>
+<td><strong>[]运算符 （[]operator）</strong></td>
+<td>下标运算符</td>
+</tr>
+</tbody></table>
+<pre><code>//范围for语句
+string s(&quot;Hellow World!!!&quot;);
+//转换成大写形式
+for(auto &amp;c : s)        //对于s中的每个字符（注意：c是引用）
+    c = toupper(c);     //c是一个引用，因此赋值语句将改变s中字符的值
+cout &lt;&lt; s &lt;&lt; endl;</code></pre><pre><code>//[]运算符
+//依次处理s中的字符直至我们处理完全部字符或者遇到一个空白
+for(decltype(s.size()) index = 0; index != s.size() &amp;&amp; !isspace(s[index]); ++index)
+    s[index] = toupper(s[index]);   //将当前字符改成大写形式</code></pre><h1 id="3-标准库类型vector"><a href="#3-标准库类型vector" class="headerlink" title="3.标准库类型vector"></a>3.标准库类型vector</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>vector</strong></td>
+<td>是一种标准库类型，容纳某指定类型的一组元素</td>
+</tr>
+<tr>
+<td><strong>类模板（class template）</strong></td>
+<td>用于创建具体类类型的模板。要想使用类模板，必须提供关于类型的辅助信息</td>
+</tr>
+<tr>
+<td><strong>实例化（instantiation）</strong></td>
+<td>编译器生成一个指定的模板类或函数的过程</td>
+</tr>
+<tr>
+<td><strong>push_back</strong></td>
+<td>是vector的成员，向vector对象的末尾添加元素</td>
+</tr>
+</tbody></table>
+<pre><code>vector&lt;int&gt; ivec;               //ivec保存int类型的对象
+vector&lt;Sales_item&gt; Sales_vec;   //保存Sales_item类型的对象
+vector&lt;vector&lt;string&gt;&gt; file;    //该向量的元素是vector对象
+
+//初始化
+vector&lt;string&gt; v1{&quot;a&quot;, &quot;an&quot;, &quot;the&quot;};    //列表初始化
+vector&lt;string&gt; v2(&quot;a&quot;, &quot;an&quot;, &quot;the&quot;);    //错误
+
+vector&lt;int&gt; ivec(10, -1);   //10个int类型的元素，每个元素都初始化为-1
+vector&lt;string&gt; svec(10, &quot;hi!&quot;); //10个string类型的元素，每个都被初始化为&quot;hi!&quot;
+
+vector&lt;int&gt; ivec(10);       //10个元素，每个都初始化为0
+vector&lt;string&gt; svec(10);    //10个元素，每个都是空string对象
+
+//从标准输入中读取单词，将其作为vector对象的元素存储
+string word;
+vector&lt;string&gt; text;        //空vector对象
+while(cin &gt;&gt; word){
+    text.push_back(word);   //把word添加到text后面
+}
+
+//不能用下标形式添加元素
+vector&lt;int&gt; ivec;   //空vector对象
+for(decltype(ivec.size()) ix = 0; ix != 10; ++ix)
+    ivec[ix] = ix;  //严重错误：ivec不包含任何元素
+
+for(decltype(ivec.size()) ix = 0; ix != 10; ++ix)
+    ivec.push_back(ix); //正确：添加一个新元素，该元素的值是ix</code></pre><h1 id="4-迭代器"><a href="#4-迭代器" class="headerlink" title="4.迭代器"></a>4.迭代器</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>迭代器（iterator）</strong></td>
+<td>是一种类型，用于访问容器中的元素或者在元素之间移动</td>
+</tr>
+<tr>
+<td><strong>迭代器运算（iterator arithmetic）</strong></td>
+<td>是string或vector的迭代器的运算</td>
+</tr>
+<tr>
+<td><strong>begin</strong></td>
+<td>是string和vector的成员，返回指向第一个元素的迭代器。也是一个标准库函数，输入一个数组，返回指向该数组首元素的指针</td>
+</tr>
+<tr>
+<td><strong>end</strong></td>
+<td>是string和vector的成员，返回一个尾后迭代器。也是一个标准库函数，输入一个数组，返回指向该数组尾元素的下一位置的指针</td>
+</tr>
+<tr>
+<td><strong>尾后迭代器（off-the-end iterator）</strong></td>
+<td>end函数返回的迭代器，指向一个并不存在的元素，该元素位于容器尾元素的下一位置</td>
+</tr>
+<tr>
+<td><strong>difference_type</strong></td>
+<td>由string和vector定义的一种带符号整数类型，表示两个迭代器之间的距离</td>
+</tr>
+<tr>
+<td><strong>++运算符（++operator）</strong></td>
+<td>是迭代器和指针定义的递增运算符</td>
+</tr>
+<tr>
+<td><strong>-&gt;运算符（-&gt;operator）</strong></td>
+<td>箭头运算符</td>
+</tr>
+</tbody></table>
+<pre><code>string s(&quot;some string&quot;);
+if(s.begin() != s.end()){   //确保s非空
+    auto it = s.begin();    //it表示s的第一个字符
+    *it = toupper(*it);     //将当前字符改成大写形式
+}
+
+vector&lt;int&gt;::iterator it;       //it能读写vector&lt;int&gt;的元素
+string::iterator it2;           //it2能读写string对象中的字符
+
+vector&lt;int&gt;::const_iterator it3;    //it3只能读元素，不能写字符
+string:const_iterator it4;          //it3只能读字符，不能写字符</code></pre><h1 id="5-数组"><a href="#5-数组" class="headerlink" title="5.数组"></a>5.数组</h1><table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>size_t</strong></td>
+<td>是cstddef头文件中定义的一种与机器实现有关的无符号整数类型，它的空间足够大，能够表示任意数组的大小</td>
+</tr>
+<tr>
+<td><strong>指针运算（pointer arithmetic）</strong></td>
+<td>是指针类型支持的算术运算中。指向数组的指针所支持的运算种类与迭代器运算一样</td>
+</tr>
+<tr>
+<td><strong>prtdiff_t</strong></td>
+<td>是cstddef头文件中定义的一种与机器实现有关的带符号整数类型，它的空间足够大，能够表示数组中任意两个指针之间的距离</td>
+</tr>
+<tr>
+<td><strong>C风格字符串（C-style string）</strong></td>
+<td>以空字符结束的字符数组。字符串字面值是C风格字符串，C风格字符串容易出错</td>
+</tr>
+<tr>
+<td><strong>以空字符结束的字符串（null-terminated string）</strong></td>
+<td>是一个字符串，它的最后一个字符后面还跟着一个空字符（’\0’）</td>
+</tr>
+</tbody></table>
+<pre><code>//指针和数组
+string nums[] = {&quot;one&quot;, &quot;two&quot;, &quot;three&quot;};    //数组的元素是string对象
+string *p = &amp;nums[0];                       //p指向nums的第一个元素
+string *p2 = nums;  //等价于p2 = &amp;nums[0]
+int ia[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+int *beg = begin(ia);       //指向ia首元素的指针
+int *last = end(ia);        //指向arr尾元素的下一位置的指针
+ptrdiff_t n = end(ia) - begin(ia);     //n的类型是ptrdiff_t，值是10，也就是ia中元素的数量
+
+//C风格字符串
+char ca[] = {&#39;C&#39;, &#39;+&#39;, &#39;+&#39;};        //不以空字符结束
+cout &lt;&lt; strlen(ca) &lt;&lt; endl;         //严重错误：ca没有以空字符结束
+
+//比较两个C风格字符串
+const char ca1[] = &quot;A string example&quot;;
+const char ca2[] = &quot;A different string&quot;;
+if(ca1 &lt; ca2)           //未定义的：视图比较两个无关地址
+if(strcmp(ca1, ca2) &lt; 0)    //正确
+
+//混用string对象和C风格字符串
+string s = ca1;
+char *str = s;      //错误：不能用string对象初始化char*
+const char *str = s.c_str();    //正确</code></pre>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://oliverbvb.github.io" rel="external nofollow noreferrer">Oliver</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-2-zi-fu-chuan-xiang-liang-he-shu-zu/">https://oliverbvb.github.io/c-primer-zhu-yu-biao-2-zi-fu-chuan-xiang-liang-he-shu-zu/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://oliverbvb.github.io" target="_blank">Oliver</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
+                                    <span class="chip bg-color">术语表</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/c-primer-zhu-yu-biao-3-biao-da-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="C++ Primer术语表3-表达式">
+                        
+                        <span class="card-title">C++ Primer术语表3-表达式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            C++ 表达式的术语表。表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category">
+                                    C++
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
+                        <span class="chip bg-color">术语表</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/c-primer-zhu-yu-biao-1-bian-liang-he-ji-ben-lei-xing/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="C++ Primer术语表 1-变量和基本类型">
+                        
+                        <span class="card-title">C++ Primer术语表 1-变量和基本类型</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            C++ 变量和基本类型的术语表。C++语言支持广泛的数据类型。它定义了几种基本内置类型（如字符、整型、浮点数等），同时也为程序员提供了自定义数据类型的机制。基于此，C++标准库定义了一些更加复杂的数据类型，比如可变长字符串和向量等。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category">
+                                    C++
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
+                        <span class="chip bg-color">术语表</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="sitetime"></span>
+            <span id="year">2020</span>
+            <a href="https://oliverbvb.github.io" target="_blank">Oliver</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">16.1k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/oliverbvb" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:tanghaidong1995@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1277509304" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1277509304" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " +diffYears+" 年 "+diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>
