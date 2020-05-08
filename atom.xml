@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://oliverbvb.github.io/"/>
-  <updated>2020-04-04T16:30:44.532Z</updated>
+  <updated>2020-05-08T13:43:54.075Z</updated>
   <id>https://oliverbvb.github.io/</id>
   
   <author>
@@ -15,6 +15,310 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>游戏编程算法和技巧·网络游戏</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-wang-luo-you-xi/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-wang-luo-you-xi/</id>
+    <published>2020-05-08T13:43:33.000Z</published>
+    <updated>2020-05-08T13:43:54.075Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、协议&quot;&gt;&lt;a href=&quot;#一、协议&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·脚本语言和数据格式</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-jiao-ben-yu-yan-he-shu-ju-ge-shi/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-jiao-ben-yu-yan-he-shu-ju-ge-shi/</id>
+    <published>2020-05-08T13:42:44.000Z</published>
+    <updated>2020-05-08T13:43:15.766Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;一、脚本语言&quot;&gt;&lt;a href=&quot;#一、脚本语言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·用户界面</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-yong-hu-jie-mian/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-yong-hu-jie-mian/</id>
+    <published>2020-05-08T13:41:55.000Z</published>
+    <updated>2020-05-08T13:42:15.065Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一个游戏的用户界面通常有两个主要部分:一个是菜单系统，一个是平视显示器(HUD)。菜单系统决定玩家如何进入和退出游戏，包括改变模式、暂停游戏、选择选项等。一些游戏(特别是RPG)都会有菜单系统来展示和升级技能。&lt;/p&gt;
+&lt;p&gt;HUD包括了展示玩家游戏中额外信息的元素。通常包
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·人工智能</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-ren-gong-zhi-neng/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-ren-gong-zhi-neng/</id>
+    <published>2020-05-08T13:41:00.000Z</published>
+    <updated>2020-05-08T13:41:30.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本章将谈到人工智能在游戏应用中的3个方面:寻路、基于状态的行为机制、策略/计划。寻路算法可以判定非玩家角色(NPC)如何在游戏世界中移动。基于状态的行为驱动做出相应的行为。最后，策略/计划在大型AI计划的时候是必要的需求，比如实时战略(RTS)游戏。&lt;/p&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·摄像机</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-she-xiang-ji/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-she-xiang-ji/</id>
+    <published>2020-05-08T13:40:07.000Z</published>
+    <updated>2020-05-08T13:40:39.678Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;摄像机赋予了玩家在3D世界中的视角。在游戏中会用到很多种类型的摄像机，而选择摄像机又是游戏开发初期的基本设计决策&lt;/p&gt;
+&lt;h1 id=&quot;一、摄像机的类型&quot;&gt;&lt;a href=&quot;#一、摄像机的类型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·物理</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-wu-li/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-wu-li/</id>
+    <published>2020-05-08T13:39:11.000Z</published>
+    <updated>2020-05-08T13:39:53.558Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;物理都会实现碰撞和运动，但不是所有游戏都需要物理。碰撞检测用于检测两个游戏对象是否相互交错在一起。有大量的算法可以检测碰撞。&lt;/p&gt;
+&lt;p&gt;物理学中的运动部分会考虑作用力、加速度、质量等，以及其他经典力学中用到的属性，用于判断物体每帧的取向。为了做到这样，必须用到微积分，主
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·声音</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-sheng-yin/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-sheng-yin/</id>
+    <published>2020-05-08T13:38:27.000Z</published>
+    <updated>2020-05-08T13:38:54.695Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本章首先讲如何将原始数据转换成代码控制的音效。然后讨论更高级的声音技术，比如多普勒效应、数字信号处理和音效遮挡，它们都会在很多情况下用到。&lt;/p&gt;
+&lt;h1 id=&quot;一、基本声音&quot;&gt;&lt;a href=&quot;#一、基本声音&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·游戏输入</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-shu-ru/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-shu-ru/</id>
+    <published>2020-05-08T13:37:45.000Z</published>
+    <updated>2020-05-08T13:38:12.098Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;没有输入，游戏就成为了一种静止的娱乐形式，就像电影和电视那样。当游戏响应键盘、鼠标、手柄等输入设备的时候，游戏才能够互动。&lt;/p&gt;
+&lt;h1 id=&quot;一、输入设备&quot;&gt;&lt;a href=&quot;#一、输入设备&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·3D图形</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-3d-tu-xing/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-3d-tu-xing/</id>
+    <published>2020-05-08T13:36:56.000Z</published>
+    <updated>2020-05-08T13:37:30.868Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;3D游戏显示技术的挑战主要是，怎么将3D的游戏世界显示在2D的显示器上。&lt;/p&gt;
+&lt;h1 id=&quot;一、基础&quot;&gt;&lt;a href=&quot;#一、基础&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·2D图形</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-2d-tu-xing/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-2d-tu-xing/</id>
+    <published>2020-05-08T13:35:04.000Z</published>
+    <updated>2020-05-08T13:36:30.365Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;2D图形&quot;&gt;&lt;a href=&quot;#2D图形&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏编程算法和技巧·游戏编程概述</title>
+    <link href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-bian-cheng-gai-shu/"/>
+    <id>https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-bian-cheng-gai-shu/</id>
+    <published>2020-05-08T13:30:02.000Z</published>
+    <updated>2020-05-08T13:33:25.730Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;游戏编程概述&quot;&gt;&lt;a href=&quot;#游戏编程概述&quot; class=&quot;headerlink&quot; title=&quot;游戏编程概述&quot;&gt;&lt;/a&gt;游戏编程概述&lt;/h1&gt;&lt;h2 id=&quot;一、游戏编程的发展&quot;&gt;&lt;a href=&quot;#一、游戏编程的发展&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="游戏编程" scheme="https://oliverbvb.github.io/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>深切哀悼为抗击疫情牺牲的同胞</title>

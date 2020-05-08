@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C++ Primer术语表3-表达式, 游戏，编程，生活">
-    <meta name="description" content="C++ 表达式的术语表。表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。">
+    <meta name="keywords" content="游戏编程算法和技巧·游戏编程概述, 游戏，编程，生活">
+    <meta name="description" content="游戏编程概述一、游戏编程的发展世界上第一款商业游戏Computer Space在1971年推出，是后来Atari的创办人Nolan Bushnell和Ted Dabney开发的。这款游戏当时并不是运行在传统计算机上的。它的硬件甚至没有处理器">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>C++ Primer术语表3-表达式 | GameOrLife</title>
+    <title>游戏编程算法和技巧·游戏编程概述 | GameOrLife</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,12 +304,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C++ Primer术语表3-表达式</h1>
+                    <h1 class="description center-align post-title">游戏编程算法和技巧·游戏编程概述</h1>
                 </div>
             </div>
         </div>
@@ -426,12 +426,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                                <span class="chip bg-color">术语表</span>
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">游戏编程</span>
                             </a>
                         
                     </div>
@@ -442,8 +438,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C/" class="post-category">
-                                C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                游戏编程
                             </a>
                         
                     </div>
@@ -455,28 +451,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-03
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-05
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    4.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    16 分
                 </div>
                 
 				
@@ -492,222 +488,191 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。</p>
-<h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>表达式（expression）</strong></td>
-<td>C++程序中最低级别的计算。表达式将运算符作用于一个或多个运算对象，每个表达式都有对应的求值结果。表达式本身也可以作为运算对象，这时就得到了对多个运算符求值的复合表达式</td>
-</tr>
-<tr>
-<td><strong>运算对象（operand）</strong></td>
-<td>表达式在某些值上执行运算，这些值就是运算对象。一个运算符有一个或多个相关的运算对象</td>
-</tr>
-<tr>
-<td><strong>运算符（operator）</strong></td>
-<td>决定表达式所做操作的符号。C++语言定义了一套运算符并说明了这些运算符作用于内置类型时的含义</td>
-</tr>
-<tr>
-<td><strong>结果（result）</strong></td>
-<td>计算表达式得到的值或对象</td>
-</tr>
-<tr>
-<td><strong><a href="https://zh.cppreference.com/w/cpp/language/operator_precedence" target="_blank" rel="noopener">优先级（precedence）</a></strong></td>
-<td>规定了复合表达式中不同运算符的执行顺序。与低优先级的运算符相比，高优先级的运算符组合得更紧密</td>
-</tr>
-<tr>
-<td><strong>结合律（associativity）</strong></td>
-<td>规定具有相同优先级的运算符如何组合在一起。结合律分为左结合律（运算符从左向右组合）和右结合律（运算符从右向左组合）</td>
-</tr>
-<tr>
-<td><strong>求值顺序（order of evaluation）</strong></td>
-<td>是某个运算符的运算对象的求值顺序。大多数情况下，编译器可以选择运算对象求值的顺序。不过运算对象一定要在运算符之前得到求值结果</td>
-</tr>
-<tr>
-<td><strong>一元运算符（unary operators）</strong></td>
-<td>只有一个运算对象参与运算的运算符</td>
-</tr>
-<tr>
-<td><strong>二元运算符（binary operator）</strong></td>
-<td>有两个运算对象参与运算的运算符</td>
-</tr>
-<tr>
-<td><strong>重载运算符（overloaded operator）</strong></td>
-<td>针对某种运算符重新定义的适用于类类型的版本</td>
-</tr>
-<tr>
-<td><strong>左值（lvalue）</strong></td>
-<td>是指那些求值结果为对象或函数的表达式。一个表示对象的非常量左值可以作为赋值运算符的左侧运算对象</td>
-</tr>
-<tr>
-<td><strong>右值（rvalue）</strong></td>
-<td>是指一种表达式，其结果是指而非值所在的位置</td>
-</tr>
-<tr>
-<td><strong>复合表达式（compound expression）</strong></td>
-<td>含有多于一个运算符的表达式</td>
-</tr>
-</tbody></table>
-<h1 id="2-运算符"><a href="#2-运算符" class="headerlink" title="2.运算符"></a>2.运算符</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>&amp;&amp;运算符（&amp;&amp;operator）</strong></td>
-<td>逻辑与运算符，如果两个运算对象都是真，结果才为真。只有当左侧运算对象为真时才会检查右侧对象</td>
-</tr>
-<tr>
-<td><strong>&#124;&#124;运算符（&#124;&#124; operator）</strong></td>
-<td>逻辑或运算符，任何一个运算对象是真，结果就为真。只有当左侧运算对象为假时才会检查右侧运算对象</td>
-</tr>
-<tr>
-<td><strong>!运算符（!operator）</strong></td>
-<td>逻辑非运算符，将它的运算对象的布尔值取反</td>
-</tr>
-<tr>
-<td><strong>短路求值（short-circuit evaluation）</strong></td>
-<td>是一个专有名词，描述逻辑与运算符和逻辑或运算符的执行过程。如果根据运算符的第一个运算对象就能确定整个表达式的结果，求值终止，此时第二个运算对象将不会被求值</td>
-</tr>
-<tr>
-<td><strong>++运算符（++operator）</strong></td>
-<td>递增运算符。包括两种形式：前置版本和后置版本</td>
-</tr>
-<tr>
-<td><strong>–运算符（–operator）</strong></td>
-<td>递减运算符。包括两种形式：前置版本和后置版本</td>
-</tr>
-<tr>
-<td><strong>?:运算符（?:operator）</strong></td>
-<td>条件运算符</td>
-</tr>
-<tr>
-<td><strong>&lt;&lt;运算符（&lt;&lt;operator）</strong></td>
-<td>左移运算符，将左侧运算对象的值的（可能是提升后的）副本向左移位，移动的位数由右侧运算对象确定</td>
-</tr>
-<tr>
-<td><strong>&gt;&gt;运算符（&gt;&gt;operator）</strong></td>
-<td>右移运算符，除了移动方向相反，其他性质都和左移运算符类似</td>
-</tr>
-<tr>
-<td><strong>&amp;运算符（&amp;operator）</strong></td>
-<td>位与运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位都是1，所得结果中该位为1；否则所得结果中该位为0</td>
-</tr>
-<tr>
-<td><strong>&#124;运算符（&#124; operator）</strong></td>
-<td>位或运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位至少有一个是1，所得结果中该位为1；否则所得结果中该位为0</td>
-</tr>
-<tr>
-<td><strong><del>运算符（</del>operator）</strong></td>
-<td>位求反运算符，生成一个新的整数值。该值的每一位恰好与（可能是提升后的）运算对象的对应位相反</td>
-</tr>
-<tr>
-<td><strong>sizeof</strong></td>
-<td>是一个运算符，返回存储对象所需的字节数，该对象的类型可能是某个给定的类型名字，也可鞥由表达式的返回结果确定</td>
-</tr>
-<tr>
-<td><strong>,运算符（,operator）</strong></td>
-<td>逗号运算符，是一种从左向右求值的二元运算符。逗号运算符的结果是右侧运算对象的值，当且仅当右侧运算对象是左值时逗号运算符的结果是左值</td>
-</tr>
-</tbody></table>
-<pre><code>//条件运算符
-cout &lt;&lt; ((grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;);   //输出pass或者fail
-cout &lt;&lt; (grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;;     //输出1或者0
-cout &lt;&lt; grade &lt; 60 ? &quot;fail&quot; : &quot;pass&quot;;       //错误：试图比较cout和60，因为小于运算符的优先级低于移位运算符，所以先输出了grade再进行比较
+                <h1 id="游戏编程概述"><a href="#游戏编程概述" class="headerlink" title="游戏编程概述"></a>游戏编程概述</h1><h2 id="一、游戏编程的发展"><a href="#一、游戏编程的发展" class="headerlink" title="一、游戏编程的发展"></a>一、游戏编程的发展</h2><p>世界上第一款商业游戏Computer Space在1971年推出，是后来Atari的创办人Nolan Bushnell和Ted Dabney开发的。这款游戏当时并不是运行在传统计算机上的。它的硬件甚至没有处理器和内存。它只是一个简单的状态机，在多个状态中转换。Computer Space的所有逻辑必须在硬件上完成。</p>
+<p>随着“Atari 2600”在1977年推出，开发者们有了一个开发游戏的平台。这正是游戏开发变得更加软件化的时候，再也不用涉及复杂的硬件了。虽然这一节的焦点在于家用机开发，但是在PC机上也仍然适用。在PC机上不同之处在于，PC技术通常都会领先家用机几年。这是因为家用机推出的时候，它的硬件就会被锁定5年多，称为一个“世代”，而PC机则是以惊人的速度发展着。可是家用机的优点也在于其锁定了硬件，使得程序员可以有效利用机能。这就是为什么新时代的The Last of Us与PC机上的游戏相比仍然有着惊人的画质表现。</p>
+<p>不管如何，家用机自Atari在1977年推出Atari 2600之后并没有大的变化。在此之前，已经有好几种家用游戏系统，但是这些系统都是很受限的。它们的游戏都是只能预装的，而且这些游戏只能在特定平台下玩。在游戏基于卡带后，游戏市场才开始真正地打开。</p>
+<h3 id="Atari时期-1977-1985年"><a href="#Atari时期-1977-1985年" class="headerlink" title="Atari时期(1977-1985年)"></a>Atari时期(1977-1985年)</h3><p>虽然Atari 2600不是第一个通用的游戏系统，但只有它成功了。大多数Atari游戏开发周期短，也基本只靠一个人完成。</p>
+<p>这个时期的程序员需要对底层硬件有一定的理解。CPU运行在1.1MHz，内存也只有128字节。因此大多数游戏都是完全用汇编语言开发的。更糟糕的是，调试是完全看个人能力的。没有任何开发工具和SDK(开发代码库)。</p>
+<p>虽然有着这些技术限制，Atari仍然很成功。其中一个作品Pitfall，卖出了400万份。这款由David Crane在1982年设计的游戏，是Atari早期的游戏之一，以人类奔跑动画为特色。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/08/Ufe37nVXKQvhPol.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 @《Pitfall》</div>
+</center>
 
-//sizeof运算符
-Sales_data data, *p;
-sizeof(Sales_data);         //存储Sales_data类型的对象所占的空间大小
-sizeof data;                //data的类型的大小，即sizeof(Sales_data)
-sizeof p;                   //指针所占的空间大小
-sizeof *p;                  //p所指类型的空间大小，即sizeof(Sales_data)
-sizeof data.revenue;        //Sales_data的revenue成员对应类型的大小
-sizeof Sales_data::revenue; //另一种获取revenue大小的方式</code></pre><h1 id="3-类型转换"><a href="#3-类型转换" class="headerlink" title="3.类型转换"></a>3.类型转换</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>转换（conversion）</strong></td>
-<td>一种类型的值改变成另一种类型的值的过程。C++语言定义了内置类型的转换规则。类类型同样可以转换</td>
-</tr>
-<tr>
-<td><strong>隐式转换（implicit conversion）</strong></td>
-<td>由编译器自动执行的类型转换。假如表达式需要某种特定的类型而运算对象是另外一种类型，此时只要规则允许，编译器就会自动地将运算对象转换成所需的类型</td>
-</tr>
-<tr>
-<td><strong>算术转换（arithmetic conversion）</strong></td>
-<td>从一种算术类型转换成另一种算术类型。在二元运算符的上下文中，为了保留精度，算术转换通常把较小的类型转换成较大的类型</td>
-</tr>
-<tr>
-<td><strong>整型提升（integral promotion）</strong></td>
-<td>把一种较小的整数类型转换成与之最接近的较大整数类型的过程。不论是否真的需要，小整数类型（即short、char等）总是会得到提升</td>
-</tr>
-<tr>
-<td><strong>强制类型转换（cast）</strong></td>
-<td>一种显式的类型转换</td>
-</tr>
-<tr>
-<td><strong>static_cast</strong></td>
-<td>显式地执行某种定义明确的类型转换，常用于替代由编译器隐式执行的类型转换</td>
-</tr>
-<tr>
-<td><strong>const_cast</strong></td>
-<td>一种涉及const的强制类型转换。将底层const对象转换成对应的非常量类型，或者执行相反的转换</td>
-</tr>
-<tr>
-<td><strong>reinterpret_cast</strong></td>
-<td>把运算对象的内容解释成另外一种类型。这种强制类型转换本质上依赖于机器而且非常危险</td>
-</tr>
-<tr>
-<td><strong>dynamic_cast</strong></td>
-<td>和继承及运行时类型识别一起使用</td>
-</tr>
-</tbody></table>
-<pre><code>/* 隐式转换 */
+<h3 id="NES和SNES时期-1985-1995年"><a href="#NES和SNES时期-1985-1995年" class="headerlink" title="NES和SNES时期(1985-1995年)"></a>NES和SNES时期(1985-1995年)</h3><p>然而到了1983年，北美游戏市场崩溃了。主要原因在于，市场上充斥着大量质量低下的游戏。比如Atari版的Pac-Man及名声不佳的E.T.。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/08/BCr4Kn6AcpXkQtY.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 著名的E.T.</div>
+</center>
 
-int ival = 3.541 + 3;   //结果为6，编译器可能会警告该运算损失了精度
-int ia[10];     //含有10个整数的数组
-int* ip = ia;   //ia转换成指向数组首元素的指针
-//转换成布尔类型
-char *cp = get_string();
-if(cp) /*...*/      //如果指针cp不是0，条件为真
-while(*cp) /*...*/  //如果*cp不是空字符，条件为真
-//转换成常量
-int i;
-const int &amp;j = i;   //非常量转换成const int的引用
-const int *p = &amp;i;  //非常量的地址转换成const的地址
-int &amp;r = j, *q = p; //错误：不允许const转换成非常量
-//类类型转换
-string s;
-while(cin &gt;&gt; s)     //while的条件部分把cin转换成布尔值
+<p>直到1985年推出的红白机(NES)才把产业带回正轨。NES比Atari强大得多，这需要更多的“人时”去开发游戏。很多NES时期的游戏都需要不少程序员去开发。比如初代《塞尔达传说》需要3位著名程序员去开发。</p>
+<p>到了超级任天堂(SNES)时代，开发人员进一步扩大，程序员会分工专门为某个游戏的某个功能进行深度开发。</p>
+<p>NES和SNES的游戏仍然完全用汇编语言开发，因为内存依然不足。幸运的是任天堂有提供SDK(开发代码库)和开发工具，开发者不再像Atari时期那么痛苦。</p>
+<h3 id="PS和PS2时期-1995-2005年"><a href="#PS和PS2时期-1995-2005年" class="headerlink" title="PS和PS2时期(1995-2005年)"></a>PS和PS2时期(1995-2005年)</h3><p>在20世纪90年代中期推出的PS和N64终于可以用高级语言去开发游戏了。两大平台的游戏开发语言以C语言为主，但仍然有一些性能敏感的功能得用汇编语言完成。</p>
+<p>由于高级语言带来了生产力提升，开发团队规模的增长在这个时期有所减缓。</p>
+<h3 id="Xbox360、PS3和Wii时期-2005-2013年"><a href="#Xbox360、PS3和Wii时期-2005-2013年" class="headerlink" title="Xbox360、PS3和Wii时期(2005-2013年)"></a>Xbox360、PS3和Wii时期(2005-2013年)</h3><p>家用机的高画质表现导致游戏开发进入了两种境地。AAA游戏变得更加庞大，也有着相应庞大的团队和费用。而独立游戏则跟过去的小团队开发规模相仿。</p>
+<p>对于AAA游戏，开发团队的规模增长让人震惊。《刺客信条：启示录》(Assassin’s Creed: Revelations)参与开发的程序员总人数达75人。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/08/pQ5enXiCIubFmKY.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 @《刺客信条：启示录》</div>
+</center>
 
-/* 显式转换 */
+<p>对于独立游戏开发者来说，数字分发平台拯救了他们。随着XBLA、PSN、Steam及App store等平台的出现，使得游戏不再需要走传统发布渠道。独立游戏的规模也远比AAA游戏要小。</p>
+<p>游戏编程的另一个大的开发趋势就是<strong>中间件</strong>及开源的出现。有的中间件是完整的游戏引擎，比如Unreal、Unity。有的则是专门地做某个系统，比如物理引擎Havok Physics。这样就节省了大量的人力、财力。但是缺点就是某个策划功能可能会受到中间件的限制。</p>
+<h3 id="游戏的未来"><a href="#游戏的未来" class="headerlink" title="游戏的未来"></a>游戏的未来</h3><p>脱离移动和Web平台去讨论游戏的未来，是不完整的，因为它们的重要性越来越明显。移动设备的性能提升得飞快，这就导致了越来越多的3D游戏在移动平台开发。</p>
+<p>但这不是说传统的家用机平台就没有进展了。索尼以及微软也早已开始了新一代主机项目，任天堂的switch也已经推出。AAA游戏仍然会扩展它们的团队，团队成员会更加专业。游戏产业的未来真是让人激动和期待。</p>
+<p>尽管游戏开发多年来有许多变迁，有趣的是，许多早期概念到现在仍然使用。</p>
+<h2 id="二、游戏循环"><a href="#二、游戏循环" class="headerlink" title="二、游戏循环"></a>二、游戏循环</h2><p>整个游戏程序的核心流程控制称为<strong>游戏循环</strong>。之所以是一个循环，是因为游戏总是不断地执行一系列动作直到玩家退出。每迭代一次游戏循环为1<strong>帧</strong>。大部分实时游戏每秒钟更新30-60帧。如果一个游戏跑60FPS（<strong>帧/秒</strong>），那么这个游戏循环每秒要执行60次。</p>
+<p>游戏开发中有着各种各样的游戏循环，选择上需要考虑许多因素，其中以硬件因素为主。</p>
+<h3 id="传统的游戏循环"><a href="#传统的游戏循环" class="headerlink" title="传统的游戏循环"></a>传统的游戏循环</h3><p>一个传统的游戏循环可以分成3部分：处理输入、更新游戏世界、生成输出。一个基本的游戏循环可能是这样的:</p>
+<pre><code>while game is running
+    process inputs
+    update game world
+    generate outputs
+loop</code></pre><p>比起字面含义，每一个阶段都会有更深层次的含义。例如<strong>process inputs</strong>会检查各种输入设备，比如键盘、鼠标、手柄。但是这些输入设备并不只输入已经想到的，任何外部的输入在这一阶段都要处理完成。</p>
+<p>比如，多人在线游戏，一个重要的输入就是网络数据，因为游戏状态会直接被这些信息所影响。又比如支持重新播放的游戏，当要重新看之前玩的录像时，就会将录像数据输入。还有一些游戏，输入可能是摄像机、GPS等。所以会有很多中可能的输入数据，取决于游戏的特殊性及所用到的硬件。</p>
+<p><strong>update game world</strong>会执行所有激活并且需要更新的对象。这可能会有成千上万个游戏对象。</p>
+<p>对于<strong>generate outputs</strong>，最耗费计算量的输出通常就是将图形渲染成2D或3D。另外还有其他一些输出，比如音频，涵盖了音效、背景音乐、对话，跟图形输出同样重要。还有，家用机手柄通常会有振动效果，随着游戏进程振动，它也是一个需要输出的效果，也叫作<strong>力回馈</strong>。对于多人游戏，游戏中需要输出数据给其他玩家。</p>
+<h3 id="多线程下的游戏循环"><a href="#多线程下的游戏循环" class="headerlink" title="多线程下的游戏循环"></a>多线程下的游戏循环</h3><p>虽然很多移动和独立游戏仍然使用传统的游戏循环，但是大部分AAA家用机和PC机游戏都已经不用了，因为现在CPU都有多个核。这意味着CPU可以在物理上同时执行多指令或者多<strong>线程</strong>。</p>
+<p>图形渲染对于AAA级别游戏来说是非常耗时的。在渲染管线的过程中有多个步骤，而且还有大量的数据需要处理。假设对于某个游戏来说，渲染整个场景需要30毫秒，它还需要额外的20毫秒去更新游戏世界。如果这些都在同一个线程执行，每帧将耗时50毫秒，最终导致低帧率——20FPS。但如果渲染和更新逻辑同步执行，每帧只要30ms，30FPS的目标就可以完成。</p>
+<p>为了完成以上想法，主线程必须处理所有输入、更新游戏世界、处理所有图形以外的输出。它必须提交相关数据给第二条线程，那么第二条线程就可以渲染所有图像。</p>
+<p>但是，当渲染线程绘制的时候，主线程该干什么？我们不想它简单地等着渲染结束，因为这样比单线程还慢。解决的办法是让渲染线程比主线程慢1帧。这个方法的缺点就是会增加<strong>输入延迟</strong>，玩家的输入要更久才能在画面上有所反馈。假设跳跃键在第2帧就按下。在多线程游戏循环下，输入直到第3帧才开始处理。图形要到第4帧结束才能看到。</p>
+<h2 id="三、时间和游戏"><a href="#三、时间和游戏" class="headerlink" title="三、时间和游戏"></a>三、时间和游戏</h2><p>大多数游戏都有关于时间进展(progression of time)的概念。对于实时游戏，时间进展通常都很快。比如30FPS(Frame Per Second)的游戏，每帧大约用时33ms。即使是回合制游戏也是通过时间进展来完成功能的，只不过它们使用回合来计数。</p>
+<h3 id="真实时间和游戏时间"><a href="#真实时间和游戏时间" class="headerlink" title="真实时间和游戏时间"></a>真实时间和游戏时间</h3><p><strong>真实时间</strong>，就是从真实世界流逝的时间；<strong>游戏时间</strong>，就是从游戏世界流逝的时间。区分它们很重要，虽然通常都是1:1，但不总是这样。</p>
+<h3 id="通过处理时间增量来表示游戏逻辑"><a href="#通过处理时间增量来表示游戏逻辑" class="headerlink" title="通过处理时间增量来表示游戏逻辑"></a>通过处理时间增量来表示游戏逻辑</h3><p>早期的游戏经常以特定处理器速度来处理逻辑。例如，处理敌人位置的代码可能如下:</p>
+<pre><code>// 更新x位置5个像素
+enemy.position.x += 5</code></pre><p>在这种情况下，敌人一定伪代码每秒执行30次(30FPS)，敌人在1秒就移动150个像素。可是在60FPS的帧率下，敌人在同样的1秒会移动300个像素。为了解决这样的问题，需要引入<strong>增量时间</strong>的概念：从上一帧起流逝的时间。</p>
+<p>为了应用增量时间，先前的伪代码中的移动不能再使用每帧移动的像素来表示，而是应该使用每秒移动的像素。如果理想的移动速度是每秒150像素，那么代码可以改成这样:</p>
+<pre><code>// 更新x位置150像素/每秒
+enemy.position.x += 150 * deltaTime</code></pre><p>现在代码不管帧率如何都能正常工作。在30FPS的帧率下，敌人会每帧移动5个像素，总共每秒150个像素。在60FPS的帧率下，敌人每秒只会移动2.5个像素，但总共还是每秒150个像素。虽然在60FPS下的移动更加平滑，但是总体上每秒的移动速度是一致的。</p>
+<p>如何计算每帧的增量时间呢?首先，上一帧所流逝的真实时间是可以得到的。一旦得到流逝的真实时间，我们就可以算出游戏时间。取决于游戏的状态，有可能与真实时间一致也有可能被乘上一个因子。</p>
+<p>改进后的游戏循环如下。</p>
+<pre><code>while game is running
+    realDeltaTime = time since last frame
+    gameDeltaTime = realDeltaTime * gameTimeFactor
 
-//static_cast
-double slope = static_cast&lt;double&gt;(j) / i;  //进行强制类型转换以便执行浮点数除法
-void *p = &amp;d;                               //正确：任何非常量对象的地址都能存入void*
-double *dp = static_cast&lt;double*&gt;(p);       //正确：将void*转换回初始的指针类型
-//const_cast
-const char *pc;
-char *p = const_cast&lt;char*&gt;(pc);//正确：但是通过p写值是未定义的行为
-const char *cp;
-char *q = static_cast&lt;char*&gt;(cp);       //错误：static_cast不能转换掉const性质
-static_cast&lt;string&gt;(cp);                //正确：字符串字面值转换成string类型
-const_cast&lt;string&gt;(cp);                 //错误：const_cast只改变常量属性
-//reinterpret_cast
-int *ip;
-char *pc = reinterpret_cast&lt;char*&gt;(ip);
-string str(pc);                         //错误：可能导致异常的运行时行为，必须牢记pc所指的真实对象是一个int而非字符</code></pre>
+    //进程输入
+    ···
+    update game world with gameDeltaTime
+
+    //渲染输出
+    ···
+loop</code></pre><p>虽然能够在不同帧率下都正确执行，但还是会有一些问题。首先是任何与物理相关的游戏(比如平台跳跃类)在帧率的表现上都会很不一样。这是数值积分的原因。这会导致奇怪的角色行为，比如在低帧率下跳得更高。还有就是那些支持多人互动的游戏，可能在不同帧率下导致行为异常。</p>
+<p>这个问题最简单的解决方法就是限制帧率，强制游戏循环等待到指定帧率才继续。比如一个目标帧率为30FPS的游戏，如果游戏循环本身只用了30ms，那么还要等待额外的3.3ms才能开始执行下一次的游戏循环。</p>
+<pre><code>//30FPS每帧33.3ms
+targetFrameTime = 33.3f
+while game is running
+    realDeltaTime = time since last frame
+    gameDeltaTime = realDeltaTime * gameTimeFactor
+
+    //处理输入
+    ···
+    update game world with gameDeltaTime
+
+    //渲染输出
+    ···
+    while (time spent this frame) &lt; targetFrameTime
+        //做一些事情将多出的时间用完
+        ···
+    loop
+loop</code></pre><p>还有一种情况需要考虑：如果游戏突然遇上复杂情形，导致某帧比目标帧率的时长长怎么办？有很多解决办法，最常见的就是为了跟上目标帧率，而丢弃这一帧的渲染。这就是有名的<strong>卡帧</strong>，这么做会引起视觉上的卡顿。你可能会注意到有时候玩游戏的时候，做某些事情就会卡一下。</p>
+<h2 id="四、游戏对象"><a href="#四、游戏对象" class="headerlink" title="四、游戏对象"></a>四、游戏对象</h2><p>广义上的<strong>游戏对象</strong>是每一帧都需要更新或者绘制的对象。虽然叫做“游戏对象”，但不意味着就必须用传统的面向对象。有的游戏采用传统的对象，也有的用组合或者其他复杂的方法。不管如何实现，游戏都需要跟踪管理这些对象，在游戏循环中把它们整合起来。在处理整合游戏对象之前，先看3种游戏对象。</p>
+<h3 id="游戏对象的类型"><a href="#游戏对象的类型" class="headerlink" title="游戏对象的类型"></a>游戏对象的类型</h3><p>在3种游戏对象中，最常见的就是更新和绘制都需要的对象。任何角色、生物或者可以移动的物体都需要在游戏循环中的update game world阶段更新，还要在generate outputs阶段渲染。</p>
+<p>只绘制不更新的对象，称为<strong>静态对象</strong>。这些对象就是那些玩家可以看到，但是永远不需要更新的对象。它可以是游戏背景中的建筑。一栋建筑不会移动也不会攻击玩家，但是需要绘制。</p>
+<p>第三种游戏对象，就是那些需要更新，但不需要绘制的对象。例如，摄像机和<strong>触发器</strong>。</p>
+<h3 id="游戏循环中的游戏对象"><a href="#游戏循环中的游戏对象" class="headerlink" title="游戏循环中的游戏对象"></a>游戏循环中的游戏对象</h3><p>有很多方法来表示游戏对象。其中一种就是面向对象中的接口。<strong>接口</strong>更像是一种契约。如果一个类实现了这个接口，那么就相当于要按照契约去实现这个接口中所有的函数。</p>
+<p>首先，需要由一个基础的游戏对象类，使得3种游戏对象都可以从这里继承:</p>
+<pre><code>class GameObject
+    //成员变量/函数
+    ...
+end</code></pre><p>任何游戏对象公用的功能，不管什么对象类型，都应该放在基类里。这样就可以声明两个接口，一个是Drawable对象，一个是Updateable对象:</p>
+<pre><code>interface Drawable
+    function Draw()
+end
+
+interface Updateable
+    function Update(float deltaTime)
+end</code></pre><p>一旦有了这两个接口，就可以通过两个接口和一个基类来表示3种游戏对象：</p>
+<pre><code>//只更新的游戏对象
+class UGameObject inherits GameObject, implements Drawable
+    //重载绘制函数
+    ...
+end
+
+//只渲染的游戏对象
+class DGameObject inherits GameObject, implements Drawable
+    //重载绘制函数
+    ...
+end
+
+//更新且绘制的游戏对象
+class DUGameObject inherits UGameObject, implements Drawable
+    //重载绘制和更新函数
+    ...
+end</code></pre><p>在实现这3种对象后，把它们整合在游戏循环中是很简单的。GameWorld类拥有两个列表，分别在游戏世界中管理Updateable对象和Drawable对象:</p>
+<pre><code>class GameWorld
+    List updateableObjects
+    List drawableObjects
+end</code></pre><p>游戏对象被创建出来后，必须添加到相应的列表中。相应的，删除游戏对象也要讲其从列表移除。在存储了所有游戏对象之后，就可以将游戏循环中的update game world部分完成。</p>
+<pre><code>while game is running
+    realDeltaTime = time since last frame
+    gameDeltaTime = realDeltaTime * gameTimeFactor
+
+    //处理输入
+    ...
+
+    //更新游戏世界
+    foreach Updateable  o in GameWorld.updateableObjects
+        o.Update(gameDeltaTime)
+    loop
+
+    //渲染输出
+    foreach Drawable o in GameWorld.drawableObejcts
+        o.Draw()
+    loop
+
+    //帧数限制代码
+    ...</code></pre><h2 id="四、相关资料"><a href="#四、相关资料" class="headerlink" title="四、相关资料"></a>四、相关资料</h2><h3 id="游戏编程的发展"><a href="#游戏编程的发展" class="headerlink" title="游戏编程的发展"></a>游戏编程的发展</h3><p><strong>Crane David. “GDC 2011 Classic Postmortem on Pitfall!”</strong><a href="http://tinyurl.com/6kwpfee" target="_blank" rel="noopener">http://tinyurl.com/6kwpfee</a>.Pitfall!的作者David Crane的1小时演讲，关于在Atari上开发的心得</p>
+<h3 id="游戏循环"><a href="#游戏循环" class="headerlink" title="游戏循环"></a>游戏循环</h3><p><strong>Gregory, Json. Game Engine Architecture. Boca Raton: A K Peters, 2009.</strong> 这本书用了几节篇幅讲了多种多线程下的游戏循环，包括在PS3的非对称CPU架构上使用的情况</p>
+<p><strong>West,Mick. “Programming Responsiveness”和”Measuring Responsiveness”</strong> (<a href="http://tinyurl.com/594f6r" target="_blank" rel="noopener">http://tinyurl.com/594f6r</a> 和 <a href="">http://tinyurl.com/5qv5zt</a>).这些是Mick West在Gamasutra上写的文章，讨论了那些导致输入延迟的因素，同时也对游戏中的输入延迟进行了测量</p>
+<h3 id="游戏对象"><a href="#游戏对象" class="headerlink" title="游戏对象"></a>游戏对象</h3><p><strong>Dickheiser,Michael.Ed.Game Programning Gems 6. Boston:Charles River Media, 2006.</strong> 这卷书中的一篇文章“Game Object Component System”讲了一种与传统面向对象模型所不同的方法。虽然实现上有点复杂，但是越来越多的商业游戏中的游戏对象通过组合的形式来实现</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -732,7 +697,7 @@ string str(pc);                         //错误：可能导致异常的运行�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/">https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/</a>
+                    <a href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-bian-cheng-gai-shu/">https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-bian-cheng-gai-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -770,12 +735,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                                    <span class="chip bg-color">术语表</span>
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">游戏编程</span>
                                 </a>
                             
                         </div>
@@ -820,31 +781,32 @@ string str(pc);                         //错误：可能导致异常的运行�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/c-primer-zhu-yu-biao-6-lei/">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-2d-tu-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="C++ Primer术语表6-类">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="游戏编程算法和技巧·2D图形">
                         
-                        <span class="card-title">C++ Primer术语表6-类</span>
+                        <span class="card-title">游戏编程算法和技巧·2D图形</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 类的术语表。类的基本思想是数据抽象和封装。
+                            2D图形随着Web、移动游戏、独立游戏的爆发式增长，2D图形进入了文艺复兴时期。开发者选择2D通常是因为预算和团队规模。玩家选择2D则是因为游戏简洁而纯粹。
+2D渲染基础为了更加全面地认识2D渲染，了解这种技术诞生时显示设备的情况是很有必要
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
                                 </a>
                             
                             
@@ -854,12 +816,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                        <span class="chip bg-color">术语表</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
                     </a>
                     
                 </div>
@@ -873,48 +831,35 @@ string str(pc);                         //错误：可能导致异常的运行�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/c-primer-zhu-yu-biao-2-zi-fu-chuan-xiang-liang-he-shu-zu/">
+                <a href="/shen-qie-ai-dao-wei-kang-ji-yi-qing-xi-sheng-de-tong-bao/">
                     <div class="card-image">
                         
+                        <img src="/medias/otherimages/0.jpg" class="responsive-img" alt="深切哀悼为抗击疫情牺牲的同胞">
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="C++ Primer术语表2-字符串、向量和数组">
-                        
-                        <span class="card-title">C++ Primer术语表2-字符串、向量和数组</span>
+                        <span class="card-title">深切哀悼为抗击疫情牺牲的同胞</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 字符串、向量和数组的术语表。C++语言定义了一个内容丰富的抽象数据类型库。其中，string和vector是两种最重要的标准库类型。内置数组是一种更基础的类型，string和vector都是对它的某种抽象。
+                            为表达对疫情时期牺牲的烈士和同胞们的深切哀悼，今日我们一同对逝者缅怀哀悼！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    生活
                                 </a>
                             
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                        <span class="chip bg-color">术语表</span>
-                    </a>
-                    
                 </div>
                 
             </div>

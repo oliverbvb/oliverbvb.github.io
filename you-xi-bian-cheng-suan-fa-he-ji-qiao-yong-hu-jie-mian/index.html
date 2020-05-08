@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C++ Primer术语表3-表达式, 游戏，编程，生活">
-    <meta name="description" content="C++ 表达式的术语表。表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。">
+    <meta name="keywords" content="游戏编程算法和技巧·用户界面, 游戏，编程，生活">
+    <meta name="description" content="一个游戏的用户界面通常有两个主要部分:一个是菜单系统，一个是平视显示器(HUD)。菜单系统决定玩家如何进入和退出游戏，包括改变模式、暂停游戏、选择选项等。一些游戏(特别是RPG)都会有菜单系统来展示和升级技能。
+HUD包括了展示玩家游戏中额">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>C++ Primer术语表3-表达式 | GameOrLife</title>
+    <title>游戏编程算法和技巧·用户界面 | GameOrLife</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C++ Primer术语表3-表达式</h1>
+                    <h1 class="description center-align post-title">游戏编程算法和技巧·用户界面</h1>
                 </div>
             </div>
         </div>
@@ -426,12 +427,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                                <span class="chip bg-color">术语表</span>
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">游戏编程</span>
                             </a>
                         
                     </div>
@@ -442,8 +439,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C/" class="post-category">
-                                C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                游戏编程
                             </a>
                         
                     </div>
@@ -455,28 +452,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-03
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-05
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    13 分
                 </div>
                 
 				
@@ -492,222 +489,244 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。</p>
-<h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>表达式（expression）</strong></td>
-<td>C++程序中最低级别的计算。表达式将运算符作用于一个或多个运算对象，每个表达式都有对应的求值结果。表达式本身也可以作为运算对象，这时就得到了对多个运算符求值的复合表达式</td>
-</tr>
-<tr>
-<td><strong>运算对象（operand）</strong></td>
-<td>表达式在某些值上执行运算，这些值就是运算对象。一个运算符有一个或多个相关的运算对象</td>
-</tr>
-<tr>
-<td><strong>运算符（operator）</strong></td>
-<td>决定表达式所做操作的符号。C++语言定义了一套运算符并说明了这些运算符作用于内置类型时的含义</td>
-</tr>
-<tr>
-<td><strong>结果（result）</strong></td>
-<td>计算表达式得到的值或对象</td>
-</tr>
-<tr>
-<td><strong><a href="https://zh.cppreference.com/w/cpp/language/operator_precedence" target="_blank" rel="noopener">优先级（precedence）</a></strong></td>
-<td>规定了复合表达式中不同运算符的执行顺序。与低优先级的运算符相比，高优先级的运算符组合得更紧密</td>
-</tr>
-<tr>
-<td><strong>结合律（associativity）</strong></td>
-<td>规定具有相同优先级的运算符如何组合在一起。结合律分为左结合律（运算符从左向右组合）和右结合律（运算符从右向左组合）</td>
-</tr>
-<tr>
-<td><strong>求值顺序（order of evaluation）</strong></td>
-<td>是某个运算符的运算对象的求值顺序。大多数情况下，编译器可以选择运算对象求值的顺序。不过运算对象一定要在运算符之前得到求值结果</td>
-</tr>
-<tr>
-<td><strong>一元运算符（unary operators）</strong></td>
-<td>只有一个运算对象参与运算的运算符</td>
-</tr>
-<tr>
-<td><strong>二元运算符（binary operator）</strong></td>
-<td>有两个运算对象参与运算的运算符</td>
-</tr>
-<tr>
-<td><strong>重载运算符（overloaded operator）</strong></td>
-<td>针对某种运算符重新定义的适用于类类型的版本</td>
-</tr>
-<tr>
-<td><strong>左值（lvalue）</strong></td>
-<td>是指那些求值结果为对象或函数的表达式。一个表示对象的非常量左值可以作为赋值运算符的左侧运算对象</td>
-</tr>
-<tr>
-<td><strong>右值（rvalue）</strong></td>
-<td>是指一种表达式，其结果是指而非值所在的位置</td>
-</tr>
-<tr>
-<td><strong>复合表达式（compound expression）</strong></td>
-<td>含有多于一个运算符的表达式</td>
-</tr>
-</tbody></table>
-<h1 id="2-运算符"><a href="#2-运算符" class="headerlink" title="2.运算符"></a>2.运算符</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>&amp;&amp;运算符（&amp;&amp;operator）</strong></td>
-<td>逻辑与运算符，如果两个运算对象都是真，结果才为真。只有当左侧运算对象为真时才会检查右侧对象</td>
-</tr>
-<tr>
-<td><strong>&#124;&#124;运算符（&#124;&#124; operator）</strong></td>
-<td>逻辑或运算符，任何一个运算对象是真，结果就为真。只有当左侧运算对象为假时才会检查右侧运算对象</td>
-</tr>
-<tr>
-<td><strong>!运算符（!operator）</strong></td>
-<td>逻辑非运算符，将它的运算对象的布尔值取反</td>
-</tr>
-<tr>
-<td><strong>短路求值（short-circuit evaluation）</strong></td>
-<td>是一个专有名词，描述逻辑与运算符和逻辑或运算符的执行过程。如果根据运算符的第一个运算对象就能确定整个表达式的结果，求值终止，此时第二个运算对象将不会被求值</td>
-</tr>
-<tr>
-<td><strong>++运算符（++operator）</strong></td>
-<td>递增运算符。包括两种形式：前置版本和后置版本</td>
-</tr>
-<tr>
-<td><strong>–运算符（–operator）</strong></td>
-<td>递减运算符。包括两种形式：前置版本和后置版本</td>
-</tr>
-<tr>
-<td><strong>?:运算符（?:operator）</strong></td>
-<td>条件运算符</td>
-</tr>
-<tr>
-<td><strong>&lt;&lt;运算符（&lt;&lt;operator）</strong></td>
-<td>左移运算符，将左侧运算对象的值的（可能是提升后的）副本向左移位，移动的位数由右侧运算对象确定</td>
-</tr>
-<tr>
-<td><strong>&gt;&gt;运算符（&gt;&gt;operator）</strong></td>
-<td>右移运算符，除了移动方向相反，其他性质都和左移运算符类似</td>
-</tr>
-<tr>
-<td><strong>&amp;运算符（&amp;operator）</strong></td>
-<td>位与运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位都是1，所得结果中该位为1；否则所得结果中该位为0</td>
-</tr>
-<tr>
-<td><strong>&#124;运算符（&#124; operator）</strong></td>
-<td>位或运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位至少有一个是1，所得结果中该位为1；否则所得结果中该位为0</td>
-</tr>
-<tr>
-<td><strong><del>运算符（</del>operator）</strong></td>
-<td>位求反运算符，生成一个新的整数值。该值的每一位恰好与（可能是提升后的）运算对象的对应位相反</td>
-</tr>
-<tr>
-<td><strong>sizeof</strong></td>
-<td>是一个运算符，返回存储对象所需的字节数，该对象的类型可能是某个给定的类型名字，也可鞥由表达式的返回结果确定</td>
-</tr>
-<tr>
-<td><strong>,运算符（,operator）</strong></td>
-<td>逗号运算符，是一种从左向右求值的二元运算符。逗号运算符的结果是右侧运算对象的值，当且仅当右侧运算对象是左值时逗号运算符的结果是左值</td>
-</tr>
-</tbody></table>
-<pre><code>//条件运算符
-cout &lt;&lt; ((grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;);   //输出pass或者fail
-cout &lt;&lt; (grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;;     //输出1或者0
-cout &lt;&lt; grade &lt; 60 ? &quot;fail&quot; : &quot;pass&quot;;       //错误：试图比较cout和60，因为小于运算符的优先级低于移位运算符，所以先输出了grade再进行比较
+                <p>一个游戏的用户界面通常有两个主要部分:一个是菜单系统，一个是平视显示器(HUD)。菜单系统决定玩家如何进入和退出游戏，包括改变模式、暂停游戏、选择选项等。一些游戏(特别是RPG)都会有菜单系统来展示和升级技能。</p>
+<p>HUD包括了展示玩家游戏中额外信息的元素。通常包括雷达、子弹数量、指南针和准心。虽然不是所有游戏都有HUD(而一些游戏则有隐藏HUD的选项)，但是大多数都会有至少一个。</p>
+<h1 id="一、菜单系统"><a href="#一、菜单系统" class="headerlink" title="一、菜单系统"></a>一、菜单系统</h1><p>一个实现良好的菜单系统应该能够提供很多不同方面的灵活性。与此同时，它又必须集成尽可能多的功能。</p>
+<h2 id="1-菜单栈"><a href="#1-菜单栈" class="headerlink" title="1.菜单栈"></a>1.菜单栈</h2><p>典型家用机游戏的菜单系统都以“点击开始”作为开始阶码。在用户按键之后，就会进入主菜单界面。也许还可以通过点击选项进入选项界面。通常来讲，玩家都能够退出当前菜单然后返回之前的界面。</p>
+<p>一个确保菜单总能回退到基本界面的方法就是使用栈这种数据结构。栈最上层的元素就是当前活跃的菜单，而打开新菜单就是往栈中压入新的菜单。回退到之前的菜单就是将当前的菜单弹出栈。这个机制还可以改进为支持多个菜单同时可见。比如说，如果需要接受/拒绝某个请求，一个弹出框可以在某个菜单之前。为了达到目标。菜单系统需要对栈的底部到顶部全部引用。</p>
+<h2 id="2，按钮"><a href="#2，按钮" class="headerlink" title="2，按钮"></a>2，按钮</h2><p>几乎所有菜单系统都有玩家可以交互的按钮。一般按钮都有两种状态:未选中和选中。</p>
+<p>如果菜单只能通过键盘或者手柄控制，按钮的支持就相当直观。一个菜单界面可以用双向链表的形式来组织按钮，很容易前进和后退，而且如果过了最后一个按钮也很容易回到第一个按钮。</p>
+<p>通常在按钮按下的时候，用户会期待发生一些事情。一个足够抽象的支持方式就是让按钮拥有一个函数成员变量。当创建新按钮的时候，可以为它分配正确的函数，使能够在按钮按下的时候得到执行。</p>
+<p>如果游戏也支持通过鼠标导航，系统就会增加一定的复杂度。每个按钮需要有一个<strong>感应区</strong>，或者用一个2D包围盒表示按钮可点击区域。所以随着用户鼠标在菜单中移动，需要检测鼠标是否进入某个按钮的感应区。</p>
+<p>允许玩家在鼠标导航和键盘导航之间切换也是可以的。一个常见的方式就是当用户按下键盘的时候隐藏鼠标(同时也忽略鼠标位置)。然后，如果鼠标移动，鼠标的选择模式被再次激活。</p>
+<h2 id="3-打字"><a href="#3-打字" class="headerlink" title="3.打字"></a>3.打字</h2><p>计算机游戏中最常见的菜单功能就是让用户在其中输入一到两个单词。传统的应用程序支持打字的方法通常是通过标准输入，但是标准输入不适合游戏。</p>
+<p>允许输入的第一步就是准备一个空字符串。每次玩家输入一个字母，我们就可以将字母拼接到字符串后面。可以通过虚拟键盘将键盘上的每个键和枚举值对应起来。比如说，K_A对应A键，K_Z对应Z键。</p>
+<pre><code>function KeyCodeToChar(int keyCode)
+    //确保这是子母键
+    if keyCode &gt;= K_A &amp;&amp; keyCode &lt;= K_Z
+        return ('A' + (char)(keyCode - K_A))
+    else if keyCode == K_SPACE
+        return ' '
+    else
+        return ''
+    end
+end</code></pre><p>如果需要，可以进一步扩展函数同时支持大小写，可以根据Shift键是否按下进行判断。</p>
+<h1 id="二、HUD元素"><a href="#二、HUD元素" class="headerlink" title="二、HUD元素"></a>二、HUD元素</h1><p>最基础的<strong>HUD</strong> 元素就是玩家得分和剩余生命值。这种HUD实现起来相对琐碎——在主要游戏场景渲染之后，我们只要在顶层绘制文字或者图标以展示相应的信息即可。但是很多游戏都使用了更加复杂的元素，包括路点箭头、雷达、指南和准心。</p>
+<h2 id="1-路点箭头"><a href="#1-路点箭头" class="headerlink" title="1.路点箭头"></a>1.路点箭头</h2><p>路点箭头用于引导玩家到下一个目标点。一个最简单的方法就是让箭头成为真正的3D对象，然后放置在屏幕对应的位置。然后随着玩家在游戏世界中移动，3D箭头会旋转到正确的指向以指引玩家移动。</p>
+<p>实现这种路点箭头的第一步就是建立一个在没有任何旋转作用在上面的时候超前指向的箭头，然后在游戏过程中有3个参数需要跟踪：箭头朝向的向量、箭头在屏幕空间中的位置，还有箭头跟踪的路点。</p>
+<p>朝向向量应该先初始化轴向使得指向屏幕内。在传统的左手坐标系中，就是+z轴。箭头在屏幕空间中所在的位置就是我们所希望箭头在屏幕中的相应位置。这是我们需要把箭头从屏幕空间的坐标转换为3D世界中的坐标。最后，路点位置就是箭头朝向所需要的指向位置。</p>
+<p>为了更新路点箭头，每一帧都需要构造一个从玩家到路点的向量。然后进行正规化，就可得到箭头所需要的朝向。接下来的问题就是使用点乘和叉乘来确定原始朝向到新朝向所需要的旋转角度。这个旋转可以使用四元数，是用插值得到平滑的箭头过渡。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/27/uRoQsjC3YD8VkUH.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 《疯狂出租车》中的路点箭头</div>
+</center>
 
-//sizeof运算符
-Sales_data data, *p;
-sizeof(Sales_data);         //存储Sales_data类型的对象所占的空间大小
-sizeof data;                //data的类型的大小，即sizeof(Sales_data)
-sizeof p;                   //指针所占的空间大小
-sizeof *p;                  //p所指类型的空间大小，即sizeof(Sales_data)
-sizeof data.revenue;        //Sales_data的revenue成员对应类型的大小
-sizeof Sales_data::revenue; //另一种获取revenue大小的方式</code></pre><h1 id="3-类型转换"><a href="#3-类型转换" class="headerlink" title="3.类型转换"></a>3.类型转换</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>转换（conversion）</strong></td>
-<td>一种类型的值改变成另一种类型的值的过程。C++语言定义了内置类型的转换规则。类类型同样可以转换</td>
-</tr>
-<tr>
-<td><strong>隐式转换（implicit conversion）</strong></td>
-<td>由编译器自动执行的类型转换。假如表达式需要某种特定的类型而运算对象是另外一种类型，此时只要规则允许，编译器就会自动地将运算对象转换成所需的类型</td>
-</tr>
-<tr>
-<td><strong>算术转换（arithmetic conversion）</strong></td>
-<td>从一种算术类型转换成另一种算术类型。在二元运算符的上下文中，为了保留精度，算术转换通常把较小的类型转换成较大的类型</td>
-</tr>
-<tr>
-<td><strong>整型提升（integral promotion）</strong></td>
-<td>把一种较小的整数类型转换成与之最接近的较大整数类型的过程。不论是否真的需要，小整数类型（即short、char等）总是会得到提升</td>
-</tr>
-<tr>
-<td><strong>强制类型转换（cast）</strong></td>
-<td>一种显式的类型转换</td>
-</tr>
-<tr>
-<td><strong>static_cast</strong></td>
-<td>显式地执行某种定义明确的类型转换，常用于替代由编译器隐式执行的类型转换</td>
-</tr>
-<tr>
-<td><strong>const_cast</strong></td>
-<td>一种涉及const的强制类型转换。将底层const对象转换成对应的非常量类型，或者执行相反的转换</td>
-</tr>
-<tr>
-<td><strong>reinterpret_cast</strong></td>
-<td>把运算对象的内容解释成另外一种类型。这种强制类型转换本质上依赖于机器而且非常危险</td>
-</tr>
-<tr>
-<td><strong>dynamic_cast</strong></td>
-<td>和继承及运行时类型识别一起使用</td>
-</tr>
-</tbody></table>
-<pre><code>/* 隐式转换 */
+<p>这种类型箭头的实现如下所示。这种实现有几件事需要记住。首先就是摄像机在路点箭头之前更新，因为这是保证路点箭头在屏幕上同一位置的唯一方法。否则，当摄像机发生改变是，路点箭头会延后更新一帧。</p>
+<p>还有，路点箭头渲染时需要在其他3D物体渲染之后关闭z-buffer才能进行渲染。这样能够确保箭头总能被渲染出来，哪怕有其他3D物体在它前面。</p>
+<pre><code>class WaypointArraw
+    //记录箭头的朝向
+    Vector3 facing
+    //箭头在屏幕上的2D位置
+    Vector2 screenPosition
+    //箭头指向的当前路点
+    Vector3 waypoint
+    //用于渲染箭头的世界变换矩阵
+    Matrix worldTransform
 
-int ival = 3.541 + 3;   //结果为6，编译器可能会警告该运算损失了精度
-int ia[10];     //含有10个整数的数组
-int* ip = ia;   //ia转换成指向数组首元素的指针
-//转换成布尔类型
-char *cp = get_string();
-if(cp) /*...*/      //如果指针cp不是0，条件为真
-while(*cp) /*...*/  //如果*cp不是空字符，条件为真
-//转换成常量
-int i;
-const int &amp;j = i;   //非常量转换成const int的引用
-const int *p = &amp;i;  //非常量的地址转换成const的地址
-int &amp;r = j, *q = p; //错误：不允许const转换成非常量
-//类类型转换
-string s;
-while(cin &gt;&gt; s)     //while的条件部分把cin转换成布尔值
+    //通过给定位置/旋转计算世界变换矩阵
+    function ComputeMatrix(Vector3 worldPosition, Quaternion rotation)
+        //缩放、旋转、平移
+        worldTransform = CreateFromQuaternion(rotation) * CreateTranslation(worldPosition)
+    end
 
-/* 显式转换 */
+    //根据屏幕位置计算3D箭头的世界坐标
+    function ComputeWorldPosition()
+        //为了计算反投影，我们需要一个3D向量
+        //z分量是一个在近平面和远平面之间的百分比
+        //在这种情况下，我选择二者之间10%的一个点(z=0.1)
+        Vector3 unprojectPos = Vector3(screenPosition.x, screenPosition.y, 0.1)
 
-//static_cast
-double slope = static_cast&lt;double&gt;(j) / i;  //进行强制类型转换以便执行浮点数除法
-void *p = &amp;d;                               //正确：任何非常量对象的地址都能存入void*
-double *dp = static_cast&lt;double*&gt;(p);       //正确：将void*转换回初始的指针类型
-//const_cast
-const char *pc;
-char *p = const_cast&lt;char*&gt;(pc);//正确：但是通过p写值是未定义的行为
-const char *cp;
-char *q = static_cast&lt;char*&gt;(cp);       //错误：static_cast不能转换掉const性质
-static_cast&lt;string&gt;(cp);                //正确：字符串字面值转换成string类型
-const_cast&lt;string&gt;(cp);                 //错误：const_cast只改变常量属性
-//reinterpret_cast
-int *ip;
-char *pc = reinterpret_cast&lt;char*&gt;(ip);
-string str(pc);                         //错误：可能导致异常的运行时行为，必须牢记pc所指的真实对象是一个int而非字符</code></pre>
+        //得到摄像机和投影矩阵
+        ...
+
+        //调用反投影函数
+        return Unproject(unprojectPos, cameraMatrix, projectionMatrix)
+    end
+
+    function Initialize(Vector2 myScreenPos, Vector3 myWaypoint)
+        screenPosition = myScreenPos
+        //对于Y轴向上的左手坐标系
+        facing = Vector3(0, 0, 1)
+        SetNewWaypoint(myWaypoint)
+
+        //初始化世界变换坐标系
+        ComputeMatrix(ComputeWorldPosition(), Quaternion.Identity)
+    end
+
+    function SetNewWaypoint(Vector3 myWaypoint)
+        waypoint = myWaypoint
+    end
+
+    function Update(float deltaTime)
+        //得到箭头的当前世界坐标
+        Vector3 worldPos = ComputeWorldPosition()
+
+        //得到玩家位置
+        ...
+        //箭头的新朝向是一个正规化向量
+        //从玩家的位置指向路点
+        facing = waypoint - playerPosition
+        facing.Normalize()
+
+        //使用点乘得到原始朝向(0,0,1)和新朝向之间的夹角
+        float angle = acos(DotProduct(Vector3(0, 0, 1), facing))
+        //使用叉乘得到轴的旋转轴
+        Vector3 axis = CrossProduct(Vector3(0, 0, 1), facing)
+        Quaternion quat
+        //如果长度为0，意味着平行
+        //意味着不需要旋转
+        if axis.Length() &lt; 0.01f
+            quat = Quaternion.Identity
+        else
+            //计算用来表示旋转的四元数
+            axis.Normalize()
+            quat = CreateFromAxisAngle(axis, angle)
+        end
+
+        //现在设置箭头最后的世界变换
+        ComputeMatrix(worldPos, quat)
+    end
+
+end</code></pre><h2 id="2-准心"><a href="#2-准心" class="headerlink" title="2.准心"></a>2.准心</h2><p>大多数第一人称或者第三人称游戏带有的远程攻击都会使用准心这种标准的HUD，它使得玩家指定自己距离打中目标还差多远。不管准心是传统的十字形还是圆形，实现原理都一样。</p>
+<p>就像鼠标光标一样，准心是一个在屏幕上的光标。我们拿到整个2D坐标，然后执行两个反投影：一个在近平面，一个在远平面。得到这两个点以后，可以在这两点之间执行光线投射。</p>
+<h2 id="3-雷达"><a href="#3-雷达" class="headerlink" title="3.雷达"></a>3.雷达</h2><p>有的游戏会有雷达系统来显示雷达范围附近的敌方(或者友方)。为了让雷达顺利工作，需要完成两件事情。首先，我们有一种方式可以遍历能够在雷达上显示的所有对象。然后，所有在雷达范围内的对象都需要根据UI中心做出相应的偏移。计算距离和转换为2D偏移，我们都希望忽视高度，这意味着我们必须投影雷达对象到雷达面板上。</p>
+<p>在我们计算之前，应该先定义<strong>雷达光点</strong>结构体，就是那些在雷达上显示的点。这样，就可以根据实际情况让这些点有不同的大小和颜色。</p>
+<pre><code>struct RadarBlip
+    //雷达光点的颜色
+    Color color = Color.Red
+    //雷达光点的位置
+    Vector2 position
+    //雷达光点的缩放
+    float scale = 1.0f
+end</code></pre><center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/27/R4EyLhPeWaXixKC.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 《战地5》中的雷达(在左下角)</div>
+</center>
+
+<p>对于Radar类来说，需要有两个参数：游戏世界中的对象能够被探测出来的最大距离，以及屏幕上显示的雷达半径。通过这两个参数，在我们得到光点位置之后，就可转换到屏幕上正确的位置。</p>
+<pre><code>class Radar
+    //雷达在游戏世界单位中的范围
+    float range
+    //雷达在屏幕中的位置(x,y)
+    Vector2 position
+    //雷达在屏幕中的半径
+    float radius
+    //雷达的背景图片
+    ImageFile radarImage
+    //所有活跃的雷达光点
+    List blips
+
+    //初始化函数设置range、center、radius及image
+    ...
+
+    function Update(float deltaTime)
+        //清除上一帧的光点
+        blips.Clear()
+        //获取玩家位置
+        ...
+        //将playerPosition转换为2D坐标
+        //以下假设y轴向上
+        Vector2 playerPos2D = Vector2(playerPosition.x, playerPosition.z)
+
+        //计算需要添加到blip上的选择
+        //得到正规化后的玩家朝向向量
+        ...
+        //将playerFacing转换为2D
+        Vector2 playerFacing2D = Vector2(playerFacing.x, playerFacing.z)
+        //计算雷达前向与玩家朝向之间的夹角
+        float angle = acos(DotProduct(playerFacing2D, Vector2(0,11)))
+        //为了使用叉乘，需要转换为3D向量
+        Vector3 playerFacing3D = Vector3(playerFacing2D.x, playerFacing2D.y, 0)
+        //使用叉乘判定旋转的方向
+        Vector3 crossResult = CrossProduct(playerFacing3D, Vector2(0,1,0))
+        //顺时针为-z，意味着角度应该取负
+        if crossResult.z &lt; 0
+            angle *= -1
+        end
+
+        //判定哪些敌人在范围之内
+        foreach Enemy e in gameWorld
+            //将敌人的位置转换为2D坐标
+            Vector2 enemyPos2D = Vector2(e.position.x, e.position.z)
+            //构造从玩家到敌人的向量
+            Vector2 playerToEnemy = enemyPos2D - playerPos2D
+            //检查长度，看看是否在距离之内
+            if playerToEnemy.Length() &lt;= range
+                //旋转playerToEnemy，使得它相对于玩家朝向旋转(使用2D旋转矩阵)
+                playerToEnemy = Rotate2D(angle)
+                //为敌人创建雷达光点
+                RadarBlip blip
+                //取playerToEnemy向量，转换为相对于屏幕上雷达中心点的偏移
+                blip.position = playerToEnemy
+                blip.position /= range
+                blip.position *= radius
+                //将blip添加到blips中
+                blips.Add(blip)
+            end
+        loop
+    end
+
+    function Draw(float deltaTime)
+        //绘制雷达图片
+        ...
+
+        foreach RadarBlip r in blips
+            //在position + blip.position的位置绘制r
+            //因为blip中存放的是偏移量
+            ...
+        loop
+    end
+end</code></pre><p>雷达还有一些可以改善的地方。比如，同时显示敌人和友军，以及只显示最近开枪的敌人等等。</p>
+<h1 id="三、其他需要考虑的UI问题"><a href="#三、其他需要考虑的UI问题" class="headerlink" title="三、其他需要考虑的UI问题"></a>三、其他需要考虑的UI问题</h1><h2 id="1-支持多套分辨率"><a href="#1-支持多套分辨率" class="headerlink" title="1.支持多套分辨率"></a>1.支持多套分辨率</h2><p>对于PC游戏来说，通常都会有很高的分辨率，现在最新的5k显示器分辨率是5120x2880，但是其他分辨率也有很多人在使用，比如4k显示器分辨率4096x2160以及2k、1080p等等。</p>
+<p>解决方法就是避免使用绝对坐标，而使用相对坐标。相对坐标可以根据屏幕上的一些关键位置(通常是屏幕角落或者中心)来表达，又或者相对于其他UI元素来表达。</p>
+<h2 id="2-本地化"><a href="#2-本地化" class="headerlink" title="2.本地化"></a>2.本地化</h2><p>虽然一款游戏只支持一种语言也是可行的，但是大多数商业游戏都需要支持多语言。<strong>本地化</strong>就是支持更多语言的过程。由于许多菜单和HUD都有文本显示，在设计UI系统的时候就需要重视。哪怕一款游戏不需要本地化，但将文本硬编码到代码里面本身就非常不好，这样不利于非程序员修改。但是如果游戏需要本地化，将硬编码移除就特别重要。</p>
+<p>最简单的文本本地化方法就是将游戏中这些文本存储到外部文件中。这个外部文件可以使用XML、JSON或者类似的格式。这样紧接着就可以通过字典映射键来访问特定的字符串。</p>
+<p>不幸的是，支持使用不同字符的语言会让问题变得复杂。传统的ASCII字符集只能支持英语字母，不支持阿拉伯语和简体中文之类的象形文字。因此，大多数游戏都通过Unicode字符集来支持不同的编码系统。有多种方式来对Unicode字符进行编码，最流行的方法就是UTF-8。</p>
+<p>还有一个问题就是一个单词在不同语言中的长度不一样，比如说德语单词的平均长度要比英语长一些。这就是说，我们需要考虑UI元素的适配问题使得所有语言都能放在上面。</p>
+<p>除了文本和语言之外，本地化的另一个重要方面就是对游戏内容根据国家本地化。需要遵守不同国家的法律和习俗，需要特别注意。</p>
+<h2 id="3-UI中间件"><a href="#3-UI中间件" class="headerlink" title="3.UI中间件"></a>3.UI中间件</h2><p>一个著名的中间件:Autodesk Scaleform，在AAA游戏中广泛使用。之所以使用Scaleforn是因为它允许美工使用Adobe Flash来创建所有的UI内容。</p>
+<h2 id="4-用户体验"><a href="#4-用户体验" class="headerlink" title="4.用户体验"></a>4.用户体验</h2><p>用户体验(UX)，是当用户使用界面时的交互。一个设计不好的UI会让用户点击多个按钮来完成很简单的动作，不过你的任务不只是编程，还有UI设计，考虑UX是非常重要的。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -732,7 +751,7 @@ string str(pc);                         //错误：可能导致异常的运行�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/">https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/</a>
+                    <a href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-yong-hu-jie-mian/">https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-yong-hu-jie-mian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -770,12 +789,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                                    <span class="chip bg-color">术语表</span>
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">游戏编程</span>
                                 </a>
                             
                         </div>
@@ -820,31 +835,31 @@ string str(pc);                         //错误：可能导致异常的运行�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/c-primer-zhu-yu-biao-6-lei/">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-jiao-ben-yu-yan-he-shu-ju-ge-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="C++ Primer术语表6-类">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="游戏编程算法和技巧·脚本语言和数据格式">
                         
-                        <span class="card-title">C++ Primer术语表6-类</span>
+                        <span class="card-title">游戏编程算法和技巧·脚本语言和数据格式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 类的术语表。类的基本思想是数据抽象和封装。
+                            一、脚本语言多年前，游戏全部使用汇编语言开发。这是因为早期的机器需要汇编级别的优化才能运行。但是随着计算能力的提升，而游戏又变得很复杂，使用汇编开发就变得越来越没意义了。直到某一天，使用汇编语言开发游戏带来的优点被完全抵消了，这就是为什么现
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
                                 </a>
                             
                             
@@ -854,12 +869,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                        <span class="chip bg-color">术语表</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
                     </a>
                     
                 </div>
@@ -873,31 +884,31 @@ string str(pc);                         //错误：可能导致异常的运行�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/c-primer-zhu-yu-biao-2-zi-fu-chuan-xiang-liang-he-shu-zu/">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-ren-gong-zhi-neng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="C++ Primer术语表2-字符串、向量和数组">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="游戏编程算法和技巧·人工智能">
                         
-                        <span class="card-title">C++ Primer术语表2-字符串、向量和数组</span>
+                        <span class="card-title">游戏编程算法和技巧·人工智能</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 字符串、向量和数组的术语表。C++语言定义了一个内容丰富的抽象数据类型库。其中，string和vector是两种最重要的标准库类型。内置数组是一种更基础的类型，string和vector都是对它的某种抽象。
+                            本章将谈到人工智能在游戏应用中的3个方面:寻路、基于状态的行为机制、策略/计划。寻路算法可以判定非玩家角色(NPC)如何在游戏世界中移动。基于状态的行为驱动做出相应的行为。最后，策略/计划在大型AI计划的时候是必要的需求，比如实时战略(RT
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
                                 </a>
                             
                             
@@ -907,12 +918,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                        <span class="chip bg-color">术语表</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
                     </a>
                     
                 </div>

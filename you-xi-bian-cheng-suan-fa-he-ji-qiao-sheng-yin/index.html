@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C++ Primer术语表3-表达式, 游戏，编程，生活">
-    <meta name="description" content="C++ 表达式的术语表。表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。">
+    <meta name="keywords" content="游戏编程算法和技巧·声音, 游戏，编程，生活">
+    <meta name="description" content="本章首先讲如何将原始数据转换成代码控制的音效。然后讨论更高级的声音技术，比如多普勒效应、数字信号处理和音效遮挡，它们都会在很多情况下用到。
+一、基本声音声音播放最基础的级别就是在游戏某个时刻播放某个音频文件。但是在多数情况下一个事件不是必须">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>C++ Primer术语表3-表达式 | GameOrLife</title>
+    <title>游戏编程算法和技巧·声音 | GameOrLife</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C++ Primer术语表3-表达式</h1>
+                    <h1 class="description center-align post-title">游戏编程算法和技巧·声音</h1>
                 </div>
             </div>
         </div>
@@ -426,12 +427,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                                <span class="chip bg-color">术语表</span>
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">游戏编程</span>
                             </a>
                         
                     </div>
@@ -442,8 +439,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C/" class="post-category">
-                                C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                游戏编程
                             </a>
                         
                     </div>
@@ -455,28 +452,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-03
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-05
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    10 分
                 </div>
                 
 				
@@ -492,222 +489,90 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。</p>
-<h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>表达式（expression）</strong></td>
-<td>C++程序中最低级别的计算。表达式将运算符作用于一个或多个运算对象，每个表达式都有对应的求值结果。表达式本身也可以作为运算对象，这时就得到了对多个运算符求值的复合表达式</td>
-</tr>
-<tr>
-<td><strong>运算对象（operand）</strong></td>
-<td>表达式在某些值上执行运算，这些值就是运算对象。一个运算符有一个或多个相关的运算对象</td>
-</tr>
-<tr>
-<td><strong>运算符（operator）</strong></td>
-<td>决定表达式所做操作的符号。C++语言定义了一套运算符并说明了这些运算符作用于内置类型时的含义</td>
-</tr>
-<tr>
-<td><strong>结果（result）</strong></td>
-<td>计算表达式得到的值或对象</td>
-</tr>
-<tr>
-<td><strong><a href="https://zh.cppreference.com/w/cpp/language/operator_precedence" target="_blank" rel="noopener">优先级（precedence）</a></strong></td>
-<td>规定了复合表达式中不同运算符的执行顺序。与低优先级的运算符相比，高优先级的运算符组合得更紧密</td>
-</tr>
-<tr>
-<td><strong>结合律（associativity）</strong></td>
-<td>规定具有相同优先级的运算符如何组合在一起。结合律分为左结合律（运算符从左向右组合）和右结合律（运算符从右向左组合）</td>
-</tr>
-<tr>
-<td><strong>求值顺序（order of evaluation）</strong></td>
-<td>是某个运算符的运算对象的求值顺序。大多数情况下，编译器可以选择运算对象求值的顺序。不过运算对象一定要在运算符之前得到求值结果</td>
-</tr>
-<tr>
-<td><strong>一元运算符（unary operators）</strong></td>
-<td>只有一个运算对象参与运算的运算符</td>
-</tr>
-<tr>
-<td><strong>二元运算符（binary operator）</strong></td>
-<td>有两个运算对象参与运算的运算符</td>
-</tr>
-<tr>
-<td><strong>重载运算符（overloaded operator）</strong></td>
-<td>针对某种运算符重新定义的适用于类类型的版本</td>
-</tr>
-<tr>
-<td><strong>左值（lvalue）</strong></td>
-<td>是指那些求值结果为对象或函数的表达式。一个表示对象的非常量左值可以作为赋值运算符的左侧运算对象</td>
-</tr>
-<tr>
-<td><strong>右值（rvalue）</strong></td>
-<td>是指一种表达式，其结果是指而非值所在的位置</td>
-</tr>
-<tr>
-<td><strong>复合表达式（compound expression）</strong></td>
-<td>含有多于一个运算符的表达式</td>
-</tr>
-</tbody></table>
-<h1 id="2-运算符"><a href="#2-运算符" class="headerlink" title="2.运算符"></a>2.运算符</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>&amp;&amp;运算符（&amp;&amp;operator）</strong></td>
-<td>逻辑与运算符，如果两个运算对象都是真，结果才为真。只有当左侧运算对象为真时才会检查右侧对象</td>
-</tr>
-<tr>
-<td><strong>&#124;&#124;运算符（&#124;&#124; operator）</strong></td>
-<td>逻辑或运算符，任何一个运算对象是真，结果就为真。只有当左侧运算对象为假时才会检查右侧运算对象</td>
-</tr>
-<tr>
-<td><strong>!运算符（!operator）</strong></td>
-<td>逻辑非运算符，将它的运算对象的布尔值取反</td>
-</tr>
-<tr>
-<td><strong>短路求值（short-circuit evaluation）</strong></td>
-<td>是一个专有名词，描述逻辑与运算符和逻辑或运算符的执行过程。如果根据运算符的第一个运算对象就能确定整个表达式的结果，求值终止，此时第二个运算对象将不会被求值</td>
-</tr>
-<tr>
-<td><strong>++运算符（++operator）</strong></td>
-<td>递增运算符。包括两种形式：前置版本和后置版本</td>
-</tr>
-<tr>
-<td><strong>–运算符（–operator）</strong></td>
-<td>递减运算符。包括两种形式：前置版本和后置版本</td>
-</tr>
-<tr>
-<td><strong>?:运算符（?:operator）</strong></td>
-<td>条件运算符</td>
-</tr>
-<tr>
-<td><strong>&lt;&lt;运算符（&lt;&lt;operator）</strong></td>
-<td>左移运算符，将左侧运算对象的值的（可能是提升后的）副本向左移位，移动的位数由右侧运算对象确定</td>
-</tr>
-<tr>
-<td><strong>&gt;&gt;运算符（&gt;&gt;operator）</strong></td>
-<td>右移运算符，除了移动方向相反，其他性质都和左移运算符类似</td>
-</tr>
-<tr>
-<td><strong>&amp;运算符（&amp;operator）</strong></td>
-<td>位与运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位都是1，所得结果中该位为1；否则所得结果中该位为0</td>
-</tr>
-<tr>
-<td><strong>&#124;运算符（&#124; operator）</strong></td>
-<td>位或运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位至少有一个是1，所得结果中该位为1；否则所得结果中该位为0</td>
-</tr>
-<tr>
-<td><strong><del>运算符（</del>operator）</strong></td>
-<td>位求反运算符，生成一个新的整数值。该值的每一位恰好与（可能是提升后的）运算对象的对应位相反</td>
-</tr>
-<tr>
-<td><strong>sizeof</strong></td>
-<td>是一个运算符，返回存储对象所需的字节数，该对象的类型可能是某个给定的类型名字，也可鞥由表达式的返回结果确定</td>
-</tr>
-<tr>
-<td><strong>,运算符（,operator）</strong></td>
-<td>逗号运算符，是一种从左向右求值的二元运算符。逗号运算符的结果是右侧运算对象的值，当且仅当右侧运算对象是左值时逗号运算符的结果是左值</td>
-</tr>
-</tbody></table>
-<pre><code>//条件运算符
-cout &lt;&lt; ((grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;);   //输出pass或者fail
-cout &lt;&lt; (grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;;     //输出1或者0
-cout &lt;&lt; grade &lt; 60 ? &quot;fail&quot; : &quot;pass&quot;;       //错误：试图比较cout和60，因为小于运算符的优先级低于移位运算符，所以先输出了grade再进行比较
+                <p>本章首先讲如何将原始数据转换成代码控制的音效。然后讨论更高级的声音技术，比如多普勒效应、数字信号处理和音效遮挡，它们都会在很多情况下用到。</p>
+<h1 id="一、基本声音"><a href="#一、基本声音" class="headerlink" title="一、基本声音"></a>一、基本声音</h1><p>声音播放最基础的级别就是在游戏某个时刻播放某个音频文件。但是在多数情况下一个事件不是必须对应到一个声音上的。比如角色每次脚碰地设置多种脚步声随机选择播放。</p>
+<p>还有一个要考虑的事情就是只有有限数量的<strong>频道</strong>可以同时播放。假如一个游戏有大量的敌人在玩家附近奔跑，如果全部都播放脚步声，那么有可能将所有的频道用完。有很多声音比敌人的脚步声更重要，因此我们需要将音效进行优先级排序。大多数游戏都存储了一组额外的数据描述了音频文件的优先级。</p>
+<h2 id="1-原始数据"><a href="#1-原始数据" class="headerlink" title="1.原始数据"></a>1.原始数据</h2><p><strong>原始数据</strong>是指音效设计师使用类似Audacity这样的工具来创建的最原始的音频文件。一个常见的方式为将短音效存储为WAV格式或者其他无压缩文件格式，而存储长音效，比如声音或者对话，则会采用压缩格式比如MP3或者OGG。</p>
+<p>当在游戏中需要播放这些声音文件时，通常由两种方法。一种方法是让场景预加载短音效文件到内存中，这样到了播放声音的时刻就不再需要花时间到硬盘加载了。而另一种方法，由于压缩的声音或者对话文件通常会有更大的体积，通常会以<strong>6流</strong> 的方式加载。</p>
+<h2 id="2-声音事件"><a href="#2-声音事件" class="headerlink" title="2.声音事件"></a>2.声音事件</h2><p><strong>声音事件</strong>映射了一个或者多个原始数据文件。声音事件事实上是由代码触发的。所以比起直接播放fs1.wav，可能调用一个叫“footstep”的声音事件会更好。这个想法就是声音事件可以包含多个声音文件同时还能有元数据，将这些声音文件作为整体。</p>
+<h1 id="二、3D声音"><a href="#二、3D声音" class="headerlink" title="二、3D声音"></a>二、3D声音</h1><p>大多数2D音效都是位置无关的。但是对于3D音效和3D游戏来说，音源的位置就特别重要。大多数音效都有自己独特的随着<strong>监听者</strong>距离增大衰减的方式。</p>
+<h2 id="1-监听者和发射者"><a href="#1-监听者和发射者" class="headerlink" title="1.监听者和发射者"></a>1.监听者和发射者</h2><p>不管监听者怎么监听游戏世界中的音效，<strong>发射者</strong>就是发射特定音效的物体。比如说，如果有一堆柴火发出噼里哗啦的声音，就会有一个声音发射器放在哪个位置然后发出噼里啪啦的声音。然后基于监听者和火柴声的发射者之间的距离就可以算出音量的大小。发射者相对于监听者的朝向决定了哪个喇叭有声音。</p>
+<p>由于监听者回监听所有3D世界中的声音，所以摆放监听者的位置和朝向就很重要。如果监听者摆设不对，3D声音系统会有问题——要么声音太小或者太大，要么喇叭出声音的方向不对。</p>
+<p>对于很多种游戏来说，直接使用摄像机的位置和朝向就可以了。但是有些游戏却不适用，比如第三人称动作游戏。</p>
+<p>如果监听者与摄像机在同一个位置，这个声音听起来就像在几米或几十米外。简单的解决方法就是将监听者的位置和朝向设置到角色身上。但会有一个更大的问题，可能会导致喇叭出声音的方向不对。简单来说就是，会发生发射器在玩家的左侧，而在摄像机的右侧的情况，声音就可能会从左边的喇叭出来，这样就会看起来不正确。因为我们看到了爆炸在屏幕的右侧发生就会预期在右侧的喇叭播放爆炸声，而不管玩家的朝向。</p>
+<p>在游戏《指环王:征服》中，开发者做了一定的妥协。首先就是我们让监听者的朝向等于摄像机的朝向，而不是等于角色的朝向。接着，与监听者位置准确地摆放在玩家身上或者摄像机身上不同，他们放在了两者之间。换句话说，监听者的位置就是摄像机位置和角色位置的差值结果。两者间的百分比通常介于33%和66%之间都能有不错的效果。</p>
+<h2 id="2-衰减"><a href="#2-衰减" class="headerlink" title="2.衰减"></a>2.衰减</h2><p><strong>衰减</strong>描述了音效的音量随着远离监听者会如何减小，可以用任何可能的函数去表达衰减。但是，由于音量的单位<strong>分贝</strong>是一个对数刻度，线性衰减会产生对数变换关系。这种线性分贝衰减函数通常都是默认方法，但是显然不是唯一的方法。</p>
+<h2 id="3-环绕声"><a href="#3-环绕声" class="headerlink" title="3.环绕声"></a>3.环绕声</h2><p>不少平台都不支持环绕声的概念——大多数移动设备最多只支持立体声。但是，PC和家用机游戏是可以有两个以上喇叭的。在<strong>5.1环绕系统</strong>中，会有总共5个正式的喇叭和1个用于表现低频效果的低音炮。5.1配置的优点就是会感受到更多方向的声音。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/14/ihmjcQ84PCpXreD.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 一个标准的5.1环绕声配置</div>
+</center>
 
-//sizeof运算符
-Sales_data data, *p;
-sizeof(Sales_data);         //存储Sales_data类型的对象所占的空间大小
-sizeof data;                //data的类型的大小，即sizeof(Sales_data)
-sizeof p;                   //指针所占的空间大小
-sizeof *p;                  //p所指类型的空间大小，即sizeof(Sales_data)
-sizeof data.revenue;        //Sales_data的revenue成员对应类型的大小
-sizeof Sales_data::revenue; //另一种获取revenue大小的方式</code></pre><h1 id="3-类型转换"><a href="#3-类型转换" class="headerlink" title="3.类型转换"></a>3.类型转换</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>转换（conversion）</strong></td>
-<td>一种类型的值改变成另一种类型的值的过程。C++语言定义了内置类型的转换规则。类类型同样可以转换</td>
-</tr>
-<tr>
-<td><strong>隐式转换（implicit conversion）</strong></td>
-<td>由编译器自动执行的类型转换。假如表达式需要某种特定的类型而运算对象是另外一种类型，此时只要规则允许，编译器就会自动地将运算对象转换成所需的类型</td>
-</tr>
-<tr>
-<td><strong>算术转换（arithmetic conversion）</strong></td>
-<td>从一种算术类型转换成另一种算术类型。在二元运算符的上下文中，为了保留精度，算术转换通常把较小的类型转换成较大的类型</td>
-</tr>
-<tr>
-<td><strong>整型提升（integral promotion）</strong></td>
-<td>把一种较小的整数类型转换成与之最接近的较大整数类型的过程。不论是否真的需要，小整数类型（即short、char等）总是会得到提升</td>
-</tr>
-<tr>
-<td><strong>强制类型转换（cast）</strong></td>
-<td>一种显式的类型转换</td>
-</tr>
-<tr>
-<td><strong>static_cast</strong></td>
-<td>显式地执行某种定义明确的类型转换，常用于替代由编译器隐式执行的类型转换</td>
-</tr>
-<tr>
-<td><strong>const_cast</strong></td>
-<td>一种涉及const的强制类型转换。将底层const对象转换成对应的非常量类型，或者执行相反的转换</td>
-</tr>
-<tr>
-<td><strong>reinterpret_cast</strong></td>
-<td>把运算对象的内容解释成另外一种类型。这种强制类型转换本质上依赖于机器而且非常危险</td>
-</tr>
-<tr>
-<td><strong>dynamic_cast</strong></td>
-<td>和继承及运行时类型识别一起使用</td>
-</tr>
-</tbody></table>
-<pre><code>/* 隐式转换 */
+<h1 id="三、数字信号处理"><a href="#三、数字信号处理" class="headerlink" title="三、数字信号处理"></a>三、数字信号处理</h1><p>广义上讲，<strong>数字信号处理</strong> (DSP)是计算机中表示的信号。在音频领域中，数字信号处理说的是加载音频文件然后在修改之后得到不同的效果。简单例子就是加载音频文件然后增加或减小它的音高。</p>
+<p>看起来离线处理好这些效果，然后在游戏中播放也许会更好。但是运行时使用数字信号处理理由就是它能够节省大量内存。假如有一款剑击游戏，有20多种在野外开阔场地录制的武器碰撞音效。如果游戏中有多种场地会发出声音，除了野外之外，还有洞穴、大教堂等等其他地方。</p>
+<p>这时候，在洞穴中发出的声音和在野外发出等声音听起来完全不一样。特别是在洞穴中，会有<strong>回声</strong>的效果。不用数字信号处理的话，那就得为20多种刀剑声针对不同场地录制成倍的音效。现在如果需要所有战斗音效，游戏内存很快就会被用尽。但是如果有了数字信号处理效果，就只需要根据场所调整成相应的音效即可。</p>
+<p>实现数字信号处理需要线性系统和高级数学运算的知识，比如傅里叶变换。</p>
+<h2 id="1-常见数字信号处理效果"><a href="#1-常见数字信号处理效果" class="headerlink" title="1. 常见数字信号处理效果"></a>1. 常见数字信号处理效果</h2><p>游戏中常见的数字信号处理效果就是之前提到的回声。一个非常流行的回声效果库叫做Freeverb3。Freeverb3是一个<strong>冲量驱动系统</strong>，就是说为了对任何音效实现回声效果，需要一个音频文件表达在特殊场景播放的数据。</p>
+<p>另一个大量使用的数字信号处理效果就是<strong>音高偏移</strong>，特别是多普勒偏移。音高偏移会通过调整频率增加或者减小音效的音高。多普勒偏移很常用，比如赛车游戏中引擎的音高会随着速度的变化而变化。</p>
+<p>游戏中大多数的数字信号处理效果通常都会修改频率的范围或者输出分贝的级别。举个例子，一个<strong>压缩机</strong>缩小了音量的范围，导致很小的声音得到了增强，同时很大的声音得到了减小。通常用于统一多个音频文件，让它们保持相似的范围。</p>
+<p>另一个例子是<strong>低通滤波器</strong>，通过删减频率的方式减小音量。在游戏中很常见的就是当玩家附近发生爆炸时的嗡鸣声。为了实现效果，时间会拉长，然后应用低通滤波器，接着播放嗡鸣声。</p>
+<h2 id="2-区域标记"><a href="#2-区域标记" class="headerlink" title="2.区域标记"></a>2.区域标记</h2><p>通常只有关卡的一些区域才需要使用某些效果。比如说，如果一关里有野外区域和洞穴，回响效果可能只有在洞穴才会有。最简单的方式就是在地面上标记凸多边形。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/14/k5X3ZsFwbCfVdnv.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 凸多边形和凹多边形</div>
+</center>
 
-int ival = 3.541 + 3;   //结果为6，编译器可能会警告该运算损失了精度
-int ia[10];     //含有10个整数的数组
-int* ip = ia;   //ia转换成指向数组首元素的指针
-//转换成布尔类型
-char *cp = get_string();
-if(cp) /*...*/      //如果指针cp不是0，条件为真
-while(*cp) /*...*/  //如果*cp不是空字符，条件为真
-//转换成常量
-int i;
-const int &amp;j = i;   //非常量转换成const int的引用
-const int *p = &amp;i;  //非常量的地址转换成const的地址
-int &amp;r = j, *q = p; //错误：不允许const转换成非常量
-//类类型转换
-string s;
-while(cin &gt;&gt; s)     //while的条件部分把cin转换成布尔值
+<p>使用凸多边形的原因就是，给定一个凸多边形我们更容易判断一个点在凸多边形内部还是外部。给定角色的位置，就很容易判断角色是在多边形内部还是外部。如果角色在区域内部，回响效果打开，在外部则关闭。</p>
+<p>但是，我们不想玩家已进入区域就马上产生效果，否则效果会比较刺耳。这意味着，玩家进入标记区域之后，我们希望渐渐地开启回响效果，这样效果听上去更加平滑。</p>
+<p>值得注意的是使用凸多边形标记区域会有一个问题。就是如果标记区域在关卡中上下重叠，而这些区域又有不同的数字信号处理效果，这个方法会失效。举例就是，上方有一篇草地，下方由一个隧道，都标记了凸多边形区域。这个问题可以使用绑定盒之类的方式来解决。</p>
+<h1 id="四、其他声音话题"><a href="#四、其他声音话题" class="headerlink" title="四、其他声音话题"></a>四、其他声音话题</h1><h2 id="1-多普勒效应"><a href="#1-多普勒效应" class="headerlink" title="1.多普勒效应"></a>1.多普勒效应</h2><p>在街上，一辆警车打开警报器向你靠近时，随着警车的靠近声音变得尖细(即频率变高，波长变短)，相对的，在警车不断远离时，声音变得低沉(即频率变低，波长变长)。这种现象称为多普勒效应(或者称之为多普勒偏移)，原因是因为声波在空气中传播需要时间。靠近的时候，连续的声波都比前一个要早到，远离时，则是晚到。</p>
+<p>有趣的是多普勒效应不仅在音波中出现，而是所有与波相关的情况中都会出现。例如光波。</p>
+<p>在游戏中，动态多普勒效应只会在高速移动的对象身上应用，比如汽车。技术上来讲，也可以在子弹上应用，但是由于太快，通常只播子弹飞走的声音。可以使用数字信号处理效果来实现多普勒效应。</p>
+<h2 id="2-声音遮挡"><a href="#2-声音遮挡" class="headerlink" title="2.声音遮挡"></a>2.声音遮挡</h2><p><strong>声音遮挡</strong>指的是当声音被障碍物遮挡住的时候，会有低通滤波的效果，意味着高频率声音的音量被移除了。这是因为低频率的音波比起高频率更容易传播。声音遮挡的另一个输出就是整体音量的降低。</p>
+<p>相似但是不同的现象是<strong>声音衍射</strong>。通过声音衍射，声音可能不再是直线传播的了，但是还是有可能穿透障碍物。比如说，如果你朝柱子另一边的人大喊，声波会被柱子衍射，一个有趣现象是分割之后的音波可能会以不同的顺序到达，左边的音波可能比右边的音波早到，那么另一边人可能会听到两次声音。</p>
+<p>检测遮挡和衍射的方法就是发射者构造一系列指向监听者附近的弧形。如果没有一个向量能直接到达，那就是遮挡。如果有一些向量能够到达，那么是衍射。如果全部都能到达，那么是<strong>Fresnel声学衍射</strong>。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/14/wqQ95fSU1yLt6KI.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 声音遮挡(a) 声音衍射(b) Fresnel声学衍射(c)</div>
+</center>
 
-/* 显式转换 */
-
-//static_cast
-double slope = static_cast&lt;double&gt;(j) / i;  //进行强制类型转换以便执行浮点数除法
-void *p = &amp;d;                               //正确：任何非常量对象的地址都能存入void*
-double *dp = static_cast&lt;double*&gt;(p);       //正确：将void*转换回初始的指针类型
-//const_cast
-const char *pc;
-char *p = const_cast&lt;char*&gt;(pc);//正确：但是通过p写值是未定义的行为
-const char *cp;
-char *q = static_cast&lt;char*&gt;(cp);       //错误：static_cast不能转换掉const性质
-static_cast&lt;string&gt;(cp);                //正确：字符串字面值转换成string类型
-const_cast&lt;string&gt;(cp);                 //错误：const_cast只改变常量属性
-//reinterpret_cast
-int *ip;
-char *pc = reinterpret_cast&lt;char*&gt;(ip);
-string str(pc);                         //错误：可能导致异常的运行时行为，必须牢记pc所指的真实对象是一个int而非字符</code></pre>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -732,7 +597,7 @@ string str(pc);                         //错误：可能导致异常的运行�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/">https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/</a>
+                    <a href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-sheng-yin/">https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-sheng-yin/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -770,12 +635,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                                    <span class="chip bg-color">术语表</span>
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">游戏编程</span>
                                 </a>
                             
                         </div>
@@ -820,31 +681,32 @@ string str(pc);                         //错误：可能导致异常的运行�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/c-primer-zhu-yu-biao-6-lei/">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-wu-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="C++ Primer术语表6-类">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="游戏编程算法和技巧·物理">
                         
-                        <span class="card-title">C++ Primer术语表6-类</span>
+                        <span class="card-title">游戏编程算法和技巧·物理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 类的术语表。类的基本思想是数据抽象和封装。
+                            物理都会实现碰撞和运动，但不是所有游戏都需要物理。碰撞检测用于检测两个游戏对象是否相互交错在一起。有大量的算法可以检测碰撞。
+物理学中的运动部分会考虑作用力、加速度、质量等，以及其他经典力学中用到的属性，用于判断物体每帧的取向。为了做到这样
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
                                 </a>
                             
                             
@@ -854,12 +716,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                        <span class="chip bg-color">术语表</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
                     </a>
                     
                 </div>
@@ -873,31 +731,32 @@ string str(pc);                         //错误：可能导致异常的运行�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/c-primer-zhu-yu-biao-2-zi-fu-chuan-xiang-liang-he-shu-zu/">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-shu-ru/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="C++ Primer术语表2-字符串、向量和数组">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="游戏编程算法和技巧·游戏输入">
                         
-                        <span class="card-title">C++ Primer术语表2-字符串、向量和数组</span>
+                        <span class="card-title">游戏编程算法和技巧·游戏输入</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 字符串、向量和数组的术语表。C++语言定义了一个内容丰富的抽象数据类型库。其中，string和vector是两种最重要的标准库类型。内置数组是一种更基础的类型，string和vector都是对它的某种抽象。
+                            没有输入，游戏就成为了一种静止的娱乐形式，就像电影和电视那样。当游戏响应键盘、鼠标、手柄等输入设备的时候，游戏才能够互动。
+一、输入设备目前市面上有各种各样的输入设备。绝大多数的输入形式可以分为两种：数字与模拟。数字形式的输入就是那些只有两
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
                                 </a>
                             
                             
@@ -907,12 +766,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                        <span class="chip bg-color">术语表</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
                     </a>
                     
                 </div>

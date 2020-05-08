@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="深切哀悼为抗击疫情牺牲的同胞, 游戏，编程，生活">
-    <meta name="description" content="为表达对疫情时期牺牲的烈士和同胞们的深切哀悼，今日我们一同对逝者缅怀哀悼！">
+    <meta name="keywords" content="游戏编程算法和技巧·人工智能, 游戏，编程，生活">
+    <meta name="description" content="本章将谈到人工智能在游戏应用中的3个方面:寻路、基于状态的行为机制、策略/计划。寻路算法可以判定非玩家角色(NPC)如何在游戏世界中移动。基于状态的行为驱动做出相应的行为。最后，策略/计划在大型AI计划的时候是必要的需求，比如实时战略(RT">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>深切哀悼为抗击疫情牺牲的同胞 | GameOrLife</title>
+    <title>游戏编程算法和技巧·人工智能 | GameOrLife</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,12 +304,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/otherimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">深切哀悼为抗击疫情牺牲的同胞</h1>
+                    <h1 class="description center-align post-title">游戏编程算法和技巧·人工智能</h1>
                 </div>
             </div>
         </div>
@@ -424,9 +424,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">游戏编程</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -434,8 +438,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                生活
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                游戏编程
                             </a>
                         
                     </div>
@@ -447,28 +451,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-04
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-05
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    133
+                    5.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    21 分
                 </div>
                 
 				
@@ -484,8 +488,259 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>我仅代表自己和我的家人深深感恩在这场抗疫中逝去的医务工作者，志愿者以及一群又一群平凡的人，在危难中挺身而出，在重压下义无反顾。我们不会忘记，他们平凡而又伟大的人生，愿逝者安息！</p>
-<p><img src="maxresdefault.jpg" alt=""></p>
+                <p>本章将谈到人工智能在游戏应用中的3个方面:寻路、基于状态的行为机制、策略/计划。寻路算法可以判定非玩家角色(NPC)如何在游戏世界中移动。基于状态的行为驱动做出相应的行为。最后，策略/计划在大型AI计划的时候是必要的需求，比如实时战略(RTS)游戏。</p>
+<h1 id="一、“真”AI与游戏AI"><a href="#一、“真”AI与游戏AI" class="headerlink" title="一、“真”AI与游戏AI"></a>一、“真”AI与游戏AI</h1><p>在传统计算机科学中，许多人工智能的研究都趋向于复杂形势的AI，包括遗传算法和神经算法。但是这些复杂的算法在计算机和游戏中应用还存在限制。这存在两个主要原因，第一个原因是复杂的算法需要大量的计算时间。大多数游戏只能分出它们每帧的小部分时间在AI上，这意味着高效比复杂重要。另外一个主要原因就是，游戏AI通常都有良好的行为定义，通常都是在策划的控制之下，而传统的AI专注于解决更加模糊而广泛的问题。</p>
+<p>在很多游戏中，AI行为只是一种随机变化的状态机规则的组合，但还是有几个主要的例外。AI对于复杂的棋牌游戏，比如象棋或者围棋，需要决策树支持，这是传统游戏理论的基石。但是棋牌游戏在某一时刻的行动选择相比其他游戏来将还是要小一些。也有一些游戏实时做出很复杂的算法，但那些是特例。一般来讲，如果玩家觉得敌人的AI或者队友的AI行为很聪明，这个AI系统就已经成功了。</p>
+<h1 id="二、寻路"><a href="#二、寻路" class="headerlink" title="二、寻路"></a>二、寻路</h1><p>寻路就是看似简单问题的解：给定点A和B，AI该怎么只能地在游戏世界中行走？这个问题的复杂度来自于实际上A和B之间存在大量的路径可走，但只有一条是最佳的。</p>
+<p>所以只是找到一条两点之间的有效路径是不够的的。理想的寻路算法需要查找所有可能的情况，然后比较出最好的路径。</p>
+<h2 id="1-搜索空间的表示"><a href="#1-搜索空间的表示" class="headerlink" title="1.搜索空间的表示"></a>1.搜索空间的表示</h2><p>最简单的寻路算法设计就是将<strong>图</strong>作为数据结构。一个图包含了多个<strong>节点</strong>，连接任意邻近的点组成<strong>边</strong>。在内存中表示图有很多种方法，但是最简单的是邻接表。在这种表示中，每个节点包含了一系列指向任意邻近节点的指针。图中的完整节点集合可以存储在标准的数据结构容器里。</p>
+<p>这意味着在游戏中实现寻路的第一步是如何将游戏世界用图来表示。这里有多种方法。一种简单的方法就是将世界分区为一个个正方形的格子(或者六边形)。这种情况下，邻近节点就是格子中邻近的正方形。这个方法在回合制策略游戏中很流行，比如《文明》或者XCOM。</p>
+<p>但是，对于实时动作游戏，NPC通常不是在网格上一个正方形一个正方形地走。由此，在主流游戏中要么使用路点要么使用导航网格。可以在场景编辑器照片那个手工构造也可以自动化。</p>
+<p><strong>寻路节点</strong>最早在第一人称射击游戏(FPS)中使用，由id Software再20世纪90年代早期推出。通过这种表示方法，关卡设计师可以在游戏世界中摆放那些AI可以到达的位置。这些路点直接被解释为图中的节点。而边则可以自动生成。</p>
+<p>路点的主要缺点是AI只能在节点和边缘的位置移动。这是因为即使路点组成三角形，也不能保证三角形内部就是可以行走的。通常会有很多不能走的区域，所以寻路算法需要人为不在节点和边缘上的区域都是不可走的。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/26/u1mHBhi9wktzYbG.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 《幕府将军的头骨》用AI调试模式演示它用于寻路的格子</div>
+</center>
+
+<p>实际上，当部署路点之后，游戏世界中就会有很多不可到达的区域要么有很多路点。前者是不希望出现的状况，因为这样会让AI的行为显得不可信且不自然，而后者缺乏效率。越多的节点就会有越多的边缘，寻路算法花费的时间就会越长。通过路点，在性能和精确度上需要折中。</p>
+<p>一个可选的解决方案就是使用<strong>导航网格</strong>。在这种方法中，图上的节点实际上就是凸多边形。邻近节点就是简单的任意邻近的凸多边形。这意味着整个游戏世界区域可以通过很少数量的凸多边形表示，结果就是图上的节点特别少。</p>
+<p>通过导航网格，在凸多边形内部的任意位置都认为是可走的。这意味着AI有了大量的空间可以行走，因此寻路可返回更自然的路径。</p>
+<p>导航网格还有其他一些优点。比如可以只用一份导航网格就可以计算不同的角色是否可以到达。还有一点就是导航网格完全可以自动生成。</p>
+<h2 id="2-可接受的启发式算法"><a href="#2-可接受的启发式算法" class="headerlink" title="2.可接受的启发式算法"></a>2.可接受的启发式算法</h2><p>所有寻路算法都需要一种方法以数学的方式估算某个节点是否应该被选择。大多数游戏都会使用<strong>启发式</strong>，以h(x)表示，就是估算从某个位置到目标位置的开销。理想情况下，启发式结果越接近真实越好。如果它的估算总是保证小于等于真实开销，那么这个启发式是<strong>可接受</strong>的。如果启发式高估了实际的开销，这个寻路算法就会有一定概率无法发现最佳路径。</p>
+<p>对于正方形格子，有两种方式计算启发式。第一种是<strong>曼哈顿距离</strong>，简单来说曼哈顿距离认为不能沿对角线方向移动，也只有这种情况下才能使用启发式。如果对角线移动是被允许的，则曼哈顿距离会经常高估真实开销。</p>
+<p>在2D格子中，曼哈顿距离的计算如下:</p>
+<p>$$<br>h(x)=|start.x-end.x|+|start.y-end.y|<br>$$</p>
+<p>第二种计算启发式的方法就是<strong>欧几里得距离</strong>。这种启发式的计算使用标准距离公式然后估算直线路径。不像曼哈顿距离，欧几里得距离可以用在其他寻路表示中计算启发式，比如路点或者导航网络。在我们的2D格子中，欧几里得距离为:</p>
+<p>$$<br>h(x)=\sqrt{(start.x-end.x)^2+(start.y-end.y)^2}<br>$$</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/26/tBwsnEYD24ky3vP.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 曼哈顿与欧几里得距离： 红、蓝与黄线分别表示所有曼哈顿距离都拥有一样长度（12），而绿线表示欧几里得距离有6×√2 ≈ 8.48的长度</div>
+</center>
+
+<h2 id="3-贪婪最佳优先算法"><a href="#3-贪婪最佳优先算法" class="headerlink" title="3.贪婪最佳优先算法"></a>3.贪婪最佳优先算法</h2><p>在有了启发式之后，可以开始实现一个相对简单的算法:<strong>贪婪最佳优先算法</strong>。一个算法如果没有做任何长期计划而且只是马上选择最佳答案的话，则可以被认为是贪婪算法。在贪婪最佳优先算法的每一步，算法会先看所有邻近节点，然后选择最低开销的启发式。</p>
+<p>虽然这样看起来理由充足，但是最佳优先算法通常得到的都是次优的路径。如下图，路径上存在不必要的向右移动，这是因为这在当时就是最佳的访问节点。一个理想的路径应该是一开始就往下走，但是这要求一定程度的计划，这是贪婪算法所不具备的。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/26/WXpKBMLzkH9gRb7.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 贪婪最佳优先路径</div>
+</center>
+
+<p>下面来实现这个贪婪算法。首先，先看看我们每个节点所需要存储的数据。为了能够将这些数据构造成图，需要有额外的邻近信息。</p>
+<pre><code>struct Node
+    Node parent
+    float h
+end</code></pre><p>那个parent成员变量用于跟踪哪个节点是当前访问的。parent成员的价值在于构造链表，能够从终点回到起点。当算法完成的时候，parent链表就可以通过遍历得到最终路径。浮点数h存储了某个节点的h(x)的值，这个值导致在选择节点的时候会偏向于h值最小的节点。</p>
+<p>算法的下一个组件就是用于临时存储节点的容器：开放集合和封闭集合。<strong>开放集合</strong>存储了所有目前需要考虑的节点。由于找到最低h(x)值开销节点的操作是很常见的，所以对于开放集合可以采用某种类似于二叉堆或者优先级队列的容器。</p>
+<p>而<strong>封闭集合</strong>则包含了所有已经被算法估值的节点。一旦节点在封闭集合中，算法不再对其进行考虑。由于经常会检查一个节点是否存在于封闭集合里，故会使用搜索的时间复杂度优于O(n)的数据结构，比如二叉搜索树。</p>
+<p>现在我们就有了贪婪最佳优先算法所需要的组件。假设有开始节点和结束节点，而且我们需要计算两点之间的路径。算法的主要部分在循环中处理，但是，在进入循环之前，我们需要先初始化一些数据：</p>
+<pre><code>currentNode = stratNode
+add currentNode to closedSet</code></pre><p>当前节点只是跟踪哪个邻居节点是议案一个估值的节点。在算法开始的时候，我们除了开始节点没有任何节点，所以需要先对开始节点的邻居进行估值。</p>
+<p>在主循环里，我们首先要做的事情就是查看所有与当前节点相邻的节点，而且把一部分加到开放集合里：</p>
+<pre><code>do
+    foreach Node n adjacent to currentNode
+    if closedSet conatins n
+        continue
+    else
+        n.parent = currentNode
+        if openSet does not contain n
+            compute n.h
+            add n to openSet
+        end
+    end
+loop</code></pre><p>注意任意已经在封闭集合里的节点都会被忽略。在封闭集合里的节点都在之前进行了估值，所以不需要再进一步估值了。对于其他相邻节点，这个算法会把parent设置为当前节点。然后，如果节点不在开放集合中，我们计算h(x)的值并且把节点加入开放集合。</p>
+<p>在邻近节点处理完之后，如果开放集合中再也没有节点存在，意味着我们把所有节点都估算过了，这就会导致寻路失败。实际上也不能保证总有路径可走，所以算法必须考虑这种情况:</p>
+<pre><code>if openSet is empty
+    break //退出主循环
+end</code></pre><p>但是，如果开放集合中还有节点，我们就可以继续。接下来要做的事情就是在开放集合中找到最低h(x)值开销节点，然后移到封闭集合中。在新一轮迭代中，我们依旧将其设为当前节点。</p>
+<pre><code>currentNode = Node with lowest h in openSet
+remove currentNode from openSet
+add currentNode to closedSet</code></pre><p>最后，在找到有效路径之后，当前节点等于终点，这样就能够退出循环了。</p>
+<p>until currentNode == endNode //end main do…until loop</p>
+<p>如果在成功的情况下退出do…until循环，我们会得到一条链表通过parent从终点指向起点。由于我们想要得到从起点到终点的路径，所以必须将其反转。有很多种方法反转链表，最简单的方法就是使用栈。</p>
+<p>完整的贪婪最佳优先算法如下所示。注意这个实现假设h(x)的值在执行过程中总是不变的。</p>
+<pre><code>currentNode = startNode
+add currentNode to closedSet
+do
+    //把邻接节点加入开放集合
+    foreach Node n adjacent to currentNode
+        if closedSet contains n
+            continue
+        else
+            n.parent = currentNode
+            if openSet does not contain n
+                compute n.h
+                add n to openSet
+            end
+        end
+    loop
+
+    //所有可能性都尝试过了
+    if openSet is empty
+        break
+    end
+
+    //选择新的当前节点
+    currentNode = Node with lowest h in openSet
+    remove currentNode from openSet
+    add currentNode to closedSet
+until currentNode == endNode</code></pre><h2 id="4-A-寻路"><a href="#4-A-寻路" class="headerlink" title="4.A*寻路"></a>4.A*寻路</h2><p>比起单一地依赖于h(x)作为寻路的估价，A* 算法 增加了 <strong>路径开销</strong>分量。路径开销就是从起点到当前节点的实际开销，通过g(x)计算。A*中访问一个节点的开销等式为:</p>
+<pre><code>f(x)=g(x)+h(x)</code></pre><p>为了能够使用A*算法，Node结构体需要增加f(x)和g(x)的值。</p>
+<pre><code>struct Node
+    Node parent
+    float f
+    float g
+    float h
+end</code></pre><p>当一个节点加入开放集合之后，我们需要计算所有的3个分量，而不仅仅是启发式。而且，开放集合会根据f(x)的值来排序，因为在A*中每次迭代都会选择f(x)值最低的节点。</p>
+<p>对于A* 算法只有一个主要变化，那就是<strong>节点选用</strong> 的概念。在最佳优先算法中，总是把邻接节点作为父节点。但是在A* 算法中，已经放在开放集合中的邻接节点需要估值之后才能决定哪个当前节点是父节点。</p>
+<p>这是因为g(x)的开销取决于父节点g(x)的开销，这意味着如果父节点是可选的，那么g(x)的开销是可变的。所以在A* 算法中我们不想自动更改节点的父节点。只有在当前节点是更好的父节点时才改动。</p>
+<pre><code>currentNode = startNode
+add currentNode to closedSet
+do
+    foreach Node n adjacent to currentNode
+        if closedSet contains a
+            continue
+        else if openSet contains n //选用检查
+            compute new_g //n节点以当前节点为父节点的g(x)值
+            if new_g &lt; n.g
+                n.parent - currentNode
+                n.g = new_g
+                n.f = n.g + n.h //该节点的n.h是不变的
+            end
+        else
+            n.parent = currentNode
+            compute n.h
+            compute n.g
+            n.f = n.g + n.h
+            add n to openSet
+        end
+    loop
+
+    if openSet is empty
+        break
+    end
+
+    currentNode = Node with lowest f in openSet
+    remove currentNode from openSet
+    add currentNode to closeSet
+until currentNode == endNode</code></pre><h2 id="5-Dijkstra算法"><a href="#5-Dijkstra算法" class="headerlink" title="5.Dijkstra算法"></a>5.Dijkstra算法</h2><p>最后一个寻路算法可以通过稍微修改A* 算法得到。在Dijkstra算法中，没有启发式的估算——或者换个角度:<br>$$<br>f(x)=g(x)+h(x)<br>$$</p>
+<p>$$<br>h(x)=0<br>$$</p>
+<p>$$<br>\therefore f(x)=g(x)<br>$$</p>
+<p>这意味着Dijkstra算法可以使用与A* 算法一样的代码，除了启发式为0之外。但在实际应用中，大多数游戏都不会使用Dijkstra算法。提起这个算法只是因为Dijkstra算法比A* 早10年提出。A* 的创新在于结合了贪婪最佳优先和Dijkstra算法。</p>
+<h1 id="三、基于状态的行为"><a href="#三、基于状态的行为" class="headerlink" title="三、基于状态的行为"></a>三、基于状态的行为</h1><p>大多数基础的AI行为无非就是不同的状态。以《乒乓》的AI举例，它只需要跟踪球的位置。这个行为在整个游戏的过程中都没有改变，所以这样的AI可以被认为是<strong>无状态</strong>的。但是当游戏有点复杂度的时候，AI就需要在不同的时候有不同的行为。大多数现代游戏的NPC在不同的位置都有不同的行为。</p>
+<h2 id="1-AI的状态机"><a href="#1-AI的状态机" class="headerlink" title="1.AI的状态机"></a>1.AI的状态机</h2><p><strong>有限状态机</strong> 可以完美地表达基于状态的AI。它有着一组可能的状态，由一定条件控制状态转换，而在状态切入切除的时候可以执行动作。</p>
+<p>当你为AI实现状态机时，应该先设计好有着什么样的行为，这些行为是如何连接的。假设我们为潜行游戏实现警卫的基础AI。默认情况下，我们会让警卫巡逻预定好的路径。如果警卫在巡逻的时候发现玩家，他应该会攻击玩家。最后，如果警卫被杀死了，他应该死亡。所以AI描述起来应该有3种状态:巡逻、攻击、死亡。</p>
+<p>紧接着，我们需要决定哪些状态机之间可以切换。进入死亡状态的条件很明显，就是警卫被杀死，就会进入死亡状态。对于攻击状态，只有玩家被警卫发现才会进入。</p>
+<p>虽然这个AI能用，但是比起大多数潜行游戏的AI来说就弱多了。</p>
+<h2 id="2-基础的状态机实现"><a href="#2-基础的状态机实现" class="headerlink" title="2.基础的状态机实现"></a>2.基础的状态机实现</h2><p>状态机有多种实现方式。最简单的需求就是当AI更新的时候，正确的更新行为必须根据当前状态来完成。理想情况下，我们还想让状态机有进入和退出行为。</p>
+<p>如果AI只有两种状态，我们可以在AI的Update函数中用一个布尔值来判断。但是这个方案不够健壮。一个稍微灵活的方式是通过枚举值来表示不同的状态，这经常在简单的游戏中可以看到。例如，上述的状态机就可以像下面这样定义枚举:</p>
+<pre><code>enum AIState
+    Patrol,
+    Death,
+    Attack
+end</code></pre><p>然后可以用AIController类似AIState类型作为成员变量。在我们的AIController的Update函数中，可以根据当前状态来执行不同的行为:</p>
+<pre><code>function AIController.Update(float deltaTime)
+    if state == Patrol
+        //执行巡逻行为
+    else if state == Death
+        //执行死亡行为
+    else if state == Attack
+        //执行攻击行为
+    end
+end</code></pre><p>状态的变化和进入/退出行为可以在第二个函数中实现:</p>
+<pre><code>function AIController.SetState(AIState newState)
+    //退出行为
+    if state == Patrol
+        //退出巡逻行为
+    else if state == Death
+        //退出死亡行为
+    else if state == Attack
+        //退出攻击行为
+    end
+
+    state = newState
+
+    //进入行为
+    if state == Patrol
+        //进入巡逻行为
+    else if state == Death
+        //进入死亡行为
+    else if state == Attack
+        //进入攻击行为
+    end
+end</code></pre><p>这个实现有几个问题。首先很明显的一点就是，随着状态机的增加，Update和SetState的可读性会减弱。</p>
+<p>第二个主要问题是缺乏灵活性。加入我们有两个AI，它们有不同的状态机。这样我们就需要为不同的AI实现不同的枚举和控制器。如果两个AI之间会公用一些状态，以我们目前的基础代码结构是无法在AI之间共享状态的。</p>
+<p>一个方法是将巡逻的代码复制到两个类中，但是有着两份同样的重复代码是非常不好的实践。另一个方法就是写一个共同的基类，但是这样，意味着任何需要巡逻行为的AI都要从这里继承。</p>
+<p>多以虽然这个基础的实现能工作，但是除非AI状态机非常简单，否则完全不推荐。</p>
+<h2 id="3-状态机设计模式"><a href="#3-状态机设计模式" class="headerlink" title="3.状态机设计模式"></a>3.状态机设计模式</h2><p>有一个通用解法的设计模式能解决类似的问题。这可以通过类组合的方式完成，所以AIController“有一个”AIState作为成员变量。每个特定的状态都是AIState的子类。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/26/9c8anoZTUyJAGMS.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 状态机设计模式</div>
+</center>
+
+<p>基类AIState的定义如下:</p>
+<pre><code>class AIState
+    AIController parent
+    function Update(float deltaTime)
+    function Enter()
+    function Exit()
+end</code></pre><p>父引用使得任何AIState的实例都可以让AIController拥有它。这是必要的，如果我们想要切换到新的状态，需要有一些方法通知AIController这些事情。每个AIState都有自己的Update、Enter、Exit函数，可以为某个特定有需求的状态所实现。</p>
+<p>AIController类会保留一个当前AIState的引用，而且需要Update和SetState函数:</p>
+<pre><code>class AIController
+    AIState state
+    function Update(float deltaTime)
+    function SetState(AIState newState)
+end</code></pre><p>这样，AIController的Update函数只要简单地调用AIState的Update函数即可:</p>
+<pre><code>function AIController.Update(float deltaTime)
+    state.Update(deltaTime)
+end</code></pre><p>通过设计模式，SetState函数也变得清晰多了:</p>
+<pre><code>function AIController.SetState(AIState newState)
+    state.Exit()
+    state = newState
+    state.Enter()
+end</code></pre><p>通过状态设计模式，所有状态相关的行为都移到AIState的子类当中去了。这使得AIController的代码比之前清晰多了。状态机设计模式也使得系统更加模块化。比如说，如果我们想要在多个状态机中使用巡逻代码，就会容易很多。而且即使我们想让巡逻稍稍不同，只要从巡逻继承出去就可以修改。</p>
+<h1 id="四、策略和计划"><a href="#四、策略和计划" class="headerlink" title="四、策略和计划"></a>四、策略和计划</h1><p>很多游戏都需要比基于状态的敌人更复杂的AI。</p>
+<h2 id="1-策略"><a href="#1-策略" class="headerlink" title="1.策略"></a>1.策略</h2><p><strong>策略</strong>就是从AI的视角来完成游戏。比如说，它要思考的是应该更具侵略性还是防守性。<strong>微观策略</strong>由单位行为组成。这通常可以用状态机来完成。相对而言，<strong>宏观策略</strong>会复杂得多。它是AI的大局观，而且会决定如何完成游戏。</p>
+<p>策略有时候看上去就像很模糊的使命描述，而且模糊的策略是很难开发的。为了让问题更加形象，策略通常被认为是一系列的特定目标。比如说，如果策略是“科技”，一个特定的目标可能就是去“扩张”。</p>
+<p>一个策略通常都不止一个目标，也就是说，我们需要有一个优先级系统来让AI选择哪个目标更加重要。所有其他目标如果优先级不是最高，俺么会先搁在后面不管。其他目标会在最重要的目标完成时重新参与选择。一个实现目标系统的方式就是像这样写一个AIGoal类:</p>
+<pre><code>class AIGoal
+    function CalculatePriority()
+    function ConstructPlan()
+end</code></pre><p>每个特定目标都会作为AIGoal的子类实现。所以当策略进行目标选择之后，所有策略的目标会放到一个根据优先级排序的容器里。注意，真正高级的策略系统应该支持同时选用多个目标的功能。因为如果两个目标不是互斥的，那么是没有理由不同时选择两个目标的。</p>
+<p>计算优先级的启发式函数是CalculatePriority，会根据游戏规则的不如而变化。</p>
+<p>AIGoal中的ConstructPlan函数就是用于构造<strong>计划</strong>的：一系列为了达到目标而计划出来的步骤。</p>
+<h2 id="2-计划"><a href="#2-计划" class="headerlink" title="2.计划"></a>2.计划</h2><p>每个目标都需要一个相应的计划。比如说，如果目标是扩张，那么计划可能如下:</p>
+<ol>
+<li>为扩张侦查合适的地点</li>
+<li>建立足够多的单位来保护扩张</li>
+<li>派遣工人和战斗单位去扩张点</li>
+<li>开始建造扩张点</li>
+</ol>
+<p>特定目标的计划可以用状态机来实现。计划中的每一步都可以是状态机中的一个状态，而状态机持续为该步骤行动直到达到条件。但是，实践中的计划很少是线性的。根据计划某个步骤的成功或者失败，AI可能会调整步骤的顺序。</p>
+<p>一个需要考虑的事情是计划需要定期查看目标的可行性。如果扩张计划中发现没有适合扩张的位置，那么目标就是不可行的。一旦目标被标记为不可行，大局观需要重新估算。最终，必须要有一个“指挥官”来决定策略的改变。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -529,7 +784,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverbvb.github.io/shen-qie-ai-dao-wei-kang-ji-yi-qing-xi-sheng-de-tong-bao/">https://oliverbvb.github.io/shen-qie-ai-dao-wei-kang-ji-yi-qing-xi-sheng-de-tong-bao/</a>
+                    <a href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-ren-gong-zhi-neng/">https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-ren-gong-zhi-neng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -566,7 +821,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">游戏编程</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -609,19 +868,20 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-bian-cheng-gai-shu/">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-yong-hu-jie-mian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="游戏编程算法和技巧·游戏编程概述">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="游戏编程算法和技巧·用户界面">
                         
-                        <span class="card-title">游戏编程算法和技巧·游戏编程概述</span>
+                        <span class="card-title">游戏编程算法和技巧·用户界面</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            游戏编程概述一、游戏编程的发展世界上第一款商业游戏Computer Space在1971年推出，是后来Atari的创办人Nolan Bushnell和Ted Dabney开发的。这款游戏当时并不是运行在传统计算机上的。它的硬件甚至没有处理器
+                            一个游戏的用户界面通常有两个主要部分:一个是菜单系统，一个是平视显示器(HUD)。菜单系统决定玩家如何进入和退出游戏，包括改变模式、暂停游戏、选择选项等。一些游戏(特别是RPG)都会有菜单系统来展示和升级技能。
+HUD包括了展示玩家游戏中额
                         
                     </div>
                     <div class="publish-info">
@@ -658,31 +918,32 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/c-primer-zhu-yu-biao-5-han-shu/">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-she-xiang-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="C++ Primer术语表5-函数">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="游戏编程算法和技巧·摄像机">
                         
-                        <span class="card-title">C++ Primer术语表5-函数</span>
+                        <span class="card-title">游戏编程算法和技巧·摄像机</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 函数的术语表。函数是一个命名了的代码库，我们通过调用函数执行相应的代码。
+                            摄像机赋予了玩家在3D世界中的视角。在游戏中会用到很多种类型的摄像机，而选择摄像机又是游戏开发初期的基本设计决策
+一、摄像机的类型1，固定摄像机严格来讲，固定摄像机就是那种永远在同一位置的摄像机。这种固定的摄像机通常只用于非常简单的3D游戏
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
                                 </a>
                             
                             
@@ -692,12 +953,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                        <span class="chip bg-color">术语表</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
                     </a>
                     
                 </div>

@@ -1,0 +1,1368 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="游戏编程算法和技巧·物理, 游戏，编程，生活">
+    <meta name="description" content="物理都会实现碰撞和运动，但不是所有游戏都需要物理。碰撞检测用于检测两个游戏对象是否相互交错在一起。有大量的算法可以检测碰撞。
+物理学中的运动部分会考虑作用力、加速度、质量等，以及其他经典力学中用到的属性，用于判断物体每帧的取向。为了做到这样">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>游戏编程算法和技巧·物理 | GameOrLife</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="GameOrLife" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">GameOrLife</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">GameOrLife</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/oliverbvb" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/oliverbvb" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">游戏编程算法和技巧·物理</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">游戏编程</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                游戏编程
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-05-08
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-05-08
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    23 分
+                </div>
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>物理都会实现碰撞和运动，但不是所有游戏都需要物理。碰撞检测用于检测两个游戏对象是否相互交错在一起。有大量的算法可以检测碰撞。</p>
+<p>物理学中的运动部分会考虑作用力、加速度、质量等，以及其他经典力学中用到的属性，用于判断物体每帧的取向。为了做到这样，必须用到微积分，主要是数值积分法。</p>
+<h1 id="一、平面、射线和线段"><a href="#一、平面、射线和线段" class="headerlink" title="一、平面、射线和线段"></a>一、平面、射线和线段</h1><h2 id="1-平面"><a href="#1-平面" class="headerlink" title="1.平面"></a>1.平面</h2><p>平面是平的，在二维上无限延伸，就如同线可以在一维空间无限延伸一样。在游戏中，我们通常用平面作为地面和墙体的抽象。一个平面可以有多种表示方法，但是通常游戏程序员会倾向于用以下表示:</p>
+<p>$$<br>P·\hat{n}+d=0<br>$$</p>
+<p>P是平面上任意一点，$\hat{n}$是平面法线，d是平面到原点的最小距离。</p>
+<p>可以用平面上两个向量叉乘得到法线后，再代入顶点值得到d值。然后将这些值存储在我们的Plane数据结构体内:</p>
+<pre><code>struct Plane
+    Vector3 normal
+    float d
+end</code></pre><h2 id="2-射线和线段"><a href="#2-射线和线段" class="headerlink" title="2.射线和线段"></a>2.射线和线段</h2><p><strong>射线</strong>就是从某个点开始出发，朝某个方向无限延伸。在游戏中，通常用参数方程表示射线。参数方程是借助其他参数来表达的，一般称之为t。对于射线来说，参数方程如下:</p>
+<p>$$<br>R(t)=R_0+\overrightarrow{v}t<br>$$</p>
+<p>$R_0$就是起点，而$\overrightarrow{v}$就是射线穿越的方向。由于射线是从某点开始，然后朝着某个方向无限延伸，为了让射线表达式顺利工作，t必须大于等于0。就是说当t为0时，这个参数方程在起点$R_0$就停了。</p>
+<p><strong>线段</strong>与射线类似，除了即有起点又有终点之外。我们可以使用完全同样的参数方程来表示线段。唯一不同的地方就是现在t有了上限，因为线段必须有一个终点。</p>
+<p>技术上来讲，<strong>光线投射</strong>就是射出一条射线，然后检查是否打到某个对象。但是，大多数物理引擎都会由于实际上使用的是线段做检测的方法让人迷惑，包括Havok和Box2D。这么做的原因是游戏世界通常都会有一定的约束，所以使用线段更加合理。</p>
+<p>光线投射在3D游戏中几乎无处不在。举个常见的粒子就是发射一颗子弹穿过一条直线，虽然一些游戏采用弹道模拟的方式计算子弹弹道，但是采用光线投射也差不多，因为子弹运行得很快。还有其他的光线投射应用，包括根据敌友变色、AI判断敌人是否可见、Fresnel声学衍射、鼠标选取物品。所有这些场景都可以使用光线投射。</p>
+<p>由于光线投射要求使用线段，我们至少需要两个参数——线段的起点和终点:</p>
+<pre><code>struct RayCast
+    Vector3 startPoint
+    Vector3 endPoint
+end</code></pre><h1 id="二、碰撞几何体"><a href="#二、碰撞几何体" class="headerlink" title="二、碰撞几何体"></a>二、碰撞几何体</h1><p>在现代3D游戏中，人形角色拥有15000以上条边的多变形很常见。当游戏需要判断两个角色是否碰撞时，检查所有三角片的碰撞效率不会很高。正因如此，大多数游戏都使用简化的几何体做碰撞检测，比如球体、盒子。这些碰撞几何体不会绘制到屏幕上，只是用于提高碰撞检测的速度。</p>
+<p>值得一提的是，游戏对象拥有多个不同级别的碰撞几何体也是很常见的。这样，简单的碰撞体可以先进行第一轮碰撞检测。在简单的碰撞体发生了碰撞之后，再选择更精细的碰撞体进一步检测碰撞。</p>
+<h2 id="1-包围球"><a href="#1-包围球" class="headerlink" title="1.包围球"></a>1.包围球</h2><p>最简单的碰撞体就是包围球(在2D游戏中则是包围圈)。一个球体可以通过两个变量定义——向量表示球体的中心点，标量表示球体的半径:</p>
+<pre><code>class BoundingSphere
+    Vector3 center
+    float radius
+end</code></pre><p>多种物体，比如小行星会在球体内包围，适配得很好。但是其他类型的物体，包括人形角色，则会留出很多空间。这意味着有很多类型的物体使用球形包围体会有很多<strong>漏报(false positive)</strong>。就是说两个游戏对象的包围体发生碰撞，但是两个物体自身还没有碰撞。</p>
+<p>由于包围球对大多数游戏对象都不够精准，使用包围球作为唯一碰撞体是不合理的。但是包围球的优势就是进行碰撞检测非常简单，所以这种碰撞体是个不错的候补。</p>
+<h2 id="2-轴对齐包围盒"><a href="#2-轴对齐包围盒" class="headerlink" title="2.轴对齐包围盒"></a>2.轴对齐包围盒</h2><p>对于2D游戏来说，一个<strong>轴对齐包围盒</strong> (缩写AABB)就是一个每条边都平行于x轴或者y轴的矩阵。类似地，在3D游戏中，AABB就是长方体，而且每条棱都与对应的轴平行。不管2D还是3D，AABB都可以用两个点表示:最大点和最小点。在2D中，最小点就是左下角的点，而最大点则是右上角的点。</p>
+<pre><code>class AABB2D
+    Vector min
+    Vector max
+end</code></pre><p>由于AABB必须与对应的轴平行，如果一个对象旋转，那么AABB就需要相应变化。但是对于3D游戏来说，人形角色通常只绕向上的轴旋转，这种旋转并不会让AABB有太多的变化。因此，使用AABB作为人形角色的包围体是很常见的，特别是AABB和球体之间的碰撞计算量很小。</p>
+<h2 id="3-朝向包围盒"><a href="#3-朝向包围盒" class="headerlink" title="3.朝向包围盒"></a>3.朝向包围盒</h2><p>一个<strong>朝向包围盒</strong> (或者OBB)类似于轴对齐包围盒，只是不再要求与轴平行。就是说，这是一个长方形(2D)或者长方体(3D),而且每条轴不再需要与之对应的坐标轴平行。OBB的优点就是可以随着游戏对象渲染，因此不管游戏对象的朝向如何，OBB的精准度很高，同时计算花费也很高。OBB在游戏中有多种表示方式，包括用8个顶点或者6个平面。</p>
+<h2 id="4-胶囊体"><a href="#4-胶囊体" class="headerlink" title="4.胶囊体"></a>4.胶囊体</h2><p>在2D游戏中，胶囊体可以看作是一个AABB加上两端各一个半圆。之所以较胶囊体是因为看上去就跟药物胶囊一样。如果我们把胶囊体扩展到3D，就会变成一个圆柱加上两端一个半球。胶囊体在人形角色的碰撞体表示中是很流行的，因为他们比AABB精准一些。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/15/zo2KM8kXPDY9NOh.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 被胶囊体包围的人形(a)和被凸多边形包围的椅子(b)</div>
+</center>
+
+<p>胶囊体还可以看作带半径的线段，在游戏引擎中就是这么表示的:</p>
+<pre><code>struct Capsule2D
+    Vector2 startPoint
+    Vector2 endPoint
+    float radius
+end</code></pre><h2 id="5-凸多边形"><a href="#5-凸多边形" class="headerlink" title="5.凸多边形"></a>5.凸多边形</h2><p>另一个碰撞几何体表示的选择就是使用<strong>凸多边形</strong>(在3D领域称之为<strong>凸包</strong>)。凸多边形比其他方式效率都要低，但是比它们都精准。虽然还是有很多漏报，但是漏报的情况比其他方式都要好。</p>
+<h2 id="6-组合碰撞几何体"><a href="#6-组合碰撞几何体" class="headerlink" title="6.组合碰撞几何体"></a>6.组合碰撞几何体</h2><p>最后一个增加精准度的选择就是使用<strong>组合碰撞几何体</strong>进行碰撞检测。在人形的粒子中，我们可以在头部使用球形，身干用AABB，凸多边形用于手脚等。通过不同的碰撞几何体组合，我们几乎可以消灭漏报。</p>
+<p>不过检测碰撞几何体组合还是慢的让人不想用。事实上，在人形的例子中，应该先用AABB或者胶囊体进行第一轮碰撞检测，然后通过之后再进行更精确的测试，比如组合碰撞几何体。这种方法取决于你是否需要将精准度分级别。在检测子弹是否打中角色的时候会用到，但是阻挡玩家走进墙里就没必要了。</p>
+<h1 id="三、碰撞检测"><a href="#三、碰撞检测" class="headerlink" title="三、碰撞检测"></a>三、碰撞检测</h1><h2 id="1-球与球的交叉"><a href="#1-球与球的交叉" class="headerlink" title="1.球与球的交叉"></a>1.球与球的交叉</h2><p>如果两个球的半径之和小于两个球之间的距离，那么就发生了交叉。但是，计算距离会用到平方根，为了避免平方根的比较，通常都会使用距离的平方与半径之和的平方进行比较。这个算法只用几行代码，效率非常高，用它作为基本的碰撞体很常见。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/15/zbsiDpW6k1LwUyo.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 两个球交叉(a)和没有交叉(b)</div>
+</center>
+
+<pre><code>function SphereIntersection(BoundingSphere a, BoundingSphere b)
+    //构造两个中心点的向量，然后求长度的平方
+    Vector3 centerVector = b.center - a.center
+    //v的长度平方等于v点乘v
+    float distSquared = DotProduct(centerVector, centerVector)
+
+    //distSquared是否小于半径和的平方?
+    if distSquared &lt; ((a.radius + b.radius) * (a.radius + b.radius))
+        return true
+    else
+        return false
+    end
+end</code></pre><h2 id="2-AABB与AABB交叉"><a href="#2-AABB与AABB交叉" class="headerlink" title="2.AABB与AABB交叉"></a>2.AABB与AABB交叉</h2><p>如同球体交叉一样，AABB的交叉计算即使在3D游戏中也是很廉价的。2D中的AABB看起来会容易一些。</p>
+<p>当检测两个2D的AABB交叉的时候，检测没交叉比检测有交叉要容易些。4中没交叉的情况如下。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/15/eSthkJZb5GOD7iC.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 两个AABB完全没有交叉的4种情形</div>
+</center>
+
+<pre><code>function AABBIntersection(AABB2D a, AABB2D b)
+    bool test = (a.max.x &lt; b.min.x) || (b.max.x &lt; a.min.x) || (a.max.y &lt; b.min.y) || (b.max.y &lt; a.min.y)
+
+    return !test
+end</code></pre><h2 id="3-线段与平面交叉"><a href="#3-线段与平面交叉" class="headerlink" title="3.线段与平面交叉"></a>3.线段与平面交叉</h2><p>检测线段是否与平面碰撞在游戏中很常见。先来理解一下背后的线性代数。首先，我们有线段和平面的两个等式:</p>
+<p>$$<br>R(t)=R_0+\overrightarrow{v}t<br>$$</p>
+<p>$$<br>P·\hat{n}+d=0<br>$$</p>
+<p>我们想判断是否存在一个值t，使得点落在平面上。换句话说，我们想判断是否存在t值，使得$R(t)$满足平面等式中$P$的。索引将$R(t)$代入$P$:</p>
+<p>$$<br>R(t)·\hat{n}+d=0<br>$$</p>
+<p>$$<br>(R_0+\overrightarrow{v}t)·\hat{n}+d=0<br>$$</p>
+<p>解出t的值:</p>
+<p>$$<br>R_0·\hat{n}+(\overrightarrow{v}·\hat{n})t+d=0<br>$$</p>
+<p>$$<br>(\overrightarrow{v}·\hat{n})=-(R_0·\hat{n}+d)<br>$$</p>
+<p>$$<br>t=\frac{-(R_0·\hat{n}+d)}{\overrightarrow{v}·\hat{n}}<br>$$</p>
+<p>线段的起点对应于t=0，而终点则对应于t=1。所以当我们解出t时，如果t的值在这个范围外，那么可以忽略它。特别的是，复制表示线段朝向远离平面的方向。</p>
+<p>还有要考虑$\overrightarrow{v}$与$\hat{n}$点乘结果为0的情况，会产生除0异常。这种情况就是线段与平面平行，唯一交叉的情况就是线段在平面上。</p>
+<pre><code>//返回值就是这个结构体
+struct LSPlaneReturn
+    bool intersects
+    Vector3 point
+end
+
+//记住光线投射实际上就是线段
+function LSPlaneIntersection(RayCast r, Plane p)
+    LSPlaneReturn retVal
+    retVal.intersects = false
+
+    //计算线段方程的v
+    Vector3 v = r.endPoint - r.startPoint
+
+    //检查线段是否与平面平行
+    float vDotn = DotProduct(v, p.normal)
+    if vDotn is not approximately 0
+        t = -1 * (DotProduct(r.startPoint, p.normal) + p.d)
+        t /= vDorn
+
+        //t应该介于起点和终点(0到1)之间
+        if t &gt;= 0 &amp;&amp; t &lt;= 1
+            retVal.intersects = true
+
+            //结算交点
+            retVal.point = r.startPoint + v * t
+        end
+    else
+        //测试起点是否在平面上
+        ...
+    end
+
+    return retVal
+end</code></pre><h2 id="4-线段与三角片交叉"><a href="#4-线段与三角片交叉" class="headerlink" title="4.线段与三角片交叉"></a>4.线段与三角片交叉</h2><p>假设你需要算出用线段表示的子弹与某个三角片之间是否发生碰撞。第一步就是算出三角片所在的平面。在有了这个平面之后，你可以看看这个平面是否与线段相交。如果他们相交，你就会得到与三角形所在平面相交的交点。最后，由于平面是无限大的，我们要检测该点是否在三角片之内。</p>
+<pre><code>//这个函数只能在顶点为顺时针顶点序及共面下正常工作
+function PointInPolygon(Vector[] verts, int numSides, Vector3 point)
+    //计算多边形的法线
+    Vector3 normal = CrossProduct(Vector3(verts[1] - verts[0]), Vector3(verts[2] - verts[1]))
+    normal.Normalize()
+
+    //临时变量
+    Vector3 side, to, cross
+
+    for int i = 1, i &lt; numSides, i++
+        //从上一个顶点到当前顶点
+        side = vertes[i] - verts[i-1]
+        //从上一个顶点到point
+        to = point - verts[i-1]
+
+        cross = CrossProduct(side, to)
+        cross.Normalize()
+
+        //表示在多边形外部
+        if DotProduct(cross, normal) &lt; 0
+            return false
+        end
+    loop
+
+    //必须检测最后一条边，就是最后一个顶点到第一个顶点
+    side = verts[0] - verts[numSides - 1]
+    to = point - verts[numsSides - 1]
+    cross = CrossProduct(side, to)
+    cross.Normalize()
+
+    if DotProduct(cross, normal) &lt; 0
+        return false
+    end
+
+    //在所有边内部
+    return true
+end</code></pre><h2 id="5-球与平面交叉"><a href="#5-球与平面交叉" class="headerlink" title="5.球与平面交叉"></a>5.球与平面交叉</h2><p>在游戏中球可以与墙发生碰撞，为了对这个碰撞准确建模，可以使用球与平面的交叉。给定平面的$\hat{n}$和$d$，碰撞检测最简单的方法就是建立一个新的平面，对齐球心并且与原有平面平行。如果两个平面距离比球的半径要小，那么就发生了交叉。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/15/AHTdwVZIGjL7nux.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 球与平面不交叉的情况</div>
+</center>
+
+<pre><code>function SpherePlaneIntersection(BoundingSphere s, Plane p)
+    //通过平面的法线p.normal及圆中心点s.center计算平面的d
+    float dSphere = -DotProduct(p.normal, s.center)
+
+    //检查是否在范围之内
+    return (abs(d-dSphere) &lt; s.radius)
+end</code></pre><h2 id="6-球形扫掠体检测"><a href="#6-球形扫掠体检测" class="headerlink" title="6.球形扫掠体检测"></a>6.球形扫掠体检测</h2><p>到目前为止，我们讲了<strong>即时碰撞检测</strong>算法。就是说那些算法只能检查当前帧中发生的碰撞。虽然很多情况下都有效，但是也有很多不适用的时候。</p>
+<p>如果子弹朝着纸张发射，不存在子弹与纸张错在一起的准确的一帧。这是因为子弹速度很快，而纸张很薄。这个问题通常被称为<strong>子弹穿过纸张问题</strong>。为了解决这个问题，能够进行<strong>连续碰撞检查</strong>(CCD)的能力是必要的。这里只讨论其中一种CCD技术。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/15/5rzE3KYlCGdetmA.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 子弹穿过纸张问题</div>
+</center>
+
+<p>在<strong>球形扫掠体检测</strong>中，有两个移动中的球体。而输入则是两个球在上一帧的位置(t=0)和这一帧的位置(t=1)。给定这些数据，我们可以判断两帧之间两个球是否发生了碰撞。</p>
+<p>球形扫掠体看上去和胶囊体差不多。那是因为球形扫掠体确实就是胶囊体。球形扫掠体有起点、终点及半径，完全就是一个胶囊体。所以胶囊体与胶囊体的碰撞完全可以在这里使用。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/15/NeqRZDMKmjS9U8t.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 球形扫掠体检测</div>
+</center>
+
+<p>给定球体的上一帧和这一帧的位置，就可以将球的位置转换为参数方程。这个转换得到的函数可以用于光线投射。多以给定球P和球Q，我们可以用两个参数方程表示:</p>
+<p>$$<br>P(t)=P_0+\overrightarrow{v_p}t<br>$$</p>
+<p>$$<br>Q(t)=Q_0+\overrightarrow{v_q}t<br>$$</p>
+<p>我们想要求的是t，t就是两个球距离等于半径之和的时候。这里就不详细列出推导过程。最后结论就是</p>
+<p>$$<br>t=\frac{-b\pm\sqrt{b^2-4ac}}{2a}<br>$$</p>
+<p>其中</p>
+<p>$$<br>a=(\overrightarrow{v_p}-\overrightarrow{v_q})·(\overrightarrow{v_p}-\overrightarrow{v_q})<br>$$</p>
+<p>$$<br>b=2(P_0-Q_0)·(\overrightarrow{v_p}-\overrightarrow{v_q})<br>$$</p>
+<p>$$<br>c=(P_0-Q_0)·(P_0-Q_0)-(r_p+r_q)^2<br>$$</p>
+<p>平方跟下的值$b^2-4ac$，我们称之为为判别式。如果小于0，t就没有实根，就是说没有交叉发生。如果等于0，意味着两个球相切。如果大于0，则意味着交叉。</p>
+<p>在我们解出t的值以后，记住t值如果大于1则是这一帧之后，如果小于0则是这一帧之前。因此，t值超出范围的情况不是这个函数接受的范围。</p>
+<pre><code>//p0/q0是上一帧的球体
+//p1/q1是这一帧的球体
+function SweptSphere(BoundingSphere p0, BoundingSphere q0, BoundingSphere p1, BoundingSphere q1)
+    //首先计算v用于参数方程
+    Vector3 vp = p1.center - p0.center
+    Vector3 vq = q1.center - q0.center
+
+    //计算A和B
+    //A = p0 - q0
+    Vector3 A = p0.center - q0.center
+    //B = vp - vq
+    Vector3 B = vp - vq
+
+    //计算a、b和c
+    //a=B dot B
+    float a = DotProduct(B, B)
+    //b=2(A dot B)
+    float b = 2 * DotProduct(A, B)
+    //c=(A dot A) - (rp + rq)*(rp + rq)
+    float c = DotProduct(A, A) - ((q0.radius + p0.radius) * (q0.radius + p0.radius))
+
+    //现在计算判别式(b^2 - 4ac)
+    float disc = b * b - 4 * a * c
+    if disc &gt;= 0
+        //如果我们需要t的值，我们可以用以下的方式解出:
+        //t = (-b - sqrt(disc) / (2a))
+        return true
+    else
+        return false
+    end
+end</code></pre><h2 id="7-响应碰撞"><a href="#7-响应碰撞" class="headerlink" title="7.响应碰撞"></a>7.响应碰撞</h2><p>我们可以使用前面提到的各种算法来检测碰撞。但是在检测结果出来之后，游戏应该如何处理？这就是<strong>响应</strong>碰撞的问题。一些情况下，响应会很简单：一个或多个对象可能会死亡然后从游戏世界中移除。稍微复杂一点的响应就是一些减少生命值之类的响应。</p>
+<p>但是如果两个对象需要相互弹开呢？比如两个小行星碰撞。一个简单的解决方法就是根据碰撞的方向让速度反向。但这样做会有很多问题。一个问题就是行星会被卡住。简单来说，就是两个行星在速度很慢的情况下某一帧发生碰撞，下一帧还有可能发生碰撞，那么就会陷入死循环中。</p>
+<p>解决方案就是用包围球包围行星来进行碰撞检测，然后再根据发生碰撞的平面的法线将速度进行反射。碰撞的平面即是碰撞点的切线平面。</p>
+<p>为了构造切线平面，我们首先要得到发生碰撞的点。这个可以用线性插值算出。如果有两个球体在某个点发生碰撞，这个点肯定就在两个球心所连成的线段上。它所在的位置就取决于两个球的半径。</p>
+<pre><code>Vector3 pointOfIntersection = Lerp(A.position, B.position, A.radius / (A.radius + B.radius))</code></pre><p>而找出切线平面也很简单，就是一个球心指向另一个球心的向量，然后正规化。有了平面上的点和平面的法线，我们就可以创建在这个碰撞点上的切线平面了。虽然碰撞相应需要对速度进行反射，但是我们只要有平面的法线就可以了。</p>
+<p>有了这个反射之后的速度，行星碰撞看上去好多了，虽然看上去还是很奇怪，因为行星的反射前后都会保持恒定速度。在现实中，两个对象碰撞的时候，有一个<strong>恢复系数</strong>，衡量两个物体在碰撞后的反弹程度:</p>
+<p>$$<br>C_R=\frac{碰撞后的相对速度}{碰撞前的相对速度}<br>$$</p>
+<p>在<strong>弹性</strong>碰撞($C_R&gt;1$)的情况下，碰撞后的相对速度大于碰撞前的相对速度。在另一方面，在<strong>无弹性</strong>碰撞($C_R&lt;1$)就会导致碰撞后相对速度更低。</p>
+<h2 id="8-优化碰撞"><a href="#8-优化碰撞" class="headerlink" title="8.优化碰撞"></a>8.优化碰撞</h2><p>我们讨论的所有碰撞检测算法都只能检测一对物体间的碰撞。一个可能会遇到的问题是，如果有大量的物体需要进行碰撞检测呢？所以必须对游戏世界进行分区，这样主角只要跟所在区域的对象进行碰撞检测就可以了。2D游戏中的一种分区方法就是<strong>四叉树</strong>，游戏世界会递归切割成矩形，直到每一个叶子节点只引用一个对象。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/15/rEJXwSQIgtA4jhm.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 四叉树，字母表示游戏世界中的对象</div>
+</center>
+
+<p>在进行碰撞检测的时候，程序会先检测最外层的四叉树矩形中的玩家所在象限的对象是否与玩家发生了碰撞，这样就立刻剔除了3/4的对象。然后这个递归算法会不断进行下去，直到找到所有潜在与玩家发生碰撞的对象。在只剩下少数的对象之后，就可以对每个对象进行碰撞体检测了。</p>
+<p>四叉树不是唯一的分区方法。还有很多方法，比如二进制空间分割(BSP)及八叉树(3D版的四叉树)。大多数算法都是基于空间的，还有一些是启发式分组的。</p>
+<h1 id="四、基于物理的移动"><a href="#四、基于物理的移动" class="headerlink" title="四、基于物理的移动"></a>四、基于物理的移动</h1><p>本节聚焦于牛顿物理最基础的部分：<strong>线性力学</strong>。就是没有旋转的运动。</p>
+<h2 id="1-线性力学概览"><a href="#1-线性力学概览" class="headerlink" title="1.线性力学概览"></a>1.线性力学概览</h2><p>线性力学的两个基石是力与质量。<strong>力</strong>是一种相互作用，可以导致物体运动。力有着方向和大小，因此可以用向量表示。<strong>质量</strong>表示物体所含物质的量。对于力学来说，主要的关系是质量越大，物体就越难运动。</p>
+<p>如果一个足够大的力作用到物体身上，理论上它会开始加速。这个想法就是牛顿第二定律:</p>
+<p>$$<br>F=m·a<br>$$</p>
+<p>这里，F是力，m是质量，a是加速度。由于力等于质量点乘加速度，所以加速度可以通过力除以质量得到。给定一个力，这个等式就可以计算出加速度。</p>
+<p>在游戏中，我们希望每一帧都通过加速度算出速度和位置，这意味着要使用<strong>数值积分</strong>，一种可以每帧都使用其计算积分近似值的方法。</p>
+<h2 id="2-可变时间步长带来的问题"><a href="#2-可变时间步长带来的问题" class="headerlink" title="2.可变时间步长带来的问题"></a>2.可变时间步长带来的问题</h2><p>在使用数值积分之后，你就或多或少地不能使用可变的时间帧。这是因为数值积分的准确性取决于时间步长。步长越短就越精确。</p>
+<p>这意味着如果每帧的时间步长都改变，近似值也会每帧变动。如果准确性改变，行为也会有显著的变化。数值积分的百分比误差会在低帧率的时候放大了，所以跳得更高了。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/15/WXSZGcom6d895gD.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 不同时间步长带来不同的跳跃轨迹</div>
+</center>
+
+<p>由于这个原因，任何游戏使用物理计算位置的时候，都不要使用可变的时间步长。物理计算用可变步长当然是可以的，但是这样就会很复杂。</p>
+<h2 id="3-力的计算"><a href="#3-力的计算" class="headerlink" title="3.力的计算"></a>3.力的计算</h2><p>数值积分让我们可以由加速度算出速度，然后由速度算出位置。但是为了算出加速度，我们需要力和质量。这里有多种多样的力需要考虑。有些力，比如重力，一直作用在物体身上。而有些力可以用<strong>冲量</strong>替代，就是那些只在一帧起作用的力。在游戏中最常见的做法就是算出所有的合力，然后除以质量算出加速度：</p>
+<p>$$<br>加速度=合力/质量<br>$$</p>
+<h2 id="4-欧拉和半隐式欧拉积分"><a href="#4-欧拉和半隐式欧拉积分" class="headerlink" title="4.欧拉和半隐式欧拉积分"></a>4.欧拉和半隐式欧拉积分</h2><p>最简单的数值积分就是<strong>欧拉积分</strong>，在欧拉积分中，新的位置是由旧的位置加上速度乘以时间步长得到，然后速度以类似的方式通过加速度算出来</p>
+<pre><code>class PhysicsObject
+    //物体上所有作用力
+    List forces
+    Vector3 acceleration, velocity, position
+    float mass
+
+    function Update(float deltaTime)
+        Vector3 sumOfForce = sum of forces in forces
+        acceleration = sumOfForce / mass
+
+        //欧拉积分
+        position += velocity * deltaTime
+        velocity += acceleration * deltaTime
+    end
+end</code></pre><p>虽然欧拉积分很简单，它并没有真正表现得非常准确。一个大问题就是位置是用旧的速度算出来的，而不是时间步长之后的新速度。这样会随着时间的推移让误差不断地积累。</p>
+<p>一个简单的改法就是将欧拉积分的位置和速度更新顺序调换。就是说现在位置是使用新的速度来计算。这就是<strong>半隐式欧拉积分</strong>，会更加合理和稳定。但如果要更加准确，就得使用更复杂的数值积分方法。</p>
+<h2 id="5-Verlet积分法"><a href="#5-Verlet积分法" class="headerlink" title="5.Verlet积分法"></a>5.Verlet积分法</h2><p>在<strong>Verlet积分法中</strong>，首先算出本次时间步长中点的速度值。然后将它看作平均速度计算整个步长的位置。然后，加速度根据力和质量计算出来，最终利用新的加速度在步长结束的时候计算出速度。</p>
+<pre><code>function Update(float deltaTime)
+    Vector3 sumOfForces = sum of forces in forces
+
+    //Verlet积分法
+    Vector3 avgVelocity = velocity + acceleration * deltaTime / 2.0f
+    //位置用平均速度算出来
+    position += avgVelocity * deltaTime
+    //计算新的加速度和位置
+    acceleration = sumOfForces / mass
+    velocity = avgVelocity + acceleration * deltaTime / 2.0f
+end</code></pre><p>本质上Verlet积分法使用平均速度计算位置。这比起两种欧拉积分都要准确得多，同时也更加昂贵。</p>
+<h2 id="6-其他积分方法"><a href="#6-其他积分方法" class="headerlink" title="6.其他积分方法"></a>6.其他积分方法</h2><p>还有不少其他忽略吧方法会在游戏中用到，但是它们有点复杂。它们当中最受欢迎的方法是四阶Runge-Kutta方法。它本质上是使用泰勒近似求解的结果表示运动的微分方程的近似解。这个方法比上述两种方法都要准确，但也更慢。</p>
+<h2 id="7-角力学"><a href="#7-角力学" class="headerlink" title="7.角力学"></a>7.角力学</h2><p><strong>角力学</strong>是关于旋转的力学研究。就像线性力学有质量、作用力、加速度、速度、位置一样，角力学有转动惯量、力矩、角加速度、角速度和角度。角力学的机制比线性力学还要复杂一点。</p>
+<h1 id="五、物理中间件"><a href="#五、物理中间件" class="headerlink" title="五、物理中间件"></a>五、物理中间件</h1><p>物理问题的复杂度和广度使得大多数游戏都会选择采用中间件而不是自己实现。</p>
+<p>3D游戏最流行的商业屋里引起，毫无疑问就是Havok物理引擎。还有一个可选的工业级别的物理引擎就是PhysX。</p>
+<p>对于2D物理引擎来说，目前最流行的是开源的Box2D。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://oliverbvb.github.io" rel="external nofollow noreferrer">Oliver</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-wu-li/">https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-wu-li/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://oliverbvb.github.io" target="_blank">Oliver</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">游戏编程</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-she-xiang-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="游戏编程算法和技巧·摄像机">
+                        
+                        <span class="card-title">游戏编程算法和技巧·摄像机</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            摄像机赋予了玩家在3D世界中的视角。在游戏中会用到很多种类型的摄像机，而选择摄像机又是游戏开发初期的基本设计决策
+一、摄像机的类型1，固定摄像机严格来讲，固定摄像机就是那种永远在同一位置的摄像机。这种固定的摄像机通常只用于非常简单的3D游戏
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-sheng-yin/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="游戏编程算法和技巧·声音">
+                        
+                        <span class="card-title">游戏编程算法和技巧·声音</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本章首先讲如何将原始数据转换成代码控制的音效。然后讨论更高级的声音技术，比如多普勒效应、数字信号处理和音效遮挡，它们都会在很多情况下用到。
+一、基本声音声音播放最基础的级别就是在游戏某个时刻播放某个音频文件。但是在多数情况下一个事件不是必须
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="sitetime"></span>
+            <span id="year">2020</span>
+            <a href="https://oliverbvb.github.io" target="_blank">Oliver</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">70.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/oliverbvb" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:tanghaidong1995@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1277509304" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1277509304" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " +diffYears+" 年 "+diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>

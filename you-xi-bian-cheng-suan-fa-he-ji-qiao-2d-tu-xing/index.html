@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C++ Primer术语表3-表达式, 游戏，编程，生活">
-    <meta name="description" content="C++ 表达式的术语表。表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。">
+    <meta name="keywords" content="游戏编程算法和技巧·2D图形, 游戏，编程，生活">
+    <meta name="description" content="2D图形随着Web、移动游戏、独立游戏的爆发式增长，2D图形进入了文艺复兴时期。开发者选择2D通常是因为预算和团队规模。玩家选择2D则是因为游戏简洁而纯粹。
+2D渲染基础为了更加全面地认识2D渲染，了解这种技术诞生时显示设备的情况是很有必要">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>C++ Primer术语表3-表达式 | GameOrLife</title>
+    <title>游戏编程算法和技巧·2D图形 | GameOrLife</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C++ Primer术语表3-表达式</h1>
+                    <h1 class="description center-align post-title">游戏编程算法和技巧·2D图形</h1>
                 </div>
             </div>
         </div>
@@ -426,12 +427,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                                <span class="chip bg-color">术语表</span>
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">游戏编程</span>
                             </a>
                         
                     </div>
@@ -442,8 +439,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/C/" class="post-category">
-                                C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                游戏编程
                             </a>
                         
                     </div>
@@ -455,28 +452,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-03
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-05
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    5.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    19 分
                 </div>
                 
 				
@@ -492,222 +489,283 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>表达式由一个或多个运算对象组成，对表达式求值将得到一个结果。</p>
-<h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>表达式（expression）</strong></td>
-<td>C++程序中最低级别的计算。表达式将运算符作用于一个或多个运算对象，每个表达式都有对应的求值结果。表达式本身也可以作为运算对象，这时就得到了对多个运算符求值的复合表达式</td>
-</tr>
-<tr>
-<td><strong>运算对象（operand）</strong></td>
-<td>表达式在某些值上执行运算，这些值就是运算对象。一个运算符有一个或多个相关的运算对象</td>
-</tr>
-<tr>
-<td><strong>运算符（operator）</strong></td>
-<td>决定表达式所做操作的符号。C++语言定义了一套运算符并说明了这些运算符作用于内置类型时的含义</td>
-</tr>
-<tr>
-<td><strong>结果（result）</strong></td>
-<td>计算表达式得到的值或对象</td>
-</tr>
-<tr>
-<td><strong><a href="https://zh.cppreference.com/w/cpp/language/operator_precedence" target="_blank" rel="noopener">优先级（precedence）</a></strong></td>
-<td>规定了复合表达式中不同运算符的执行顺序。与低优先级的运算符相比，高优先级的运算符组合得更紧密</td>
-</tr>
-<tr>
-<td><strong>结合律（associativity）</strong></td>
-<td>规定具有相同优先级的运算符如何组合在一起。结合律分为左结合律（运算符从左向右组合）和右结合律（运算符从右向左组合）</td>
-</tr>
-<tr>
-<td><strong>求值顺序（order of evaluation）</strong></td>
-<td>是某个运算符的运算对象的求值顺序。大多数情况下，编译器可以选择运算对象求值的顺序。不过运算对象一定要在运算符之前得到求值结果</td>
-</tr>
-<tr>
-<td><strong>一元运算符（unary operators）</strong></td>
-<td>只有一个运算对象参与运算的运算符</td>
-</tr>
-<tr>
-<td><strong>二元运算符（binary operator）</strong></td>
-<td>有两个运算对象参与运算的运算符</td>
-</tr>
-<tr>
-<td><strong>重载运算符（overloaded operator）</strong></td>
-<td>针对某种运算符重新定义的适用于类类型的版本</td>
-</tr>
-<tr>
-<td><strong>左值（lvalue）</strong></td>
-<td>是指那些求值结果为对象或函数的表达式。一个表示对象的非常量左值可以作为赋值运算符的左侧运算对象</td>
-</tr>
-<tr>
-<td><strong>右值（rvalue）</strong></td>
-<td>是指一种表达式，其结果是指而非值所在的位置</td>
-</tr>
-<tr>
-<td><strong>复合表达式（compound expression）</strong></td>
-<td>含有多于一个运算符的表达式</td>
-</tr>
-</tbody></table>
-<h1 id="2-运算符"><a href="#2-运算符" class="headerlink" title="2.运算符"></a>2.运算符</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>&amp;&amp;运算符（&amp;&amp;operator）</strong></td>
-<td>逻辑与运算符，如果两个运算对象都是真，结果才为真。只有当左侧运算对象为真时才会检查右侧对象</td>
-</tr>
-<tr>
-<td><strong>&#124;&#124;运算符（&#124;&#124; operator）</strong></td>
-<td>逻辑或运算符，任何一个运算对象是真，结果就为真。只有当左侧运算对象为假时才会检查右侧运算对象</td>
-</tr>
-<tr>
-<td><strong>!运算符（!operator）</strong></td>
-<td>逻辑非运算符，将它的运算对象的布尔值取反</td>
-</tr>
-<tr>
-<td><strong>短路求值（short-circuit evaluation）</strong></td>
-<td>是一个专有名词，描述逻辑与运算符和逻辑或运算符的执行过程。如果根据运算符的第一个运算对象就能确定整个表达式的结果，求值终止，此时第二个运算对象将不会被求值</td>
-</tr>
-<tr>
-<td><strong>++运算符（++operator）</strong></td>
-<td>递增运算符。包括两种形式：前置版本和后置版本</td>
-</tr>
-<tr>
-<td><strong>–运算符（–operator）</strong></td>
-<td>递减运算符。包括两种形式：前置版本和后置版本</td>
-</tr>
-<tr>
-<td><strong>?:运算符（?:operator）</strong></td>
-<td>条件运算符</td>
-</tr>
-<tr>
-<td><strong>&lt;&lt;运算符（&lt;&lt;operator）</strong></td>
-<td>左移运算符，将左侧运算对象的值的（可能是提升后的）副本向左移位，移动的位数由右侧运算对象确定</td>
-</tr>
-<tr>
-<td><strong>&gt;&gt;运算符（&gt;&gt;operator）</strong></td>
-<td>右移运算符，除了移动方向相反，其他性质都和左移运算符类似</td>
-</tr>
-<tr>
-<td><strong>&amp;运算符（&amp;operator）</strong></td>
-<td>位与运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位都是1，所得结果中该位为1；否则所得结果中该位为0</td>
-</tr>
-<tr>
-<td><strong>&#124;运算符（&#124; operator）</strong></td>
-<td>位或运算符，由两个运算对象生成一个新的整型值。如果两个运算对象对应的位至少有一个是1，所得结果中该位为1；否则所得结果中该位为0</td>
-</tr>
-<tr>
-<td><strong><del>运算符（</del>operator）</strong></td>
-<td>位求反运算符，生成一个新的整数值。该值的每一位恰好与（可能是提升后的）运算对象的对应位相反</td>
-</tr>
-<tr>
-<td><strong>sizeof</strong></td>
-<td>是一个运算符，返回存储对象所需的字节数，该对象的类型可能是某个给定的类型名字，也可鞥由表达式的返回结果确定</td>
-</tr>
-<tr>
-<td><strong>,运算符（,operator）</strong></td>
-<td>逗号运算符，是一种从左向右求值的二元运算符。逗号运算符的结果是右侧运算对象的值，当且仅当右侧运算对象是左值时逗号运算符的结果是左值</td>
-</tr>
-</tbody></table>
-<pre><code>//条件运算符
-cout &lt;&lt; ((grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;);   //输出pass或者fail
-cout &lt;&lt; (grade &lt; 60) ? &quot;fail&quot; : &quot;pass&quot;;     //输出1或者0
-cout &lt;&lt; grade &lt; 60 ? &quot;fail&quot; : &quot;pass&quot;;       //错误：试图比较cout和60，因为小于运算符的优先级低于移位运算符，所以先输出了grade再进行比较
+                <h1 id="2D图形"><a href="#2D图形" class="headerlink" title="2D图形"></a>2D图形</h1><p>随着Web、移动游戏、独立游戏的爆发式增长，2D图形进入了文艺复兴时期。开发者选择2D通常是因为预算和团队规模。玩家选择2D则是因为游戏简洁而纯粹。</p>
+<h2 id="2D渲染基础"><a href="#2D渲染基础" class="headerlink" title="2D渲染基础"></a>2D渲染基础</h2><p>为了更加全面地认识2D渲染，了解这种技术诞生时显示设备的情况是很有必要的。虽然现在基本都用LCD或者等离子显示器，但是有很多在老设备上诞生的技术到今天仍然使用。</p>
+<h3 id="CRT显示器基础"><a href="#CRT显示器基础" class="headerlink" title="CRT显示器基础"></a>CRT显示器基础</h3><p>在多年前，<strong>阴极射线管(CRT)</strong>显示器是显示器的主流。CRT里图像的元素就是<strong>像素</strong>。对于彩色显示器，每个颜色由红、绿、蓝组成。显示器的分辨率决定了像素的数量。比如一个300x200的显示器有200行像素，叫做<strong>扫描线</strong>，每个扫描线可以有300个像素，所以总共有60000个像素之多。</p>
+<p>CRT内部，绘制图像是通过电子枪发射电子流完成的。这把抢从左上角开始沿第一条扫描线进行绘制。当它完成之后就继续下一条扫描线，然后不断地重复，直到所有扫描线都画完。</p>
+<p>当电子枪刚刚完成一帧的绘制的时候，它的枪头在右下角。喷枪从右下角移动到左上角所花费的时间，我们称为<strong>场消隐期(VBLANK)</strong>。这个间隔以ms计，间隔不是由CRT、计算机或者电视机决定的，而是由用途决定的。</p>
+<h3 id="像素缓冲区和垂直同步"><a href="#像素缓冲区和垂直同步" class="headerlink" title="像素缓冲区和垂直同步"></a>像素缓冲区和垂直同步</h3><p>新的硬件使得有足够的内存将所有颜色保存在<strong>像素缓冲区</strong>。但这不是说游戏循环就可以完全无视CRT喷枪。假设喷枪在屏幕上绘制到一半时，刚好游戏循环到了“generate outputs”阶段。它开始为新的一帧往像素缓冲区写像素时，CRT还在上一帧的绘制过程中。这就导致了<strong>屏幕撕裂</strong>，具体表现就是屏幕上同时显示了不同的两帧的各自一半画面。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="./assets/1.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 画面撕裂</div>
+</center>
 
-//sizeof运算符
-Sales_data data, *p;
-sizeof(Sales_data);         //存储Sales_data类型的对象所占的空间大小
-sizeof data;                //data的类型的大小，即sizeof(Sales_data)
-sizeof p;                   //指针所占的空间大小
-sizeof *p;                  //p所指类型的空间大小，即sizeof(Sales_data)
-sizeof data.revenue;        //Sales_data的revenue成员对应类型的大小
-sizeof Sales_data::revenue; //另一种获取revenue大小的方式</code></pre><h1 id="3-类型转换"><a href="#3-类型转换" class="headerlink" title="3.类型转换"></a>3.类型转换</h1><table>
-<thead>
-<tr>
-<th><strong>术语</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>转换（conversion）</strong></td>
-<td>一种类型的值改变成另一种类型的值的过程。C++语言定义了内置类型的转换规则。类类型同样可以转换</td>
-</tr>
-<tr>
-<td><strong>隐式转换（implicit conversion）</strong></td>
-<td>由编译器自动执行的类型转换。假如表达式需要某种特定的类型而运算对象是另外一种类型，此时只要规则允许，编译器就会自动地将运算对象转换成所需的类型</td>
-</tr>
-<tr>
-<td><strong>算术转换（arithmetic conversion）</strong></td>
-<td>从一种算术类型转换成另一种算术类型。在二元运算符的上下文中，为了保留精度，算术转换通常把较小的类型转换成较大的类型</td>
-</tr>
-<tr>
-<td><strong>整型提升（integral promotion）</strong></td>
-<td>把一种较小的整数类型转换成与之最接近的较大整数类型的过程。不论是否真的需要，小整数类型（即short、char等）总是会得到提升</td>
-</tr>
-<tr>
-<td><strong>强制类型转换（cast）</strong></td>
-<td>一种显式的类型转换</td>
-</tr>
-<tr>
-<td><strong>static_cast</strong></td>
-<td>显式地执行某种定义明确的类型转换，常用于替代由编译器隐式执行的类型转换</td>
-</tr>
-<tr>
-<td><strong>const_cast</strong></td>
-<td>一种涉及const的强制类型转换。将底层const对象转换成对应的非常量类型，或者执行相反的转换</td>
-</tr>
-<tr>
-<td><strong>reinterpret_cast</strong></td>
-<td>把运算对象的内容解释成另外一种类型。这种强制类型转换本质上依赖于机器而且非常危险</td>
-</tr>
-<tr>
-<td><strong>dynamic_cast</strong></td>
-<td>和继承及运行时类型识别一起使用</td>
-</tr>
-</tbody></table>
-<pre><code>/* 隐式转换 */
+<p>一个解决方案就是同步游戏循环，等到场消隐期再开始渲染。这样会消除分裂图像的问题，但是它限制了游戏循环的间隔，只有场消隐期期间才能进行渲染，对于现在的游戏来说是不行的。</p>
+<p>另一个解决方案叫作<strong>双缓冲技术</strong>。双缓冲技术里，有两块像素缓冲区。游戏交替地绘制在这两块缓冲区里。在1帧内，游戏循环可能将颜色写入缓冲区A，而CRT正在显示缓存区B。到了下一帧，CRT显示缓冲区A，而游戏循环写入缓冲区B。由于CRT和游戏循环都在使用不同的缓冲区，所以没有CRT绘制不完整的风险。</p>
+<p>为了完全消灭屏幕撕裂，缓冲区交换必须在场消隐期进行，这就是游戏中常见的垂直同步设置。技术上来讲这是不恰当的，因为垂直同步是显示器在场消隐期刚结束时才告诉你的信号。不管怎样，缓冲区交换是一个相对快速的操作，游戏渲染一帧花费的时间则长得多。所以在场消隐期交换缓冲区完全消除了屏幕撕裂风险。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="./assets/2.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 垂直同步</div>
+</center>
 
-int ival = 3.541 + 3;   //结果为6，编译器可能会警告该运算损失了精度
-int ia[10];     //含有10个整数的数组
-int* ip = ia;   //ia转换成指向数组首元素的指针
-//转换成布尔类型
-char *cp = get_string();
-if(cp) /*...*/      //如果指针cp不是0，条件为真
-while(*cp) /*...*/  //如果*cp不是空字符，条件为真
-//转换成常量
-int i;
-const int &amp;j = i;   //非常量转换成const int的引用
-const int *p = &amp;i;  //非常量的地址转换成const的地址
-int &amp;r = j, *q = p; //错误：不允许const转换成非常量
-//类类型转换
-string s;
-while(cin &gt;&gt; s)     //while的条件部分把cin转换成布尔值
 
-/* 显式转换 */
+<p>这就是双缓冲区绘制函数的样子:</p>
+<pre><code>function RenderWorld()
+    //绘制游戏世界中所有对象
+    ...
+    wait for VBLANK
+    swap color buffers
+end</code></pre><p>当然有些游戏允许缓冲区交换绘制完成前尽快进行，这种情况通常是因为玩家想要获得远比屏幕刷新速度快的帧率。虽然CRT显示器今天几乎不再使用，但是双缓冲技术在正确的时间交换还是能在LCD上消除屏幕撕裂的问题。一些游戏甚至使用了<strong>三缓冲技术</strong>，使用3个缓冲区，能使帧率在一些特殊情况下更加平滑，但也增加了输入延迟。</p>
+<h2 id="精灵"><a href="#精灵" class="headerlink" title="精灵"></a>精灵</h2><p>精灵是使用图片中的一个方块绘制而成的2D图像。通常精灵用来表示角色和其他动态对象。对于简单的游戏来讲，精灵也可能用于背景。大多数2D游戏运用大量的精灵，对于移动端游戏来说，精灵通常就是游戏体积的主要部分。所以，高效利用精灵是非常重要的。</p>
+<p>精灵使用哪种图片格式？这在很大程度上取决于用什么图片在哪些平台比较省内存。PNG格式可能空间占用小，但是通常硬件都不支持以PNG格式直接绘制，因此加载到游戏内存的过程中会被转换成其他格式。TGA格式通常可以直接绘制，可是空间占用比较大。在IOS设备上，比较好的格式时PVR，因为它不仅被压缩过，而且还能够直接绘制。</p>
+<p>加载图片到内存的过程也是很大程度上取决于平台和框架的。对于SDL，XNA和Cocos2D那样的框架，内建了大量图片格式。如果你想从头开始开发2D游戏，可以用一个相对简单的库stb_image.c(<a href="https://github.com/nothings/stb" target="_blank" rel="noopener">https://github.com/nothings/stb</a>)。</p>
+<h3 id="绘制精灵"><a href="#绘制精灵" class="headerlink" title="绘制精灵"></a>绘制精灵</h3><p>假设你需要绘制一个场景，最简单的绘制方式是，先画背景后画角色。这个算法叫作<strong>画家算法</strong>。在画家算法中，所有精灵是从后往前排序的，当它绘制场景时，预先排好序的场景可以直接遍历渲染，得到正确的结果。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="./assets/3.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 首先绘制远山，然后绘制较近的草地，最后绘制场景中最近的树木等</div>
+</center>
 
-//static_cast
-double slope = static_cast&lt;double&gt;(j) / i;  //进行强制类型转换以便执行浮点数除法
-void *p = &amp;d;                               //正确：任何非常量对象的地址都能存入void*
-double *dp = static_cast&lt;double*&gt;(p);       //正确：将void*转换回初始的指针类型
-//const_cast
-const char *pc;
-char *p = const_cast&lt;char*&gt;(pc);//正确：但是通过p写值是未定义的行为
-const char *cp;
-char *q = static_cast&lt;char*&gt;(cp);       //错误：static_cast不能转换掉const性质
-static_cast&lt;string&gt;(cp);                //正确：字符串字面值转换成string类型
-const_cast&lt;string&gt;(cp);                 //错误：const_cast只改变常量属性
-//reinterpret_cast
-int *ip;
-char *pc = reinterpret_cast&lt;char*&gt;(ip);
-string str(pc);                         //错误：可能导致异常的运行时行为，必须牢记pc所指的真实对象是一个int而非字符</code></pre>
+<p>这个方法在2D游戏中没有什么问题(在3D环境下，则有很多缺陷)。每个精灵最少由一个绘制顺序，另外还要有图像数据和位置数据。</p>
+<pre><code>class Sprite
+    ImageFile image
+    int drawOrder
+    int x,y
+    function Draw()
+        //把图片在正确的(x,y)上绘制出来
+        ...
+    end
+end</code></pre><p>然后，有些世界中的Drawable列表就可以根据绘制顺序排序。这样，在绘制期间，排好序的对象就可以线性遍历下去，然后绘制出正确的结果。</p>
+<pre><code>SortedList spriteList
+
+//创建新的精灵······
+Sprite newSprite = specify image and desired x/y
+newSprite.drawOrder = set desired draw order value
+//根据渲染顺序添加到排序列表
+spriteList.Add(newSprite.drawOrder, newSprite)
+//准备绘制
+foreach Sprite s in spriteList
+    s.Draw()
+loop</code></pre><p>一些2D库，比如Cocos2D，允许场景中的层次任意组合，而每个层次都有一个顺序。</p>
+<h3 id="动画精灵"><a href="#动画精灵" class="headerlink" title="动画精灵"></a>动画精灵</h3><p>对于大多数2D游戏，动画原理就跟连环画一样：快速切换静态图片从而产生动画的幻觉。为了保证动画的流畅性，帧率最少要达到24FPS。这就说动画的每1秒，都24张不同的图片。有的游戏类型，比如格斗游戏，可以将动画帧率提高到60FPS。</p>
+<p>一个常见的方法就是用一组图片去表示一个角色的所有状态，而不是某个特定动画。比如说，一个有走动和跑步的角色，每个用10帧表示，总共用了20张图片。为了让问题保持简单，这些图片顺序存储，就是说0-9帧表示走路，10-19帧表示跑步。</p>
+<p>这就意味着需要一些方法配置哪些帧表示哪个动画。一个简单的方法就是将这些动画信息封装为一个AnimFrameData结构体，指定开始帧和帧长度去表示一个动画:</p>
+<pre><code>struct AnimFrameData
+    //第1帧动画的索引
+    int startFrame
+    //动画的所有帧数
+    int numFrames
+end</code></pre><p>我们用AnimData结构体去存储所有图片的同时，用FrameData保存所有动画信息:</p>
+<pre><code>struct AnimData
+    //所有动画用到的图片
+    ImageFile image[]
+    //所有动画用到的帧
+    AnimFrameData frameInfo[]
+end</code></pre><p>然后需要AnimatedSprite类从Sprite类继承下来。因为它继承了Sprite，它已经有位置和根据绘制顺序进行绘制的功能，简单来讲就是绘制一张图片的能力。当然AnimatedSprite还需要额外的变量来完成功能。</p>
+<p>AnimatedSprite要能够跟踪当前的动画数量，直到当前帧属于哪一个动画及当前动画需要用到多长时间。其中FPS也作为一个成员变量被存储了。这样能够让动画动态加速或者减速。</p>
+<pre><code>class AnimatedSprite inherits Sprite
+    //所有动画数据(包括ImageFiles和FrameData)
+    AnimData animData
+    //当前运行中的动画
+    int animNum
+    //当前运行中的动画的帧数
+    int frameNum
+    //当前帧播放了多长时间
+    float frameTime
+    //动画的FPS(默认24FPS)
+    float animFPS = 24.0f
+
+    function Initialize(AnimData myData, int startingAnimNum)
+    function UpdateAnim(float deltaTime)
+    function ChangeAnim(int num)
+end</code></pre><p>Initialize函数会为这个AnimatedSprite引用AnimData。通过引用传递，多个动画精灵能共享同一份数据，这样大大节省了内存。然后函数要求传入需要传播的动画，而后续初始化工作由ChangeAnim函数完成。</p>
+<pre><code>function AnimatedSprite.Initialize(AnimData myData, int startingAnimNum)
+    animData = myData
+    ChangeAnim(startingAnimNum)
+end</code></pre><p>ChangeAnim函数在AnimatedSprite切换动画的时候调用。它设置帧数和时间都为0，而后设置当前图片为动画的第1帧。在ChangeAnim和UpdateAnim函数中，使用umage去表示图片。这是因为基类Sprite使用image绘制。</p>
+<pre><code>function AnimatedSprite.ChangeAnim(int num)
+    animNum = num
+    //当前动画为第0帧的0.0f时间
+    frameNum = 0
+    animTime = 0.0f
+    //设置当前图像，设置为startFrame
+    int imageNum = animData.frameInfo(animNum).startFrame
+    image = animData.image[imageNum]
+end</code></pre><p>UpdateAnim函数是AnimatedSprite最重要的函数。一部分复杂的原因是不能假设动画帧率比游戏帧率满。比如说，一个游戏可以以30FPS的帧率运行，但我们想让动画以48FPS运行，这就是说UpdateAnim得跳过某些动画帧。</p>
+<pre><code>function AnimatedSprite.UpdateAnim(float deltaTime)
+    //更新当前帧播放时间
+    frameTime += deltaTime
+
+    //根据frameTime判断是否播放下一帧
+    if frameTime &gt; (1/animFPS)
+        //更新当前播放到第几帧
+        //frameTime / (1 / animFPS)就相当于frameTime * animFPS
+        frameNum += frameTime * animFPS
+
+        //检查是否跳过最后一帧
+        if frameNum &gt;= animData.frameInfo[animNum].numFrames
+            //取模能保证帧数循环正确
+            frameNum = frameNum % animData.frameInfo[animNum].numFrames
+        end
+
+        //更新当前显示图片
+        //(startFrame是相当于所有图片来决定的，而frameNum是相对于某个动画来决定的)
+        int imageNum = animData.frameInfo[animNum].startFrame + frameNum
+        image = animData.images[imageNum]
+
+        //我们用fmod(浮点数运算)，相当于取模运算
+        frameTime = fmod(frameTime, 1/animFPS)
+    end
+end</code></pre><p>虽然这个AnimatedSprite实现在循环动画下工作正常，但还不支持动画切换。如果需要这样的功能，还是建议用动画状态机来实现。</p>
+<h3 id="精灵表单-图集"><a href="#精灵表单-图集" class="headerlink" title="精灵表单(图集)"></a>精灵表单(图集)</h3><p>为了保证精灵完全对齐，让角色的所有动画用同一个尺寸是尚可接受的。在过去，许多库要求所有图片尺寸为2的幂次方。</p>
+<p>如果把每帧图片都单独称为一张图片文件(或纹理)，通常都会浪费大量资源。一个解决方案就是使用单张图片去存储所有精灵，称之为<strong>精灵表单</strong>或<strong>图集</strong>。在精灵表单中，可以让精灵打包尽可能靠近，从而减少浪费的无用空间。</p>
+<p>精灵表单的另一个优势就是很多GPU要纹理加载后才能绘制。如果绘制过程中频繁地切换纹理，会造成相当多的性能消耗，特别是对于大一点的精灵。但是如果所有精灵都在一张纹理中，是可以消除切换产生的损耗的。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="./assets/4.png">
+    <br>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="./assets/5.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 单独的精灵和打包好的精灵表单</div>
+</center>
+
+<h2 id="滚屏"><a href="#滚屏" class="headerlink" title="滚屏"></a>滚屏</h2><p>在相对简单的2D游戏里，比如《吃豆人》和《俄罗斯方块》，所有元素都在一个屏幕里。在更复杂的2D游戏里，游戏世界经常比单个屏幕大。对于这些游戏，一个更常见的方法就是关卡随着角色移动而滚动。</p>
+<h3 id="单轴滚屏"><a href="#单轴滚屏" class="headerlink" title="单轴滚屏"></a>单轴滚屏</h3><p>在<strong>单轴滚屏</strong>游戏中，游戏只沿x轴或者y轴滚动。最简单的方法就是把关卡背景按屏幕大小进行切割。一关可能有20-30个片段，绝对比单张图片大得多。加载的时候，图片可以以片段为单位放置游戏世界中。如果背景精灵从左上角开始画，那么每个片段的坐标计算也相当容易。在每个背景放到正确位置后，可以将其加载到一张链表中。水平滚动的初始化代码可以像下面这样:</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="./assets/6.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 单轴滚动的Jetpack Joyride</div>
+</center>
+
+<pre><code>const int screenWidth = 960 //一台iPhone 4/4s屏幕大小为960x640
+//所有屏幕大小的背景图
+string backgrounds[] = {"bg1.png", "bg2.png", /*...*/}
+//所有水平拜访的屏幕大小的背景图数量
+int hCount = 0
+foreach string s in backgrounds
+    Sprite bgSprite
+    bgSprite.image.Load(s)
+    //第1个屏幕在x=0处，第2个在x=960处，第3个在x=1920处......
+    bgSprite.x = hCount * screenWidth
+    bgSprite.y = 0
+    bgSpriteList.Add(bgSprite)
+    screenCount++
+loop</code></pre><p>在bgSpriteList装载完毕后，需要决定哪些背景需要绘制及绘制在什么地方。如果背景片段屏幕尺寸相同，那么同时最多只有两张背景需要绘制。需要一种方法去跟踪屏幕显示正确的背景。</p>
+<p>一种常见的方法就是让摄像机也在游戏世界中拥有坐标。摄像机最开始放在第一张背景的位置。在水平滚屏的过程中，摄像机的x位置设置为玩家的x位置，只要位置不超过第一张背景和最后一张背景的范围就没问题。</p>
+<p>虽然这样可以通过if判断各种情况，但是随着这样的判断越来越多，游戏会变得很复杂。一个不错的方案就是使用clamp函数，它能让某个值在最大值和最小值之间。在这种情况下，可以设置摄像机x位置等于玩家x位置，然后把x值维护在最大值和最小值之间。</p>
+<pre><code>//camera.x就是player.x在区间中经过clamp的值
+camera.x = clamp(player.x, screenWidth / 2, bCount * screenWidth - screenWidth / 2)
+
+Iterator i = bgSpriteList.begin()
+while i != bgSpriteList.end()
+    Sprite s = i.value()
+    //找到第1张图片来绘制
+    if (camera.x - s.x) &lt; screenWidth
+        // 第1张图: s.x = 0, camera.x = 480, screenWidth/2 = 480
+        draw s at (s.x - camera.x + screenWidth/2, 0)
+        //绘制第1张背景图后，找第2张
+        i++
+        s= i.value()
+        draw s at (s.x - camera.x + screenWidth/2, 0)
+        break
+    end
+    i++
+loop</code></pre><p>上面的代码实现了摄像机和玩家在关卡中的前进和后退。如果希望让摄像机只朝前移动，只需在玩家x位置比摄像机x位置大的时候更新即可。</p>
+<h3 id="无限滚屏"><a href="#无限滚屏" class="headerlink" title="无限滚屏"></a>无限滚屏</h3><p><strong>无限滚屏</strong>就是当玩家失败才停止滚屏的游戏。当然，这里不可能有无限多个背景来滚屏。因此游戏中的背景会重复出现。当然，大部分无限滚屏游戏都拥有大量的背景图片和很好的随机性来产生丰富的背景。通常游戏都会用连续的四五张图片组成序列，有了不同系列的图片可选后再打乱重组。</p>
+<h3 id="平行滚屏"><a href="#平行滚屏" class="headerlink" title="平行滚屏"></a>平行滚屏</h3><p>在平行滚屏中，背景拆分成几个不同深度的层级。每一层都用不同的速度来滚动以制造不同深度的假象。</p>
+<p>单轴滚屏中的伪代码可以替换成多个背景同时滚屏。为了实现平行滚屏效果，当计算精灵相对于摄像机偏移时，需要每层都给出一个额外的因子。</p>
+<pre><code>//一个比较靠近的层级以1/5的速度移动
+float speedFactor = 0.2f
+draw s at (s.x - (camera.x - screenWidth/2) * speedFactor, 0)</code></pre><h3 id="四向滚屏"><a href="#四向滚屏" class="headerlink" title="四向滚屏"></a>四向滚屏</h3><p>在四向滚屏中，游戏世界会在水平和垂直方向上滚动。由于两个方向上都滚屏，同一时刻屏幕会显示4个背景片段。</p>
+<p>为了让之前的水平滚屏代码在两个方向上都能动，需要检查摄像机的y位置是否需要更新。但在此之前，需要声明一些变量，记录屏幕高度和关卡垂直方向上有多少个片段:</p>
+<pre><code>const int screenHeight = 640 //iPhone 4/4s的水平方向上的高度
+int vCount = 2</code></pre><p>我们固定左上角的游戏世界坐标为(0,0)。由于可以垂直滚屏，故需要更新摄像机的y位置:</p>
+<pre><code>camera.y = clamp(player.y, screenHeight / 2, vCount * screenHeight - screenHeight / 2)</code></pre><p>计算精灵相对于摄像机的新位置要考虑y位置:</p>
+<pre><code>draw s at (s.x - camera.x + screenWidth / 2, s.y - camera.y - screenHeight / 2)</code></pre><p>要判定哪些背景片段需要绘制，不能再用水平滚屏的方式去做。那是因为不再是更新单个精灵列表。一个基本的方法就是使用二维数组记录片段，然后判断哪一行哪一列需要在屏幕上显示。一旦片段计算出来，计算其他3个也很简单:</p>
+<h2 id="砖块地图"><a href="#砖块地图" class="headerlink" title="砖块地图"></a>砖块地图</h2><p>如果你想要开发类似《塞尔达传说》那样的2D俯视角色扮演游戏，会有着大量的野外区域和地下城，你可使用<strong>砖块地图</strong>来绘制这些关卡。砖块地图通过把游戏世界分割成等分的方块(或者其他多边形)，每个方块代表的精灵占据着某一块网格位置。这些引用的精灵可以放在多张或者一张<strong>砖块集合</strong>里。所以如果树木在砖块集合中的索引号为0，每个表示树木的方块都可以用0表示。</p>
+<p>虽然正方形是砖块地图的最常见形式，但这不是必需的。一些游戏采用六边形，有的则采用平行四边形。这取决与你希望的视角。</p>
+<h3 id="简单的砖块地图"><a href="#简单的砖块地图" class="headerlink" title="简单的砖块地图"></a>简单的砖块地图</h3><p>首先要确定砖块的尺寸。虽然这在很大程度上取决于设备，但是很多智能手机上的游戏都采用32x32像素，这就意味着在分辨率960x640的手机上，单个屏幕都能显示30x20个砖块。</p>
+<p>设置好砖块的尺寸后，下一步就是创建游戏使用的砖块。所有砖块都放进一张精灵表单中。渲染程序需要通过砖块ID得到真正的图片。一个简单的方法是让左上角的砖块ID为0，往右就加1，以此类推。</p>
+<p>在设计好砖块集合之后，就可以利用砖块集合涉及关卡数据了。虽然关卡数据可以硬编码为二维数组，但是存储在外部文件会更好一些。这个文件最常见的格式就是按照屏幕显示的方式，用砖块ID去表示。因此5x5的砖块关卡会像这样:</p>
+<pre><code>//基本关卡文件格式
+5,5
+0,0,1,0,0
+0,1,1,1,0
+1,1,2,1,1
+0,1,1,1,0
+0,0,1,0,0</code></pre><p>关卡可以用下面的类表示:</p>
+<pre><code>class Level
+    const int tileSize = 32
+    int width, height
+    int tiles[][]
+    function Draw()
+end</code></pre><p>tiles数组存储了关卡的ID，而宽高对应了数组的行列。虽然读取关卡数据的代码是由具体的程序语言决定的，但是解析这个文件非常简单。在完成解析程序之后，下一步就是实现关卡的绘制函数:</p>
+<pre><code>function Draw()
+    for int row =0, row &lt; height, row++
+        for int col = 0, col &lt; width, col++
+            //在(col*tileSize, row*tileSize)绘制tiles[row][col]
+        end
+    loop
+end</code></pre><p>值得注意的是，可以为同一个砖块ID使用不同图片。这就可以实现游戏中常见的季节性的“皮肤”功能。</p>
+<h3 id="斜视等视角砖块地图"><a href="#斜视等视角砖块地图" class="headerlink" title="斜视等视角砖块地图"></a>斜视等视角砖块地图</h3><p>在<strong>斜视等视角</strong>中，视角通过旋转，让场景更具深度感。《暗黑破坏神》和《辐射》都应用了这种视角。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="./assets/7.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 斜视视角场景</div>
+</center>
+
+<p>实现斜视等视角与普通视角有一些不同。与正方形不同的是，这些砖块要么是六边形要么是平行四边形。运用斜视等视角砖块地图时，会使用多个层次把相邻的砖块作为一组。为了支持多层次，需要更新数据，使其能够表达多个层次。即，渲染代码也需要支持正确的顺序。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -732,7 +790,7 @@ string str(pc);                         //错误：可能导致异常的运行�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/">https://oliverbvb.github.io/c-primer-zhu-yu-biao-3-biao-da-shi/</a>
+                    <a href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-2d-tu-xing/">https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-2d-tu-xing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -770,12 +828,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                                    <span class="chip bg-color">术语表</span>
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">游戏编程</span>
                                 </a>
                             
                         </div>
@@ -820,31 +874,32 @@ string str(pc);                         //错误：可能导致异常的运行�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/c-primer-zhu-yu-biao-6-lei/">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-3d-tu-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="C++ Primer术语表6-类">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="游戏编程算法和技巧·3D图形">
                         
-                        <span class="card-title">C++ Primer术语表6-类</span>
+                        <span class="card-title">游戏编程算法和技巧·3D图形</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 类的术语表。类的基本思想是数据抽象和封装。
+                            3D游戏显示技术的挑战主要是，怎么将3D的游戏世界显示在2D的显示器上。
+一、基础第一款3D游戏中的渲染是完全以软件方式实现的(即没有硬件支持)。这意味着即使是画线这种基础功能都要图形程序员去完成。这套将3D模型正确渲染到2D颜色缓冲的算法
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
                                 </a>
                             
                             
@@ -854,12 +909,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                        <span class="chip bg-color">术语表</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
                     </a>
                     
                 </div>
@@ -873,31 +924,31 @@ string str(pc);                         //错误：可能导致异常的运行�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/c-primer-zhu-yu-biao-2-zi-fu-chuan-xiang-liang-he-shu-zu/">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-bian-cheng-gai-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="C++ Primer术语表2-字符串、向量和数组">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="游戏编程算法和技巧·游戏编程概述">
                         
-                        <span class="card-title">C++ Primer术语表2-字符串、向量和数组</span>
+                        <span class="card-title">游戏编程算法和技巧·游戏编程概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++ 字符串、向量和数组的术语表。C++语言定义了一个内容丰富的抽象数据类型库。其中，string和vector是两种最重要的标准库类型。内置数组是一种更基础的类型，string和vector都是对它的某种抽象。
+                            游戏编程概述一、游戏编程的发展世界上第一款商业游戏Computer Space在1971年推出，是后来Atari的创办人Nolan Bushnell和Ted Dabney开发的。这款游戏当时并不是运行在传统计算机上的。它的硬件甚至没有处理器
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/C/" class="post-category">
-                                    C++
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
                                 </a>
                             
                             
@@ -907,12 +958,8 @@ string str(pc);                         //错误：可能导致异常的运行�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%AF%E8%AF%AD%E8%A1%A8/">
-                        <span class="chip bg-color">术语表</span>
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
                     </a>
                     
                 </div>

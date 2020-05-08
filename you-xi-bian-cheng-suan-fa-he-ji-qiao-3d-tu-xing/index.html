@@ -1,0 +1,1251 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="游戏编程算法和技巧·3D图形, 游戏，编程，生活">
+    <meta name="description" content="3D游戏显示技术的挑战主要是，怎么将3D的游戏世界显示在2D的显示器上。
+一、基础第一款3D游戏中的渲染是完全以软件方式实现的(即没有硬件支持)。这意味着即使是画线这种基础功能都要图形程序员去完成。这套将3D模型正确渲染到2D颜色缓冲的算法">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>游戏编程算法和技巧·3D图形 | GameOrLife</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="GameOrLife" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">GameOrLife</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">GameOrLife</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/oliverbvb" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/oliverbvb" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">游戏编程算法和技巧·3D图形</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">游戏编程</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                游戏编程
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-05-08
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-05-08
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    26 分
+                </div>
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>3D游戏显示技术的挑战主要是，怎么将3D的游戏世界显示在2D的显示器上。</p>
+<h1 id="一、基础"><a href="#一、基础" class="headerlink" title="一、基础"></a>一、基础</h1><p>第一款3D游戏中的渲染是完全以软件方式实现的(即没有硬件支持)。这意味着即使是画线这种基础功能都要图形程序员去完成。这套将3D模型正确渲染到2D颜色缓冲的算法称为<strong>软件光栅化</strong>，大部分计算机图形学会花费大量时间在这些算法上。但是现代的计算机已经有了称之为<strong>图形处理单元(GPU)</strong>的图形硬件，这些硬件实现了绘制点、线、三角形等功能。</p>
+<p>由此，现代游戏不再需要开发实现软件光栅化了。而焦点则转变为将需要渲染的3D场景数据以正确的方式传递给显卡，一般都通过像OpenGL和DirectX这样的库完成。如果需要进一步自定义这个需求，可以编写<strong>着色器</strong>来应用传入的数据。</p>
+<p>在3D图形中需要注意的是，经常需要计算近似值。这只是因为计算机没有足够的时间去计算真实的光照。由于近似模拟而产生的显示错误称之为<strong>图形失真</strong>，没有游戏可以完全避免失真。</p>
+<h2 id="1-多边形"><a href="#1-多边形" class="headerlink" title="1. 多边形"></a>1. 多边形</h2><p>3D对象在计算机程序中有多种显示方法，在游戏中最广泛应用的就是通过多边形显示，更具体一点来说是三角形。</p>
+<p>为什么是三角形？首先，它们是最简单的多边形，它们可以仅用3个<strong>顶点</strong>表示。第二点就是三角形总是在一个平面上，而多个顶点的多边形则有可能在多个平面上。最后，任何3D对象都可以简单地用细分三角面表示，且不会留下漏洞或者进行变形。</p>
+<p>单个模型，我们称为<strong>网格</strong>，是由多个三角片组成的。一个网格的多边形数量主要由用途决定。</p>
+<p>所有图形库都会输入想要显卡渲染的三角形，并且提供必要的信息，高速显卡这些数据该怎么渲染。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/12/QGgTnzqA3MKmY1o.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 一个用三角形网格表示的海豚</div>
+</center>
+
+<h1 id="二、坐标系"><a href="#二、坐标系" class="headerlink" title="二、坐标系"></a>二、坐标系</h1><p>一个坐标系空间有不同的参考系。比如说，在笛卡尔坐标系中，原点在世界的中间，所有坐标都相对于中心点。在3D渲染管线中，渲染3D模型到2D显示器，必须经历4个主要的坐标系空间。</p>
+<ul>
+<li>模型坐标系/局部坐标系</li>
+<li>世界坐标系</li>
+<li>视角坐标系/摄像机坐标系</li>
+<li>投影坐标系</li>
+</ul>
+<h2 id="1-模型坐标系"><a href="#1-模型坐标系" class="headerlink" title="1.模型坐标系"></a>1.模型坐标系</h2><p>当我们在建模的时候，比如像在Maya这样的软件里面，所有模型顶点的表示都是相对于模型原点的。<strong>模型坐标系</strong>就是那个相对于模型自身的坐标系。在模型坐标系中，原点通常就在模型中心。</p>
+<h2 id="2-世界坐标系"><a href="#2-世界坐标系" class="headerlink" title="2.世界坐标系"></a>2.世界坐标系</h2><p>在<strong>世界坐标系</strong>中，所有对象都相对于世界的原点偏移。</p>
+<h2 id="3-齐次坐标系"><a href="#3-齐次坐标系" class="headerlink" title="3.齐次坐标系"></a>3.齐次坐标系</h2><p>经常会有3D游戏使用4D分量，当4D坐标系应用在3D空间中时，它们被称为<strong>齐次坐标系</strong>，而第4个分量被称为<strong>ω分量</strong>。</p>
+<p>在大多数情况下，ω分量要么是0，要么是1。如果ω=0，表示这个齐次坐标是3D向量。而ω=1，则表示齐次坐标是3D的点。</p>
+<h2 id="4-通过矩阵变换4D向量"><a href="#4-通过矩阵变换4D向量" class="headerlink" title="4.通过矩阵变换4D向量"></a>4.通过矩阵变换4D向量</h2><p>用于变换的矩阵通常是4x4矩阵。为了与4x4矩阵相乘，同时也需要4D向量。这是齐次坐标的工作方式。</p>
+<h2 id="5-矩阵变换"><a href="#5-矩阵变换" class="headerlink" title="5.矩阵变换"></a>5.矩阵变换</h2><p><strong>矩阵变换</strong>就是矩阵用某种方法来影响向量或者顶点。矩阵变换使得我们可以将模型坐标系变换为世界坐标系。</p>
+<p><strong>缩放</strong> 在游戏中需要将角色的模型在世界坐标系中变大1倍，可以通过用模型的每个顶点乘以缩放矩阵来完成，它可以将模型在各个轴上进行缩放。</p>
+<p>$$<br>s(s_x,s_y,s_z)= \left[<br> \begin{matrix}<br>   s_x &amp; 0 &amp; 0 &amp; 0\<br>   0 &amp; s_y &amp; 0 &amp; 0\<br>   0 &amp; 0 &amp; s_z &amp; 0 \<br>   0 &amp; 0 &amp; 0 &amp; 1<br>  \end{matrix}<br>\right]<br>$$</p>
+<p>如果$s_x=s_y=s_z$，就是<strong>等比缩放</strong>，就是说向量在每个轴上缩放值都一样。所以当所有缩放值等于2时，模型会变为2倍大小。</p>
+<p><strong>平移</strong> 一个<strong>平移矩阵</strong>可以将顶点移动一段距离。它作用在向量上无效，因为向量在哪里绘制都一样。平移矩阵就是将单位矩阵最后一行填上平移的x，y和z值。</p>
+<p>$$<br>T(t_x,t_y,t_z)= \left[<br> \begin{matrix}<br>   1 &amp; 0 &amp; 0 &amp; 0\<br>   0 &amp; 1 &amp; 0 &amp; 0\<br>   0 &amp; 0 &amp; 1 &amp; 0 \<br>   t_x &amp; t_y &amp; t_z &amp; 1<br>  \end{matrix}<br>\right]<br>$$</p>
+<p><strong>旋转</strong> <strong>旋转矩阵</strong>可以将顶点或者向量相对于某个轴渲染。笛卡尔坐标系下每个轴都有一个矩阵，总共有3种旋转矩阵。因此绕x轴渲染跟绕y轴渲染矩阵时不同的。</p>
+<p>这些旋转称为<strong>欧拉角旋转</strong>，以瑞士数学家名字命名，</p>
+<p>$$<br>RotateX(\theta)=\left[<br> \begin{matrix}<br>   1 &amp; 0 &amp; 0 &amp; 0\<br>   0 &amp; \cos\theta &amp; -\sin\theta &amp; 0\<br>   0 &amp; \sin\theta &amp; \cos\theta &amp; 0 \<br>   0 &amp; 0 &amp; 0 &amp; 1<br>  \end{matrix}<br>\right]<br>$$</p>
+<p>$$<br>RotateY(\theta)=\left[<br> \begin{matrix}<br>   \cos\theta &amp; 0 &amp; \sin\theta &amp; 0\<br>   0 &amp; 1 &amp; 0 &amp; 0\<br>   -\sin\theta &amp; 0 &amp; \cos\theta &amp; 0 \<br>   0 &amp; 0 &amp; 0 &amp; 1<br>  \end{matrix}<br>\right]<br>$$</p>
+<p>$$<br>RotateZ(\theta)=\left[<br> \begin{matrix}<br>   \cos\theta &amp; -\sin\theta &amp; 0 &amp; 0\<br>   \sin\theta &amp; \cos\theta &amp; 0 &amp; 0\<br>   0 &amp; 0 &amp; 1 &amp; 0 \<br>   0 &amp; 0 &amp; 0 &amp; 1<br>  \end{matrix}<br>\right]<br>$$</p>
+<p><strong>应用矩阵变换</strong> 组合多个矩阵的相乘得到最终世界变换矩阵的做法是很常见的。比如说想将角色放在某个特定位置，然后拉长2倍，就需要平移矩阵和缩放矩阵。</p>
+<p>组合多个矩阵，只需将多个矩阵相乘即可。乘积的顺序是非常重要的，因为矩阵相乘不服从交换律。一般来讲，以行为主来表示的话，世界变换矩阵要像下面这样计算：</p>
+<p>$$<br>WorldTransform=Scale \times Rotation \times Translation<br>$$</p>
+<p>要注意旋转是相对于原点而言的。</p>
+<h2 id="6-视角-摄像机坐标系"><a href="#6-视角-摄像机坐标系" class="headerlink" title="6.视角/摄像机坐标系"></a>6.视角/摄像机坐标系</h2><p>在所有对象放置到世界坐标系上正确的位置之后，下一件要考虑的事情就是摄像机的位置。一个场景或者关卡可以完全静止，但是如果摄像机的位置改变，就完全改变了屏幕上的显示。这个称为<strong>视角/摄像机坐标系</strong></p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/12/eLiaqMvChzGKPDH.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 摄像机坐标系</div>
+</center>
+
+<p>所以还需要另外一个矩阵高速显卡如何将世界坐标系的模型变换到相对于摄像机的位置上。最常见的矩阵时<strong>观察矩阵</strong>。在观察矩阵当中，摄像机的位置通过3个轴的额外分量来表示。</p>
+<p>对于以行为主的左手坐标系来讲，观察矩阵如下:</p>
+<p>$$<br>Look·At=\left[<br> \begin{matrix}<br>   L_x &amp; U_x &amp; F_x &amp; 0\<br>   L_y &amp; U_y &amp; F_y &amp; 0\<br>   L_z &amp; U_z &amp; F_z &amp; 0 \<br>   T_x &amp; T_y &amp; T_z &amp; 1<br>  \end{matrix}<br>\right]<br>$$</p>
+<p>L表示左边或者x轴，U表示上方或者y轴，F表示前方或者z轴，而T则是摄像机的平移。为了构造这个矩阵，需要计算着4个向量。大部分3D库可以自动计算这个观察矩阵。</p>
+<p>需要3个输入来构造观察矩阵:<strong>眼睛</strong>，也就是摄像机的位置、摄像机正在观察的位置、摄像机向上的方向。虽然一些情况下摄像机向上的方向就是世界坐标系向上的方向，但也有特例。在任何情形下，给定这3个输入，就可以算出第4个向量:</p>
+<pre><code>function CreateLookAt(Vector3 eye, Vector3 target, Vector3 Up)
+    Vector3 F = Normalize(target - eye)
+    Vector3 L = Normalize(CrossProduct(Up, F))
+    Vector3 U = CrossProduct(F, L)
+
+    Vector3 T
+    T.x = -DotProduct(L, eye)
+    T.y = -DotProduct(U, eye)
+    T.z = -DotProduct(F, eye)
+
+    //通过F、L、U和T创建并返回观察矩阵
+end</code></pre><p>在应用视角坐标系之后，整个世界都会变换到从摄像机眼睛的位置去观察。但是，3D的世界是需要变换到2D屏幕上的。</p>
+<h2 id="6-投影坐标系"><a href="#6-投影坐标系" class="headerlink" title="6.投影坐标系"></a>6.投影坐标系</h2><p><strong>投影坐标系</strong>有时候也叫作屏幕坐标系，是一种将3D场景平铺到2D平面上得到的坐标系。一个3D场景可以通过多种方式平铺在2D平面上，两种最常见的方法分别是正交投影和透视投影。</p>
+<p>在<strong>正交投影</strong>中，整个世界挤在2D图像中，完全没有深度的感觉。就是说离摄像机远的对象与离摄像机近的对象在视觉上是一样的。任何纯2D的游戏都可以看作使用了正交投影。但是，有些正交投影的游戏会传达3D信息，比如《模拟人生》和《暗黑破坏神 3》。</p>
+<p>另一种常见的投影则是<strong>透视投影</strong>。在这种投影中，对象在摄像机中会显得近大远小。大部分3D游戏都采用这种投影。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/12/GmznU5bfXC2OQay.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 正交投影和透视投影</div>
+</center>
+
+<p>两种投影都有近平面和远平面。<strong>近平面</strong>是靠近摄像机的平面，而介于摄像机和近片面之间的物体不参与绘制。游戏中如果某个人物太过于靠近摄像机会突然消失，就是被近平面别除的原因。与之类似，<strong>远平面</strong>就是远离摄像机的平面，任何物体超过这个平面就不参与绘制了。</p>
+<p>正交投影矩阵由4个参数构成，视口的宽和高，还有远平面和近平面到眼睛的最近距离:</p>
+<p>$$<br>Orthographic=\left[<br> \begin{matrix}<br>   \frac{2}{width} &amp; U_x &amp; F_x &amp; 0\<br>   L_y &amp; \frac{2}{height} &amp; F_y &amp; 0\<br>   L_z &amp; U_z &amp; \frac{1}{far-near} &amp; 0 \<br>   T_x &amp; T_y &amp; \frac{near}{far-near} &amp; 1<br>  \end{matrix}<br>\right]<br>$$</p>
+<p>透视投影则多了一个<strong>参数视场(FOV)</strong>。就是摄像机的可见角度。视场决定了你能看到多少内容。加了视场之后就可以计算出透视矩阵:</p>
+<p>$$<br>yScale=\cot fov/2<br>$$</p>
+<p>$$<br>xScale=yScale·\frac{height}{width}<br>$$</p>
+<p>$$<br>Perspective=\left[<br> \begin{matrix}<br>   xScale &amp; 0 &amp; 0 &amp; 0\<br>   0 &amp; yScale &amp; 0 &amp; 0\<br>   0 &amp; 0 &amp; \frac{far}{far-near} &amp; 1 \<br>   0 &amp; 0 &amp; \frac{-near·far}{far-near} &amp; 0<br>  \end{matrix}<br>\right]<br>$$</p>
+<p>需要注意的是，当顶点与矩阵相乘之后，ω分量不再为1。<strong>透视分割</strong>需要让每一个变换后的顶点分量除以ω分量，使得ω分量再一次为1.这个过程真正使得透视变换具有了深度感。</p>
+<h1 id="三、光照与着色"><a href="#三、光照与着色" class="headerlink" title="三、光照与着色"></a>三、光照与着色</h1><p>到这一步为止，就可以在屏幕上将3D场景以线框的方式绘制到2D的颜色缓存中。然后我们希望这些三角形能够得到填充，现代3D游戏也同样需要颜色、纹理和光照。</p>
+<h2 id="1-颜色"><a href="#1-颜色" class="headerlink" title="1.颜色"></a>1.颜色</h2><p>最简单的在3D场景中表示颜色的方式就是使用<strong>RGB颜色空间</strong>，这是因为RGB直接就是显示器的绘图方式。每个屏幕上的像素都是通过红色、蓝色、绿色组成的。</p>
+<p>在选择了RGB表示颜色之后，下一个要决定的就是<strong>色深</strong>，就是每个像素用多少位来存储。如今，大部分游戏中的3颜色分量都用8位来存储，就是说红色、蓝色、绿色都有256种可能的颜色。这就有了大约1600万种不同的颜色。</p>
+<p>因为原色的范围从0到255，有时候会用其他方式表达。在网站图像中，#ff00000表示红色值255，绿色值0，蓝色值0。在3D图形中最常见的表示方法是用0.0到1.0之间的浮点数表示。所以1.0就是原色的最大值，而0.0就是原色不存在。</p>
+<p>根据游戏的不同，有些游戏会有第4个分量，称为<strong>不透明度</strong>。不透明通道决定了一个像素的透明度。不透明度为1.0就是说像素100%不透明的，而0.0则表示看不见。</p>
+<p>所以如果游戏完全支持RGBA，每个分量用8位表示，那么每个像素总共有32位(或者4个字节)。这是游戏很常见的渲染模式。</p>
+<h2 id="2-顶点属性"><a href="#2-顶点属性" class="headerlink" title="2.顶点属性"></a>2.顶点属性</h2><p>为了让模型有颜色，需要在顶点上存储额外的信息。这些信息被称为定点属性，在大多数现代游戏中每个顶点都会带多个属性。当然，额外的内存负担会影响模型的顶点数。</p>
+<p>有很多参数可以做顶点属性。在<strong>纹理映射</strong>中，2D的图片可以映射到3D的三角形中。每个顶点上都有一个<strong>纹理坐标</strong>指定纹理的特定部分与之对应。最常见的纹理坐标系是<strong>UV坐标系</strong>，纹理上的x坐标称为u，而y坐标称为v。</p>
+<p>仅通过纹理，就可以让场景看起来充满色彩，但是会看起来不够真实，因为场景中没有真实的光照。大部分光照模型依赖于另一种顶点模型:<strong>顶点法线</strong>。怎么得到顶点的法线。</p>
+<p>顶点的法线可以通过多种方法得到。一种方法就是对所有拥有该顶点的三角形的法线取平均值。如果你希望你的模型看上去很平滑，那么这种方法很好用。但如果你想用平均法线渲染出一个四方体，会得到一个圆角四方体。为了解决这个问题，四方体的每个角都要有3个不同的顶点，而每个顶点都存储不同的朝向各自所属平面的法线。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/12/xKoVLW1EualNv24.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 平均顶点法线(a)和四方体的顶点根据所属平面有3个不同的法线方向(b)</div>
+</center>
+
+<p>要记住，一个三角形从技术角度来讲有两个法线，取决于叉乘的顺序。对于三角形来说，这个顺序取决于<strong>顶点序</strong>，可以是顺时针的，也可以是逆时针的。</p>
+<p>顶点序的一个作用就是用于渲染优化，称为<strong>背面剔除</strong>，就是说没有朝向摄像机的三角片不进行渲染。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/12/wGIu9shP1xX6mtp.jpg">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 一个四方体使用正确的顶点序渲染(a)和同样的四方体使用不正确的顶点序渲染(b)</div>
+</center>
+
+<h2 id="3-光照"><a href="#3-光照" class="headerlink" title="3.光照"></a>3.光照</h2><p>3D游戏中使用的光照有好几种类型。一些光照会全局作用于整个场景，而一些光照只作用于光照范围内的区域。</p>
+<p><strong>环境光</strong>就是一种添加到场景中每一个物体上的固定光照。在游戏中环境光的值经常会按照不同的关卡需求来设置，取决于关卡所处的时间点。夜间关卡会选用比较阴暗寒冷的环境光，而白天的关卡则会选用比较明亮温暖的。</p>
+<p><strong>方向光</strong>是一种没有位置的光，只指定光照的方向。跟环境光一样，方向光作用与整个场景。但是，由于方向光是带方向的，所以它们会照亮物体的正面，而背面则没有光照。</p>
+<p><strong>点光源</strong>就是某个点向四面八方射出的光照。由于它们从某个点射出，点光源也只会照亮物体的正面。在大多数情况下，不希望点光源无限远。可以增加或减少<strong>衰减半径</strong>来控制光照衰减的方式。</p>
+<p><strong>聚光灯</strong>跟点光源很像，除了点光源向所有方向发射，聚光灯只在追体内有光外。为了计算椎体范围，需要一个角度作为聚光灯的参数。跟点光源一样，聚光灯只会照亮物体的正面。</p>
+<h2 id="4-Phong光照模型"><a href="#4-Phong光照模型" class="headerlink" title="4.Phong光照模型"></a>4.Phong光照模型</h2><p>在光源放入关卡之后，游戏就需要计算光源如何作用于物体上。这些计算都可以通过<strong>双向反射分布函数(BRDF)</strong>来完成。BRDF用于计算光源怎么作用于物体表面。有很多种不同的BRDF，下面只讲最基础的一种：<strong>Phong光照模型</strong>。要注意的是，Phong光照模型与Phong着色模型是不一样的。</p>
+<p>Phong光照模型是一种<strong>局部光照模型</strong>，因为它不考虑光的二次反射。换句话说，每个物体都认为在场景中只有自己被渲染。在物理世界中，如果一个红光打到白色的墙上，红光会有少量反射到房屋里其他地方。但是在局部光照模型中是不会发生的。</p>
+<p>在Phong光照模型中，光被分为几种分量：环境光、漫反射和高光。这3种分量都会影响物体的颜色。<strong>环境光</strong>分量用于整体照亮场景。由于它均匀地作用于整个场景，所以环境光分量与光源的位置和摄像机的位置都无关。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/12/dqnpfXxWOTJQAG7.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 Phong光照模型</div>
+</center>
+
+<p><strong>漫反射</strong>分量是光源作用与物体表面的主要反射。它会被所有方向光、点光源和聚光灯影响。为了计算漫反射分量，你同时需要物体表面的法线和物体表面到光源方向的向量。但是跟环境光分量一样，漫反射同样也不被摄像机的位置影响。</p>
+<p>最后一种分量是<strong>高光分量</strong>，表示物体表面上闪亮的高光。一些有强高光的物体，比如光滑的金属，会比涂上暗色涂料的物体光亮得多。类似漫反射分量，高光分量也同时取决于光源的位置和物体表面的法线。但它还取决于摄像机的位置，因为高光会随着视角方向变换而变换。</p>
+<p>总而言之，Phong光照模型的计算并不复杂。这个模型遍历场景中的所有光源，计算表面的颜色，然后以某种方式来决定表面最终的颜色。</p>
+<pre><code>//Vector3 N = 物体表面的法线
+//Vector3 eye = 摄像机的位置
+//Vector3 pos = 物体表面的位置
+//float a = 高光量
+Vector3 V = Normalize(eye - pos) //从物体表面到摄像机
+Vecroe3 Phong = AmbientColor
+foreach Light light in scene
+    if light affects surface
+        Vector3 L = Normalize(light.pos - pos)//从物体表面到光源
+        Phong += DiffuseColor * DotProduct(N, L)
+        Vector3 R = Normalize(Reflect(-L, N))//计算-L关于N的反射
+        Phong += SpecularColor * pow(DotProduct(R, V), a)
+    end
+end</code></pre><h2 id="5-着色"><a href="#5-着色" class="headerlink" title="5.着色"></a>5.着色</h2><p><strong>着色</strong>就是计算表面的三角片如何填充。最基础的着色类型是<strong>平面着色</strong>，就是整个三角片只有一种颜色。使用平面着色，只需每个三角片进行一次光照计算(通常在三角片的中心)，然后把通过计算得到的颜色赋予整个三角片。这样做基本能实现着色，可是不好看。</p>
+<p><strong>Gouraud着色</strong><br>有一种稍微复杂一点的着色方法，我们称之为<strong>Gouraud着色</strong>。在这种着色方法中，光照模型的计算需要逐个顶点进行一次。这就使得每个顶点有不同的颜色，而三角片的剩余部分则通过顶点颜色插值填充。</p>
+<p>虽然Gouraud着色比较近似自然色了，但还是有不少问题。首先，着色的质量取决于模型的多边形数量。在低多边形模型上，着色结果会有不少有棱角的边。虽然Gouraud着色在高多边形模型上能达到不错的效果，但是会占用不少内存。</p>
+<p>另一个问题是高光用在低多边形模型上效果极差。而在低多边形模型上高光有可能会完全消失，因为只依据顶点来计算光照。虽然Gouraud着色流行了好几年，但是随着GPU性能的提升，就再也没人使用了。</p>
+<p><strong>Phong着色</strong><br><strong>Phong着色</strong>是计算三角片上每个像素的光照模型。为了完成这种效果，顶点的法线需要在三角片表面进行插值，然后利用插值得到的法线进行光照计算。</p>
+<p>Phong着色的计算量比Gouraud着色昂贵得多，特别是在场景中有很多灯光的时候。但是，大多数现代硬件都可以轻松处理这部分额外的计算。Phong着色可以认为是<strong>逐像素光照</strong>，因为光照结果是针对每个像素进行单独计算的。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://i.loli.net/2019/08/12/yt2xfvEiuMmlS4L.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 2px;">图 使用Grouraud着色的物体(a)和使用Phong着色的物体(b)</div>
+</center>
+
+<h1 id="四、可见性"><a href="#四、可见性" class="headerlink" title="四、可见性"></a>四、可见性</h1><p>3D渲染里最重要的最后一点就是可见性判断。</p>
+<h2 id="1-再探画家算法"><a href="#1-再探画家算法" class="headerlink" title="1.再探画家算法"></a>1.再探画家算法</h2><p>画家算法(将场景从后往前绘制)，它在2D游戏中很好用。这是因为2D精灵之间的顺序关系清晰，而且大多数2D引擎都内在支持层级的概念。对于3D游戏而言，这个顺序很少是静止的，因为摄像机的透视可以改变。</p>
+<p>另一个画家算法的问题就是会引起大量的<strong>重绘</strong>，有的像素每帧都会绘制多次。在现代3D游戏中，计算最终光照和贴图的过程是渲染管线最昂贵的部分。像素重绘意味着前一次绘制的花费被浪费了。因此，大多数游戏都尽力避免重绘的发生。而在画家算法中这是不可能完成的任务。</p>
+<p>而且，三角形重叠的时候也有问题。由于各种问题，画家算法在3D游戏中非常少用。</p>
+<h2 id="2-深度缓冲区"><a href="#2-深度缓冲区" class="headerlink" title="2.深度缓冲区"></a>2.深度缓冲区</h2><p>在<strong>深度缓冲区</strong>中，会有一块额外的缓冲区仅在渲染的过程中使用。这块额外的缓冲区称为<strong>深度缓冲区</strong>，为场景中的每个像素存储数据，就像颜色缓冲一样。但是跟颜色缓冲区存储颜色不同，深度缓存区存储的是像素到摄像机的距离(或<strong>深度</strong>)。更准确地讲，每帧用到的缓冲区(包括颜色缓冲区、深度缓冲区、模板缓冲区等)统称为<strong>帧缓冲</strong>。</p>
+<p>在使用深度缓冲区的每一帧渲染开始之前，深度缓冲区都会清空，确保当前深度缓冲区中的所有像素都无限远。然后，在渲染的过程中，像素的深度会在绘制之前先计算出来。如果该像素的深度比当前深度缓冲区存储的深度要小，那么这个像素就进行绘制，然后新的深度值会写入深度缓冲区。</p>
+<p>所以每帧第一个绘制的对象总是能够将它的所有颜色和深度分别写入颜色缓冲区和深度缓冲区。但是当绘制第二个对象的时候，那些比已有像素更远的像素都不会进行绘制。</p>
+<pre><code>//zBuffer[x][y]存储像素深度
+foreach Object o in scene
+    foreach Pixel p in o
+        float depth = calculate depth at p
+        if zBuffer[p.x][p.y] &gt; depth
+            draw p
+            zBuffer[p.x][p.y] = depth
+        end
+    end
+end</code></pre><p>通过深度缓冲，场景可以以任意顺序绘制，如果场景中没有透明的物体，那么绘制结果一定正确。但也不是说深度缓冲可以解决所有可见性问题。比如说，透明对象在深度缓冲中就不太适用。因为如果使用纯深度缓冲的方法先画水体，那么水体会写入深度缓冲，这样就会影响石头的绘制。为了解决这个问题，应用深度缓冲先画所有不透明的物体，然后可以关掉深度缓冲，在渲染所有透明物体。</p>
+<p>像颜色一样，深度缓冲的表示方法也有固定的集中。最小的深度缓冲区为16位，可是在节省内存的同时也带来了一些副作用。在<strong>深度值冲突</strong>的时候，两个来自不同对象的像素挨得非常近，而且离摄像机很远，会产生每帧交替出现前后像素切换的情况。16位浮点数精度不够高导致在第1帧时像素A比像素B的深度要低，而在第2帧比像素B深度要大。为了避免这种情况，大多数现代游戏都会采用24位或者32位的深度缓冲区。</p>
+<p>还有很重要的一点是，仅依靠深度缓冲并不能解决像素重绘的问题。如果你先画了一个像素，然后才发现该像素不该画。那么前一个像素的渲染就纯属浪费。一个解决方案就是采用<strong>先进行深度的pass</strong>。将深度计算与着色分开，在最终的光照计算pass之前完成深度计算。</p>
+<p>深度缓冲的检查是基于像素的，如果有一颗树完全被建筑遮挡，深度缓冲还是会对这棵树的每个像素进行测试。为了解决这类问题，商业游戏经常使用复杂的<strong>剔除</strong>或者<strong>遮挡</strong>算法去消除那些在某些帧完全看不到的对象，类似的算法有二叉树分区算法(BSP)、入口算法和遮挡体积。</p>
+<h1 id="五、再探世界变换"><a href="#五、再探世界变换" class="headerlink" title="五、再探世界变换"></a>五、再探世界变换</h1><p>如果平移、缩放和旋转必须独立修改，那么矩阵就需要分开存储，每个矩阵16个浮点数，3个矩阵就有48个浮点数。要减少平移和缩放相对简单，只要将平移存储为一个标量即可。然后这些值可以在最后的计算阶段才组成矩阵。但是该怎么处理旋转呢？</p>
+<p>一种方法是使用欧拉角来表示，但是欧拉角一是不够灵活，二是会有<strong>万向锁</strong>的问题，三是有关于将两个朝向进行插值的问题，即当游戏有指向下一个目标的箭头。一旦这个目标达成，这个箭头就应该转向下一个节点。由于视觉原因，它应该有个一两秒的过渡。虽然可以通过欧拉角实现，但很难使得这个插值好看。</p>
+<h2 id="1-四元数"><a href="#1-四元数" class="headerlink" title="1.四元数"></a>1.四元数</h2><p><strong>四元数</strong>可以表示关于任意轴旋转。有了四元数，再也不是受限于关于某个轴旋转，而是关于任意你想要的轴旋转。</p>
+<p>四元数的另外一个优点就是很容易在两个四元数之间进行插值。有两种插值方式：线性插值和<strong>球形插值</strong>。球形插值比起线性插值更加准确，同时计算上也可能更加昂贵，取决于系统。</p>
+<p>四元数只需要用4个浮点数来存储信息，这样更加节省内存。所以就像位置和统一缩放可以分别存储为3D向量和浮点标量一样，物体的选择也可以存储为四元数。</p>
+<p>不管哪种用途，游戏中的四元数全部都是<strong>标准四元数</strong>，就像单位向量一样，四元数的长度为1。一个四元数有着一个向量和一个标量，经常都写着$q=|q_v,q_s|$。向量和标量的计算由旋转的轴和旋转的角度决定。</p>
+<p>大多数3D游戏数学库都会内建四元数函数库。对于这些库来说，一个CreateFromAxisAngle或者类似的函数会自动为你构造四元数。还有些数学库可能会使用x、y、z和ω分量的形式来表示四元数。在这种情况下，向量部分就是x、y、z，标量部分就是ω。</p>
+<p>具体可参考<a href="https://zhuanlan.zhihu.com/p/27471300" target="_blank" rel="noopener">四元数——基本概念</a></p>
+<h2 id="2-3D游戏对象的表示"><a href="#2-3D游戏对象的表示" class="headerlink" title="2.3D游戏对象的表示"></a>2.3D游戏对象的表示</h2><p>在有了四元数之后，平移、缩放和旋转都可以用比4x4矩阵小的数据表示。这些就是3D游戏对象的世界变换应该存储的。然后到了需要将世界变换矩阵传递给渲染代码的时候，可以临时构造一个矩阵。这意味着如果代码要更新对象的位置，只要改变位置向量即可，而不是整个矩阵。</p>
+<pre><code>class 3DGameObject
+    Quaternion rotation
+    Vector3 position
+    float scale
+
+    function GetWorldTransform()
+        //先缩放，后旋转，最后平移，顺序很重要
+        Matrix temp = CreateScale(scale) * CreateFromQuaternion(rotation) * CreateTranslation(position)
+        return temp
+    end
+end</code></pre><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://oliverbvb.github.io" rel="external nofollow noreferrer">Oliver</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-3d-tu-xing/">https://oliverbvb.github.io/you-xi-bian-cheng-suan-fa-he-ji-qiao-3d-tu-xing/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://oliverbvb.github.io" target="_blank">Oliver</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">游戏编程</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-you-xi-shu-ru/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="游戏编程算法和技巧·游戏输入">
+                        
+                        <span class="card-title">游戏编程算法和技巧·游戏输入</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            没有输入，游戏就成为了一种静止的娱乐形式，就像电影和电视那样。当游戏响应键盘、鼠标、手柄等输入设备的时候，游戏才能够互动。
+一、输入设备目前市面上有各种各样的输入设备。绝大多数的输入形式可以分为两种：数字与模拟。数字形式的输入就是那些只有两
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/you-xi-bian-cheng-suan-fa-he-ji-qiao-2d-tu-xing/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="游戏编程算法和技巧·2D图形">
+                        
+                        <span class="card-title">游戏编程算法和技巧·2D图形</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            2D图形随着Web、移动游戏、独立游戏的爆发式增长，2D图形进入了文艺复兴时期。开发者选择2D通常是因为预算和团队规模。玩家选择2D则是因为游戏简洁而纯粹。
+2D渲染基础为了更加全面地认识2D渲染，了解这种技术诞生时显示设备的情况是很有必要
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    游戏编程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">游戏编程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="sitetime"></span>
+            <span id="year">2020</span>
+            <a href="https://oliverbvb.github.io" target="_blank">Oliver</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">70.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/oliverbvb" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:tanghaidong1995@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1277509304" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1277509304" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " +diffYears+" 年 "+diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>
